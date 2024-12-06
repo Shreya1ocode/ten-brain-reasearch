@@ -6,34 +6,41 @@
 
 /* WhatsApp Logo Styling */
 .whatsapp-logo {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000; /* Ensures it's always on top */
-  }
-  
-  .whatsapp-logo img {
-    width: 50px; /* Adjust size as needed */
-    height: 50px;
-    border-radius: 50%; /* Make it circular */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .whatsapp-logo img:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-  }
-  
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000; /* Ensures it's always on top */
+}
+
+.whatsapp-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Make it circular */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-logo img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
 .logo {
-  height: 200px;
-  width: 1000x;
+  height: auto;
+  max-width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures navigation items wrap on smaller screens */
 }
 
 .nav-link {
   color: #000;
   text-decoration: none;
-  font-size: 16px;
-  margin: 0 10px;
+  font-size: 1rem;
+  margin: 5px;
   transition: color 0.3s ease;
 }
 
@@ -41,156 +48,154 @@
   color: #ff9900;
 }
 
-.nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
 /* Info Section Styling */
 .info-section {
-  background-color: #f9f9f9; /* Light gray background */
-  color: #333; /* Dark text color */
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
 }
 
 .info-title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
 .info-text {
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 10px;
   line-height: 1.6;
 }
 
 /* Main Content */
 main {
-    background-color: #f8f9fa; /* Light gray background */
-    height: auto;
-    padding: 70px 20px; /* Add side padding for smaller screens */
-    margin: 20px auto; /* Center the main container */
-    border-radius: 10px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    text-align: center;
-    line-height: 1.6;
-   
+  background-color: #f8f9fa;
+  padding: 40px 10px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 main .content {
-    width: 1000px; /* Make it responsive */
-    max-width: 1000px; /* Restrict content width for better readability */
-    margin: 0 auto; /* Center the content horizontally */
-    text-align: center;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 main .content h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 main .content p {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333; /* Dark gray text */
-    margin: 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
 }
-
-
 
 main .video iframe {
-    margin-top: 20px;
-    border: none;
-    width: 900px; /* Fixed width */
-    height: 500px; /* Fixed height */
-    border-radius: 55px; /* Curve the borders */
-    overflow: hidden; /* Ensures no content overflows the curved corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for effect */
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-  .whatsapp-query {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 20px;
-    background-color: #25d366;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-  }
-  
-  .whatsapp-query:hover {
-    background-color: #1ebe57;
-  }
-/* Align labels to the left */
-.contact-section .form-label {
-    text-align: left;
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+/* Contact Section */
+.contact-section {
+  padding: 20px;
 }
 
-/* Input and Textarea Styles */
 .contact-section input,
 .contact-section textarea {
-    border-radius: 25px; /* Makes the inputs curved */
-    border: 1px solid #ccc;
-    padding: 10px 15px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    width: 400px;
-    box-shadow: none;
-    transition: all 0.3s ease-in-out;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 1rem;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .contact-section input:focus,
 .contact-section textarea:focus {
-    border-color: #ff9900; /* Highlight color on focus */
-    outline: none;
-    box-shadow: 0 0 5px rgba(255, 153, 0, 0.5);
+  border-color: #ff9900;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 153, 0, 0.5);
 }
 
-/* Placeholder Text Styling */
-.contact-section input::placeholder,
-.contact-section textarea::placeholder {
-    font-style: italic;
-    color: #999;
-}
-
-.contact-section p {
-    width: 70%; /* Adjust width as needed */
-    margin: 0 auto; /* Center the paragraph */
-    text-align: center; /* Optional: keeps text centered */
-    font-size: 20px; /* Optional: adjust font size */
-    line-height: 1.6; /* Optional: improves readability */
-}
-
-/* Style for form inputs, textarea, and button */
-.contact-section .form-control,
 .contact-section .btn-warning {
-    width: 100%; /* Ensure both the button and textarea span the full width */
-    max-width: 500px; /* Limit the maximum width */
-    border-radius: 25px; /* Adds rounded corners */
-    padding: 10px 15px; /* Add padding inside */
-    display: block; /* Make sure the button and inputs are block elements */
-    margin: 10px 0; /* Remove centering and add space between elements */
+  width: 90%;
+  max-width: 500px;
+  border-radius: 25px;
+  padding: 10px 0;
+  font-weight: bold;
+  background-color: #ff9900;
+  border: none;
+  transition: background-color 0.3s ease;
 }
 
-/* Style for the button */
-.contact-section .btn-warning {
-    padding: 10px 0; /* Adjust padding for the button */
-    font-weight: bold; /* Bold text for button */
-    background-color: #ff9900; /* Button background color */
-    border: none; /* No border for button */
-    transition: background-color 0.3s ease; /* Smooth color transition on hover */
-}
-
-/* Hover effect for the button */
 .contact-section .btn-warning:hover {
-    background-color: #e68a00; /* Darker background on hover */
+  background-color: #e68a00;
 }
 
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  main .content h2 {
+    font-size: 1.5rem;
+  }
+
+  main .content p {
+    font-size: 0.9rem;
+  }
+
+  main .video iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-section input,
+  .contact-section textarea,
+  .contact-section .btn-warning {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-title {
+    font-size: 1.2rem;
+  }
+
+  .info-text {
+    font-size: 0.9rem;
+  }
+
+  main .content h2 {
+    font-size: 1.2rem;
+  }
+
+  main .content p {
+    font-size: 0.8rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .whatsapp-logo img {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Increase the maximum width */
+  width: 90%;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: 20px;
+  color: #444;
+}
+
+h3 {
+  font-size: 22px;
+  margin-top: 15px;
+  color: #555;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+/* Container for the terms section */
+.terms-section {
+  max-width: 1000px; /* Adjusting width to accommodate two columns */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: grid; /* Using grid for two columns layout */
+  grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
+  gap: 20px; /* Space between columns */
+}
+
+/* Column for the terms */
+.terms-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between term items */
+}
+
+/* Header styling for the terms section */
+.terms-section h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+  grid-column: span 2; /* Make the header span both columns */
+}
+
+/* Term item styling (Capsules) */
+.terms-section .term-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  text-align: center;
+}
+
+/* Term item header styling */
+.terms-section .term-item h3 {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #000000;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for the term item header */
+.terms-section .term-item h3:hover {
+  background-color: #e6f7ff;
+}
+
+/* Content inside the term items */
+.terms-section .content {
+  display: none;
+  padding: 10px;
+  font-size: 1em;
+  line-height: 1.6;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  margin-top: 10px;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  overflow: hidden;
+}
+
+/* When the term item is active, show the content */
+.terms-section .term-item.active .content {
+  display: block;
+  max-height: 500px; /* Set max-height to allow expansion */
+  padding: 20px; /* Adjust padding to make the content visible properly */
+}
+
+/* Paragraph styling inside the term items */
+.terms-section p {
+  margin: 0;
+}
+
+/* For smaller screens, make the layout stack into one column */
+@media (max-width: 768px) {
+  .terms-section {
+    grid-template-columns: 1fr; /* Stacks items in a single column */
+  }
+}
+
+/* Container for the FAQ section */
+.faq-section {
+  max-width: 1000px; /* Adjust width for two-column layout */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: grid; /* Use grid for two-column layout */
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Space between columns */
+  text-align: center;
+}
+
+/* Column for FAQ items */
+.faq-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between FAQ items */
+}
+
+/* FAQ item header styling */
+.faq-section .faq-item h3 {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #000000;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for FAQ item header */
+.faq-section .faq-item h3:hover {
+  background-color: #e6f7ff;
+}
+
+/* Content inside the FAQ items */
+.faq-section .content {
+  display: none;
+  padding: 10px;
+  font-size: 1em;
+  line-height: 1.6;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  margin-top: 10px;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  overflow: hidden;
+}
+
+/* When FAQ item is active, show content */
+.faq-section .faq-item.active .content {
+  display: block;
+  max-height: 500px; /* Set max-height for expansion */
+  padding: 20px; /* Adjust padding for visibility */
+}
+
+/* Paragraph styling for FAQ content */
+.faq-section p {
+  margin: 0;
+}
+
+@media (max-width: 1000px) {
+  .faq-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 14px;
+}

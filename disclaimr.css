@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+h1 {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+p, li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.bg-light {
+    background-color: #bfcfde !important;
+}
+
+input.form-control {
+    max-width: 300px;
+}

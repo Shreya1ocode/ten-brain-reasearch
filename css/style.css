@@ -195,6 +195,20 @@ to {opacity: 1}
   text-align:center;
 }
 
+@media screen and (max-width:991px) {
+  .desktop-logo {
+    display: none;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .desktop-logo {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 
 
@@ -280,7 +294,7 @@ to {opacity: 1}
     margin-left: auto; /* Move the toggler button to the right */
   }
   .mobile-view{
-    margin-top: -50%;
+    margin-top: -37px;
   }
   .navbar {
     justify-content: center;

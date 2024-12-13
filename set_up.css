@@ -1,0 +1,779 @@
+/* Global Styles */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Header CSS Start */
+header{
+    width: 100%;
+    height: 64px;
+    border-bottom: 1px solid rgb(224, 222, 222);
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0%;
+    z-index: 900px;
+}
+.div1{
+    width: 100%;
+    display: flex;
+}
+
+/* Link Styling */
+.anlink{
+    text-decoration: none;
+    color: black;
+}
+
+/* Logo Section */
+.head1{
+    width: 50%;
+    margin-left: 20px ;
+    justify-items: center;
+    align-content: center;
+    flex: 1;
+}
+
+.ten{
+    display: inline-block;
+}
+.logo{
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.head_nm{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 550; 
+    display: inline-block; 
+    vertical-align: middle;
+}
+
+.head2{
+    width: 50%;
+    text-align: right;
+    justify-items: center;
+    align-content: center;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.search{
+    width: 224px;
+    border: 1px solid;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgb(223, 225, 230);
+}
+
+.symbol{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.srch{
+    display: inline-block;
+}
+
+.src{
+    width: 185px;
+    height: 30px;
+    border-radius: 8px;
+    vertical-align: middle;
+    font-size: 1rem;
+    border: none;
+    background-color: rgb(223, 225, 230);
+}
+/* Header CSS End */
+
+/* Panel CSS */
+.div2{
+    display: flex;
+    flex: 1;
+}
+
+.menu-icon{
+    display: none;
+    cursor: pointer;
+}
+
+.panel{
+    width: 25%;
+    text-align: left;
+    display: inline-block;
+    padding: auto;
+    max-height: 100%;
+    overflow: visible;
+    transition: max-height 0.5s ease-out; 
+}
+
+/* When menu is shown */
+.show-menu {
+    max-height: 500px;
+}
+
+/* Unordered List */
+.unorder{
+    list-style-type: none;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.unorder li{
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+.cont{
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.list{
+    width: 100%;
+    font-size: 14px;
+    /* margin-top: 20px;
+    margin-left: 20px; */
+    padding: 6px 6px 6px 20px;
+}
+
+.panel .list:hover{
+    border-radius: 5px;
+    color: rgb(5, 115, 62);
+    background-color: rgba(18, 163, 93, 0.612);
+}
+.panel .anlink:hover{
+    color: rgb(5, 115, 62);
+}
+
+/* Main Content Styles */
+.main{
+    width: 50%;
+    text-align: left;
+    padding: 2%;
+}
+
+.bold_nm{
+    margin-bottom: 2%;
+}
+
+.para{
+    width: 95%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.refer{
+    width: 95%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.brain{
+    width: 95%;
+    height: 332px;
+    margin-bottom: 20px;
+}
+
+.vid{
+    width :95%;
+    height: 350px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Device Connection */
+.conet{
+    width: 95%;
+}
+.connect{
+    width: 100%;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center; 
+}
+
+.anli{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+.lside{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 1;
+    padding-left: 10px;
+}
+.nxt{
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.dc{
+    font-size: 18px;
+}
+
+.for{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.frwd{
+    width: 24px;
+    height: auto;
+}
+
+.connect  .anli:hover{
+    color: rgb(5, 115, 62);
+    border-color: rgb(5, 115, 62);
+}
+
+/* Right Panel Styles */
+.rp{
+    display: inline-block;
+    width: 25%;
+    padding: 20px;
+}
+
+.hed{
+    font-size: 18px;
+    color: rgb(126, 127, 130);
+    margin-top: 20px;
+}
+
+.rate{
+    display: flex;  
+    justify-content: left;
+    align-items: center;
+}
+
+/* Footer Part */
+footer{
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid rgb(168, 167, 167);
+    background-color: rgb(223, 225, 230);
+}
+
+.mode{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablet Screens (max-width: 1024px) */
+@media only screen and (max-width: 1024px){
+    body{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    .div1{
+        width: 100%;
+    }
+    .head1{
+        width: 100%;
+    }
+     
+    .logo{
+        margin: 10px 10px;
+    }
+    .menu-icon{
+        display: block;
+        position: absolute;
+        margin: 20px 10px 0px 0px;
+        cursor: pointer;
+    }
+
+    /* Hide the panel by default on smaller screens */
+    .panel{
+        width: 100%;
+        background-color: rgb(211 212 217);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+    }
+
+    .panel .list:hover{
+        border-radius: 5px;
+        color: rgb(5, 115, 62);
+        background-color: rgba(18, 163, 93, 0.612);
+    }
+
+    .panel .anlink:hover{
+        color: rgb(5, 115, 62);
+    }
+
+    .unorder{
+        list-style-type: none;
+        font-size: 10px;
+        font-weight: 300;
+        margin-top: 15px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    
+    .unorder li{
+        padding-left: 0;
+        margin-bottom: 7px;
+    }
+    
+    .cont{
+        font-weight: bold;
+        font-size: 10px;
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .list{
+        margin-top: 20px;
+        margin-left: 20px;
+        justify-content: space-evenly;
+    }
+    
+    
+    .show-menu{
+        max-height: 300px;  
+    }
+
+    .div2{
+        flex-direction: column;
+    }
+
+    .rp{
+        display: none; 
+    }
+
+    .main{
+        width: 100%;
+        padding: 20px 0px;
+        /* text-align: center; */
+    }
+    .bold_nm{
+        width: 80%;
+        font-size: 10px;
+        margin: auto;
+        /* margin-bottom: 2%; */
+    }
+    .para{
+        width: 80%;
+        font-size: 17px;
+        text-align: left;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .refer{
+        width:80%;
+        font-size: 17px;
+        text-align: left;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    
+    .brn{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    
+    .brain{
+        width: 100%;
+        height: 332px;
+        margin-bottom: 20px;
+    }
+
+    .vd{
+        width :80%;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .vid{
+        width: 100%;
+        height: 350px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    .conet{
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+    .connect{
+        width: 100%;
+        height: 60px;
+        border: 1px solid black;
+        border-radius: 5px;
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 10px;
+    }
+    
+
+    .mode{
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* For Tablet Screens (max-width: 661px) */
+@media only screen and (max-width: 661px){
+    body{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+        height: 54px;
+    }
+    .div1{
+        width: 100%;
+    }
+    .head1{
+        width: 50%;
+        justify-items: center;
+        align-content: center;
+    }
+    
+    .ten{
+        width: 40px;
+        height: 40px;
+    }
+    .logo{
+        width: 40px;
+        height: 40px;
+    }
+    
+    .head_nm{
+        margin: 0px 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px; 
+    }
+
+    .head2{
+        justify-items: center;
+        align-content: center;
+    }
+    .search{
+        width: 220px;
+    }
+}
+
+/* For Tablet Screens (max-width: 553px) */
+@media only screen and (max-width: 553px){
+    body{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+        height: 44px;
+    }
+    .div1{
+        width: 100%;
+    }
+    .head1{
+        width: 50%;
+        margin-left: 20px ;
+    }
+    
+    .ten{
+        width: 30px;
+    }
+    .logo{
+        width: 30px;
+        height: 30px;
+        margin: 10px 10px ;
+        /* vertical-align: middle; */
+    }
+    
+    .head_nm{
+        margin-left: 2px;
+        font-size: 13px;
+        font-weight: 550; 
+    }
+
+    .head2{
+        justify-items: center;
+        align-content: center;
+        margin: 5px 5px 0px 0px;
+    }
+    .search{
+        width: 170px;
+        /* height: 25px; */
+    }
+    .se{
+        width: 18px;
+        height: 18px;
+        text-align: left;
+    }
+    .src{
+        width: 130px;
+        height: 20px;
+        font-size: 15px;
+    }
+    
+
+    .menu-icon{
+        width: 20px;
+        height: 20px;
+        margin: 10px 5px;
+    }
+
+    .unorder{
+        font-size: 10px;
+    }
+
+    .cont{
+        font-size: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .list{
+        margin-top: 15px;
+        margin-left: 20px;
+        justify-content: space-evenly;
+    }
+    .bold_nm{
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .brn{
+        width: 90%;
+    }
+
+    .brain{
+        width: 100%;
+    }
+
+    .para{
+        width: 90%;
+    }
+
+    .refer{
+        width: 90%;
+    }
+
+    .vd{
+        width: 90%;
+    }
+    .vid{
+        width: 100%;
+    }
+
+    .conet{
+        width: 90%;
+    }
+    .connect{
+        width: 100%;
+    }
+
+    .frwd{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:425px){
+    body{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    .div1{
+        width: 100%;
+    }
+    .head2{
+        display: none;
+    }
+    .main{
+        width: 100%;
+        text-align: center;
+        padding: auto;
+    }
+    
+    h1{
+        font-size: 18px;
+        margin: auto;
+    }
+    
+    p{
+        width: 95%;
+        font-size: 15px;
+        margin: auto;
+        padding-bottom: 5px;
+    }
+    
+    .brain{
+        width: 95%;
+        height: 220px;
+        margin-bottom: 10px;
+    }
+    
+    .vid{
+        width :95%;
+        height: 250px;
+        border-radius: 5px;
+    }
+    .connect{
+        width: 95%;
+        height: 30px;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .nxt{
+        display: block;
+        font-size: 8px;
+    }
+    
+    .dc{
+        font-size: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        padding: auto;
+    }
+    
+    .for{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .frwd{
+        width: 15px;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width:334px){
+    body{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    .div1{
+        width: 100%;
+    }
+    .head2{
+        display: none;
+    }
+    .main{
+        width: 100%;
+        text-align: center;
+        padding: auto;
+    }
+    
+    h1{
+        font-size: 20px;
+        margin: auto;
+    }
+    
+    p{
+        width: 95%;
+        font-size: 12px;
+        margin: auto;
+        padding-bottom: 5px;
+    }
+    
+    .brain{
+        width: 95%;
+        height: 220px;
+        margin-bottom: 10px;
+    }
+    
+    .vid{
+        width :95%;
+        height: 250px;
+        border-radius: 5px;
+    }
+    
+    /* Device Connection */
+    .connect{
+        width: 95%;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 5px;
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .nxt{
+        display: block;
+        font-size: 8px;
+    }
+    
+    .dc{
+        font-size: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        padding: auto;
+    }
+    
+    .for{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .frwd{
+        width: 15px;
+        margin-left: auto;
+    }
+    .unorder{
+        list-style-type: none;
+        font-size: 10px;
+        font-weight: 400;
+        margin-top: 10px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    
+    .cont{
+        font-weight: bold;
+        font-size: 13px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .list{
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+}

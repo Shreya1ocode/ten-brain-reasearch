@@ -64,12 +64,19 @@ body{
     /* font-size: 24px;*/
 }
 .card-design-first{
-  width: 23rem; 
-  margin-right: 40px;
+   width: 23rem;  
+  /*margin-right: 40px;*/
   border-radius: 50px;
   border: 2px white solid;
-  background-color: #000;
-  color: #fff;
+ 
+}
+.card-design-card{
+  background-color: black;
+  color: white;
+  margin-bottom: 15px;
+  /* height: 284px; 
+  margin-top: 13px;
+  margin-bottom: 19px;*/
 }
 .card img{
   margin-top: 20px;
@@ -195,9 +202,18 @@ to {opacity: 1}
   text-align:center;
 }
 
+
+
+
+    
+
+
 @media screen and (max-width:991px) {
   .desktop-logo {
     display: none;
+  }
+  .card-design-first{
+    margin-top: 25px;
   }
 }
 
@@ -207,6 +223,9 @@ to {opacity: 1}
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+  }
+  .card-design-first{
+    margin-top: 25px;
   }
 }
 
@@ -244,11 +263,9 @@ to {opacity: 1}
   }
 
   .card-design-first{
-    margin-left: 30px;
     margin-top: 25px;
-    margin-right: 9%;
-    /* width: 0%; */
   }
+  
   .card-design-second{
     margin-left: 30px;
     margin-top: 25px;
@@ -293,9 +310,9 @@ to {opacity: 1}
   .navbar-toggler {
     margin-left: auto; /* Move the toggler button to the right */
   }
-  .mobile-view{
-    margin-top: -37px;
-  }
+  /* .mobile-view{
+    margin-top: -37px
+  } */
   .navbar {
     justify-content: center;
     padding:0px !important;
@@ -338,9 +355,5 @@ to {opacity: 1}
         color: #000;
     }
 }
-/* @media (max-width: 1400px) {
-  .desktop-logo {
-    visibility: hidden;
-  }
-} */
+
  

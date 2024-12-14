@@ -215,9 +215,17 @@ to {opacity: 1}
   .card-design-first{
     margin-top: 25px;
   }
+  /* .get-in{
+    
+    margin-top: 87px;
+    /* text-align: center; 
+    margin-left: 162px;
+
+  } */
 }
 
 @media screen and (min-width:992px) {
+  
   .desktop-logo {
     display: block;
     text-align: center;
@@ -229,6 +237,15 @@ to {opacity: 1}
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1800px) { 
+  .get-in{
+    
+    margin-top: 30px;
+    /* text-align: center; */
+    margin-left: 162px;
+
+  }
+}
 
 
 

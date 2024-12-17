@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Footer</title>
+    <link rel="stylesheet" href="{% static 'footer.css' %}">
+</head>
+<body>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <!-- First Column -->
+            <div class="footer-column">
+                <img src="{% static 'images/shipping.webp' %}" alt="Free Shipping Icon" class="footer-icon">
+                <h3>Free Shipping</h3>
+                <p>Shipping Globally</p>
+            </div>
+
+            <!-- Second Column -->
+            <div class="footer-column">
+                <img src="{% static 'images/cart.webp' %}" alt="Return Policy Icon" class="footer-icon">
+                <h3>7-Day Return Policy</h3>
+                <p>No questions asked</p>
+            </div>
+
+            <!-- Third Column -->
+            <div class="footer-column">
+                <img src="{% static 'images/shipping.webp' %}" alt="Dedicated Support Icon" class="footer-icon">
+                <h3>Dedicated Support</h3>
+                <p>Gets back within 24 hrs</p>
+            </div>
+        </div>
+
+        <!-- Links Section -->
+        <div class="links-container">
+            <!-- Company Links -->
+            <div class="links-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="{% url 'disclaimer' %}">Disclaimer</a></li>
+                    <li><a href="{% url 'disclaimer' %}">About Us</a></li>
+                    <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+                    <li><a href="{% url 'return' %}">Return Policy</a></li>
+                    <li><a href="{% url 'tc' %}">Terms and Conditions</a></li>
+                    <li><a href="{% url 'reviews' %}">Reviews and Testimonial</a></li>
+                    <li><a href="{% url 'disclaimer' %}">HeadBand</a></li>
+                    
+                    
+                </ul>
+            </div>
+
+            <!-- Useful Links -->
+            <div class="links-column">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">News, Media & PR</a></li>
+                    <li><a href="#">Certifications</a></li>
+                    <li><a href="#">Sitelinks</a></li>
+                </ul>
+            </div>
+
+            <!-- FAQ Links -->
+            <div class="links-column">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="{% url 'tc' %}">Frequently Asked Questions</a></li>
+                    <li><a href="{% url 'disclaimer' %}">Set up Guide for Flexcap</a></li>
+                    <li><a href="{% url 'desktop' %}">Desktop App User Manual</a></li>
+                    <li><a href="{% url 'disclaimer' %}">How to Setup EXG Synapse</a></li>
+                    <li><a href="{% url 'disclaimer' %}">Blog</a></li>
+                    <li><a href="{% url 'disclaimer' %}">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- App Download and Social Section -->
+        <div class="bottom-container">
+            <div class="app-links">
+                <h3>Download The Ten Brain Research App</h3>
+                <a href="#"><img src="{% static 'images/googleplay.webp' %}" alt="Google Play"></a>
+                <a href="#"><img src="{% static 'images/apple.webp' %}" alt="App Store"></a>
+            </div>
+
+            <div class="community-section">
+                <h3>Join the <span>#Brainiacs</span> Community</h3>
+                <a href="#"><img src="{% static 'images/linkdin.webp' %}" alt="LinkedIn"></a>
+            </div>
+        </div>
+
+        <p class="copyright">Copyright 2024 &copy; Pankhtech India Private Limited. All Rights Reserved</p>
+    </footer>
+</body>
+</html>
+
+

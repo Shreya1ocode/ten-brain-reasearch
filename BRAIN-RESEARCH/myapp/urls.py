@@ -10,6 +10,9 @@ urlpatterns = [
     path('disclaimer/', views.disclaimer, name='disclaimer'),
     path('blog/', views.blogs, name='blog'),
     path('desktop/', views.desktop, name='desktop'),
+    path('aboutus/',views.aboutus ,name='aboutus'),
+    path('setup/',views.setup ,name='setup'),
+    path('flexcap/',views.flexcap ,name='flexcap'),
 ]
 
 

@@ -25,3 +25,12 @@ def blogs(request):
 
 def desktop(request):
     return render(request, 'desktop_app.html')
+
+def aboutus(request):
+    return render(request, 'aboutus.html')
+
+def setup(request):
+    return render(request, 'set_up.html')
+
+def flexcap(request):
+    return render(request, 'flexcap.html')

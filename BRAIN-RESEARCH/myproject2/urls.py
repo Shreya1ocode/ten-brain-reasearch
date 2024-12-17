@@ -19,13 +19,17 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('myapp.urls')),  # Include the app's URLs
+    path('', include('myapp.urls')),  
     path('privacy/', include('myapp.urls')), 
-    path('return/', include('myapp.urls')),   # Include the app's URLs
-    path('reviews/', include('myapp.urls')),   # Include the app's URLs
-    path('tc/', include('myapp.urls')),   # Include the app's URLs
-    path('disclaimer/', include('myapp.urls')),   # Include the app's URLs
-    path('blog/', include('myapp.urls')),   # Include the app's URLs
-    path('desktop/', include('myapp.urls')),   # Include the app's URLs
+    path('return/', include('myapp.urls')),  
+    path('reviews/', include('myapp.urls')),  
+    path('tc/', include('myapp.urls')),  
+    path('disclaimer/', include('myapp.urls')),   
+    path('blog/', include('myapp.urls')),   
+    path('desktop/', include('myapp.urls')),
+    path('aboutus/', include('myapp.urls')),
+    path('setup/', include('myapp.urls')),
+    path('flexcap/', include('myapp.urls')),
+        
 ]
 

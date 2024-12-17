@@ -105,6 +105,9 @@ max-width: 100%;
 position: relative;
 margin: auto;
 }
+.form-label{
+  text-align: left;
+}
 
 
 /* The dots/bullets/indicators */

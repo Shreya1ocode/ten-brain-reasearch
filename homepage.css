@@ -108,19 +108,30 @@ main .video iframe {
 
 /* Contact Section */
 .contact-section {
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  flex-direction: column; /* Stack inputs vertically */
+  align-items: flex-start; /* Align inputs to the left */
   padding: 20px;
+}
+
+.contact-section label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px; /* Spacing below each label */
+  color: #333;
 }
 
 .contact-section input,
 .contact-section textarea {
-  width: 90%;
+  width: 100%; /* Full width */
   max-width: 500px;
   border-radius: 25px;
   border: 1px solid #ccc;
   padding: 10px 15px;
   font-size: 1rem;
+  margin-bottom: 15px; /* Spacing between inputs */
   box-shadow: none;
-  transition: all 0.3s ease-in-out;
 }
 
 .contact-section input:focus,
@@ -131,14 +142,18 @@ main .video iframe {
 }
 
 .contact-section .btn-warning {
-  width: 90%;
-  max-width: 500px;
+  width:100%;
+  max-width: 490px;
   border-radius: 25px;
-  padding: 10px 0;
+  padding: 10px 15px;
   font-weight: bold;
   background-color: #ff9900;
   border: none;
+  margin-bottom: 15px;
   transition: background-color 0.3s ease;
+  text-align: center;
+
+  
 }
 
 .contact-section .btn-warning:hover {

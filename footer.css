@@ -1,151 +1,63 @@
-.footerimg1{
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 53px;
-}
-.footercontent1{
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 15px;
-}
-.large{
-    font-size: 22px;
-}
-.small {
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+body , html {
+    font-style: italic;
+    font-size: 17px;
 }
 
-.Company{
-    text-align: left;
-    margin-left: 220px;
+.shipping svg{
+    width: 12%;
 }
-
-#policy{
-    text-decoration: none;
-    text-align: justify;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.policy1{
-    margin-left: 240px;
-    font-size: 110%;
-    line-height: 1;
-}
-.img{
-    
-    margin: 20px;
-}
-.row-footer1{
+.w3-black{
     text-align: center;
-    margin-left: 180px;
+    padding-top: 10px;
 }
 
-.row-footer2{
-    text-align: left;
-    margin-left: 150px;
+.w3-black a{
+    text-decoration: none;
+    color: white;
+    line-height: 1.0;
 }
 
-@media only screen and (max-width:320px){
-    .footerimg1{
-        display: inline-block;
-        vertical-align: top;
-        
+.row-footer1 img{
+    width: 35%;
+}
+.row-footer2 img{
+    width: 12%;
+}
+.row-footer3{
+    text-align: center;
+}
+
+
+
+@media  (max-width : 320px){
+    body, html{
+        text-align: center;
     }
-    .footercontent1{
-        display: inline-block;
-        vertical-align: top;
-        
-    }
-    .large{
+    .w3-black .shipping h4{
         font-size: 22px;
     }
-    .small {
-        font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
+    .w3-black .shipping p{
+        font-size: 14px;
     }
-    
-    .Company{
-        text-align: left;
-        margin-left: 220px;
+    .w3-black h4{
+        font-size: 20px ;
     }
-    
-    #policy{
-        text-decoration: none;
-        text-align: justify;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
+    .w3-black p{
+        font-size: 15px ;
     }
-    .policy1{
-        margin-left: 240px;
-        font-size: 110%;
-        line-height: 1;
+    .row-footer1 h3{
+        font-size: 22px;
+    } 
+    .row-footer1 img{
+        width: 48%;
     }
-    .img{
-        
-        margin: 20px;
+    .row-footer2 h3{
+        font-size: 22px;
     }
-    .row-footer1{
-        text-align: center;
-        margin-left: 180px;
+    .row-footer2 img{
+        width: 14%;
     }
-    
-    .row-footer2{
-        text-align: left;
-        margin-left: 150px;
+    .row-footer3{
+        font-size: small;
     }
-}
-
-
-@media only screen and (max-width:320px){
-    body{
-        padding: 2px;
-    }
-
-    .footerimg1{
-        display: inline-block;
-        vertical-align: top;
-        margin: 1px;
-        
-    }
-
-    .footercontent1{
-        display: inline-block;
-        vertical-align: top;
-        margin-left: 3px;
-    }
-    .large{
-        font-size: 17px;
-    }
-    .small {
-        font-size: 2px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .Company{
-        text-align: left;
-        margin-left: 5rem;
-    }
-    
-    .policy1{
-        margin-left: 6rem;
-        font-size: 11px;
-        line-height: 1;
-    }
-
-    /* .img{
-        
-        margin: 20px;
-    } */
-    .row-footer1{
-
-        margin-left: 20px;
-    }
-    .row-footer2{
-        text-align: center;
-        margin-left: 1rem;
-    }
-    .Copyright{
-        font-size: 10px;
-    }
-
 }

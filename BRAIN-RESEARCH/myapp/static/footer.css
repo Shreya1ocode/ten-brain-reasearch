@@ -25,8 +25,13 @@ body , html {
 }
 .row-footer3{
     text-align: center;
+    
 }
 
+.row-footer3 p{
+    padding:20px !important;
+    margin:0;
+}
 
 
 @media  (max-width : 320px){

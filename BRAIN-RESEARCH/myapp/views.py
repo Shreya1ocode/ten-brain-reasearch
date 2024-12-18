@@ -34,3 +34,9 @@ def setup(request):
 
 def flexcap(request):
     return render(request, 'flexcap.html')
+
+def headband(request):
+    return render(request, 'eeg-headband.html')
+
+
+

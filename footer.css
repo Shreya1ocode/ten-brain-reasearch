@@ -1,13 +1,14 @@
 body , html {
     font-style: italic;
     font-size: 17px;
+    text-align: center;
+    align-items: center;
 }
 
 .shipping svg{
     width: 12%;
 }
 .w3-black{
-    text-align: center;
     padding-top: 10px;
 }
 
@@ -17,18 +18,9 @@ body , html {
     line-height: 1.0;
 }
 
-.row-footer1 img{
-    width: 35%;
+.row-footer2{
+    max-width: fit-content;
 }
-.row-footer2 img{
-    width: 12%;
-}
-.row-footer3{
-    text-align: center;
-}
-
-
-
 @media  (max-width : 320px){
     body, html{
         text-align: center;

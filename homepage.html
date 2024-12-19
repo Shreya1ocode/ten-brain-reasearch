@@ -4,17 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="homepage.css">
 </head>
 
 <body>
   <!-- WhatsApp Logo -->
-  <div class="whatsapp-logo position-fixed bottom-0 end-0 m-4">
+  <!-- <div class="whatsapp-logo position-fixed bottom-0 end-0 m-4">
     <a href="https://wa.me/your-number" target="_blank">
       <img src="wplogo.png" alt="WhatsApp" class="img-fluid" />
     </a>
-  </div>
+  </div> -->
 
  
 
@@ -42,7 +45,7 @@
     <div class="row align-items-center">
       <!-- Image Section -->
       <div class="col-md-6 text-center">
-        <img src="gettouchlogo.png" alt="Neuphony Product" class="img-fluid rounded">
+        <img src="gettouchlogo.png" alt=" Product" class="img-fluid rounded">
       </div>
       <!-- Form Section -->
       <div class="col-md-6">
@@ -66,9 +69,10 @@
             <label for="message">Message</label>
             <textarea id="message" class="form-control mb-2" rows="4" placeholder="Your Message"></textarea>
           </div>
-          
-          <button type="submit" class="btn btn-warning w-100">Submit</button>
-        </form>
+          <div class="button">
+            <button type="submit" class="btn btn-warning w-100">Submit</button>
+          </div>
+          </form>
       </div>
     </div>
   </div>
@@ -76,6 +80,31 @@
 
   </main>
 
+  <div class="whatsapp-container1">
+    <div class="whatsapp-container">
+        <input type="checkbox" id="toggle-query" class="toggle-checkbox" />
+<label for="toggle-query" class="close-button" aria-label="Close">
+<i class="fa-solid fa-xmark"></i>
+</label>
+       
+        <div class="query-label">Have a query?</div>
+       
+      </div>
+      <div class="whatsapp-logo">
+        <a
+          href="https://wa.me/your-number"
+          target="_blank"
+          class="whatsapp-button"
+          aria-label="Contact us on WhatsApp"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+          />
+        </a>
+        
+      </div>
+  </div>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

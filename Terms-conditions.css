@@ -16,16 +16,12 @@
    
 }
 
-body {
-
-    line-height: 1.6;
-}
-
 .container {
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
     font-family: Times, sans-serif;
+    line-height: 1.6;
 }
 
 h1 {

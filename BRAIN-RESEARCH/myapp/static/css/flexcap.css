@@ -1,0 +1,1365 @@
+/* img content */
+.bottom-left{
+  position: absolute;
+  top:500px;
+  left: 80px;
+}
+.bottom-left h1{
+    font-size: 4rem;
+}
+.bottom-left h2{
+  font-size: 3rem;
+}
+/* img content */
+/* card1 content */
+.card{
+  border-radius: 1rem;
+  margin-top: 25px;
+  /* width: 100%; */
+  padding: 4px;
+  background-color:rgba(246, 242, 242, 0.886);
+}
+.card h1{
+  margin-top: auto;
+  font-size: 42px;
+}
+.card p{
+  margin-top: auto;
+  font-size: 22px;
+}
+
+.card img{
+  padding: 14px;
+  width: 95px;
+}
+.card .card-text{
+  padding: 20px;
+  font-size: 21px;
+}
+
+.card .margin-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 5px; */
+  padding: 5px;
+  grid-row-gap: 25px;
+}
+
+/* card1 content */
+/* Brain-Research-Desktop1 */
+.Brain-Research-Desktop1 {
+  border-radius: 1rem;
+  padding: 8px;
+  /* width: 100%; */
+  background-color:#2196f3;
+  color:white;
+}
+
+.Brain-Research-Desktop1 h3{
+  font-size: 30px;
+}
+.Brain-Research-Desktop1 p{
+  font-size: 22px;
+}
+
+/* Brain-Research-Desktop1 */
+/* Brain-Research-Desktop2 */
+.Brain-Research-Desktop2{
+    width: 100%;
+    padding: 26px;
+    height: 27rem;
+    border-radius:1rem;
+}
+.Brain-Research-Desktop2 h4{
+  font-size: 26px;
+}
+.Brain-Research-Desktop2 p{
+  font-size: 20px;
+}
+/* Brain-Research-Desktop2 */
+/* Brain-Research-Desktop3 */
+.Brain-Research-Desktop3{
+  width: 100%;
+  padding: 20px;
+  height: 27rem;
+  background-color:black;
+  border-radius:1rem;
+  color:white;
+}
+.Brain-Research-Desktop3 h4{
+font-size: 26px;
+}
+.Brain-Research-Desktop3 p{
+font-size: 20px;
+}
+/* Brain-Research-Desktop3 */
+/* Neuphony Headband Product Information and product description */
+.Neuphony-Headband-Product{
+  background-color:rgba(246, 242, 242, 0.886);
+    margin-top:2%
+}
+.Neuphony-Headband-Product h1{
+  text-align: center;
+  font-size: 35px;
+  padding: 25px;
+  font-weight: 700;
+}
+#default #xzoom-fancy{
+  margin: 2%;
+  width: 90%;
+}
+#default img{
+  width: 22%;
+}
+
+.Neuphony-Headband-Product .Neurofeedback-device h1{
+  text-align: left;
+  font-size: 40px;
+}
+.Neuphony-Headband-Product .Neurofeedback-device p{
+  text-align: left;
+  font-size: 20px;
+}
+/* Neuphony Headband Product Information and product description ends*/
+/*  product description starts*/
+.product-description h2{
+  text-align: center;
+  padding: 20px;
+  font-size: 45px;
+}
+
+/*  product description ends*/
+
+/* table content starts */
+ul li{
+  text-align: center;
+  list-style: none;
+  font-size: 30px;
+  padding: 12px;
+  font-weight: 400;
+  margin-right: 25px;
+}
+.producttabledesc2{
+    width: 100%;
+    font-size: 25px;
+}
+.producttabledesc2 th{
+  border: 3px solid black;
+   background-color: grey;
+  color: white;
+
+}
+.producttabledesc2  .light-grey{
+  background-color: lightgray;
+}
+
+
+.productdeschori-content h5{
+  font-size: 25px;
+}
+.productdeschori-content h3{
+  font-size: 32px;
+}
+/* table content ends */
+
+/* How to Use Ten Brain Research Flex Cap  */
+
+.brain-research-Desktop-app h2{
+  font-size: 30px;
+}
+.brain-research-Desktop-app p{
+  padding: 5px;
+  font-size: 22px;
+}
+/* How to Use Ten Brain Research Flex Cap end */
+
+
+/* features */
+.Features-Of-brain-Application{
+  background-color:rgba(246, 242, 242, 0.886);
+  margin-top:2%;
+  text-align: center;
+}
+.Features-Of-brain-Application h2{
+  padding: 15px;
+  font-size: 35px;
+}
+.Features-Of-brain-Application h3{
+  padding: 15px;
+  font-size: 30px;
+}
+/* features ends*/
+
+  /* card slides section */
+
+  .my-slider .card{
+    height:24rem;
+    margin: 0 8px 0 0;
+    line-height: 1.5
+  }
+
+  .my-slider .card img{
+    width: 100%;
+  }
+
+  .my-slider .card h4{
+    font-size: 25px;
+  }
+
+  .my-slider .card p{
+    font-size: 18px;
+  }
+
+  /* card slides section */
+
+/* Build with Neuphony starts */
+
+ .Build-with-header{
+  margin: 20px;
+  text-align: center;
+ }
+
+ .Build-with-header h2{
+  font-size: 40px;
+ }
+ .Build-with-header h4{
+  font-size: 30px;
+  margin: 5px;
+ }
+ .Build-with-header .card{
+  width: 40rem;
+  margin: 10px;
+ }
+ .Build-with-header .card img{
+  width: 100%;
+
+ }
+ .Build-with-header .card h5{
+  font-size: 30px;
+  text-align: center;
+ }
+ .Build-with-header .card p{
+  font-size: 20px;
+  text-align: center;
+ }
+/* Build with Neuphony ends */
+
+/* slider content starts */
+.slider-content-sli{
+  background-color:rgba(246, 242, 242, 0.886);
+  margin-top:2%;
+}
+.slider-content-sli {
+  text-align: center;
+  padding: 2%;
+}
+.slider-content-sli  .slider1 p{
+  font-size: 20px;
+}
+
+.slider-content-sli  .slider1 h5{
+  color: #2196f3;
+}
+/* slider content ends */
+
+@media (max-width:1400px){
+  /* img content */
+  .bottom-left{
+    position: absolute;
+    top:350px;
+    left: 60px;
+  }
+  .bottom-left h1{
+      font-size: 3rem;
+  }
+  .bottom-left h2{
+    font-size: 2rem;
+}
+  /* img content */
+  /* Neuphony Headband Product Information and product description */
+.Neuphony-Headband-Product{
+  background-color:rgba(246, 242, 242, 0.886);
+    margin-top:2%
+}
+.Neuphony-Headband-Product h1{
+  text-align: center;
+  font-size: 34px;
+  padding: 25px;
+  font-weight: 700;
+}
+#default #xzoom-fancy{
+  margin: 2%;
+  width: 26rem;
+}
+#default img{
+  width: 14%;
+}
+.Neuphony-Headband-Product .Neurofeedback-device h1{
+  text-align: left;
+  font-size: 32px;
+}
+.Neuphony-Headband-Product .Neurofeedback-device p{
+  text-align: left;
+  font-size: 18px;
+}
+/* Neuphony Headband Product Information and product description ends*/
+
+/* table content starts */
+ul li{
+  text-align: center;
+  list-style: none;
+  font-size: 25px;
+  padding: 10px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+.producttabledesc2{
+    width: 100%;
+    font-size: 20px;
+}
+
+.productdeschori-content h5{
+  font-size: 20px;
+}
+.productdeschori-content h3{
+  font-size: 27px;
+}
+/* table content ends */
+
+/* features */
+.Features-Of-brain-Application h2{
+  font-size: 30px;
+}
+.Features-Of-brain-Application h3{
+  font-size: 28px;
+}
+/* features ends*/
+
+/* card slides section */
+
+.my-slider .card{
+  height:24rem;
+
+}
+
+.my-slider .card img{
+  width: 100%;
+}
+
+.my-slider .card h4{
+  font-size: 20px;
+}
+
+.my-slider .card p{
+  font-size: 16px;
+}
+
+/* card slides section */
+
+/* Build with Neuphony starts */
+
+
+ .Build-with-header h2{
+  font-size: 30px;
+ }
+ .Build-with-header h4{
+  font-size: 20px;
+  margin: 5px;
+ }
+
+ .Build-with-header .card h5{
+  font-size: 25px;
+ }
+ .Build-with-header .card p{
+  font-size: 18px;
+  text-align: center;
+ }
+/* Build with Neuphony ends */
+
+/* slider content starts */
+.slider-content-sli h2{
+  font-size: 30px;
+}
+.slider-content-sli  .slider1 p{
+  font-size: 16px;
+}
+
+.slider-content-sli  .slider1 h5{
+  color: #2196f3;
+}
+/* slider content ends */
+}
+
+
+@media (max-width:1200px){
+  /* img content */
+  .bottom-left{
+    position: absolute;
+    top:300px;
+    left: 50px;
+  }
+  .bottom-left h1{
+      font-size: 2rem;
+  }
+  .bottom-left h2{
+    font-size: 25px;
+}
+  /* img content */
+
+  /* card1 content */
+.card{
+  border-radius: 1rem;
+  margin-top: 20px;
+  padding: 4px;
+  background-color:rgba(246, 242, 242, 0.886);
+}
+.card h1{
+  margin-top: auto;
+  font-size: 38px;
+}
+.card p{
+  margin-top: auto;
+  font-size: 20px;
+}
+
+.card img{
+  width: 90px;
+}
+.card .card-text{
+
+  font-size: 17px;
+}
+
+.card .margin-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  grid-row-gap: 20px;
+}
+
+/* card1 content */
+/* Brain-Research-Desktop1 */
+.Brain-Research-Desktop1 {
+  border-radius: 1rem;
+  padding: 8px;
+  /* width: 100%; */
+  background-color:#2196f3;
+  color:white;
+}
+
+.Brain-Research-Desktop1 h3{
+  font-size: 24px;
+}
+.Brain-Research-Desktop1 p{
+  font-size: 20px;
+}
+
+/* Brain-Research-Desktop1 */
+/* Brain-Research-Desktop2 */
+.Brain-Research-Desktop2{
+  height: 360px;
+    padding: 25px;
+    border-radius:1rem;
+}
+.Brain-Research-Desktop2 h4{
+  font-size: 24px;
+}
+.Brain-Research-Desktop2 p{
+  font-size: 18px;
+}
+/* Brain-Research-Desktop2 */
+/* Brain-Research-Desktop3 */
+.Brain-Research-Desktop3{
+  padding: 20px;
+  height: 360px;
+  background-color:black;
+  border-radius:1rem;
+  color:white;
+}
+.Brain-Research-Desktop3 h4{
+font-size: 24px;
+}
+.Brain-Research-Desktop3 p{
+font-size: 18px;
+}
+/* Brain-Research-Desktop3 */
+  /* table content starts */
+
+.product-description h2{
+    font-size: 40px;
+  }
+
+.productdeschori-content h5{
+  font-size: 20px;
+}
+.productdeschori-content h3{
+  font-size: 27px;
+}
+/* table content ends */
+/* How to Use Ten Brain Research Flex Cap  */
+
+.brain-research-Desktop-app h2{
+  font-size: 27px;
+}
+.brain-research-Desktop-app p{
+  padding: 4px;
+  font-size: 20px;
+}
+/* How to Use Ten Brain Research Flex Cap end */
+/* features */
+.Features-Of-brain-Application h2{
+  font-size: 26px;
+}
+.Features-Of-brain-Application h3{
+  font-size: 24px;
+}
+/* features ends*/
+/* card slides section */
+
+.my-slider .card{
+  height:22rem;
+}
+
+.my-slider .card img{
+  width: 100%;
+}
+
+.my-slider .card h4{
+  font-size: 20px;
+}
+
+.my-slider .card p{
+  font-size: 16px;
+}
+
+/* card slides section */
+
+
+/* Build with Neuphony starts */
+
+
+.Build-with-header h2{
+  font-size: 28px;
+ }
+ .Build-with-header h4{
+  font-size: 18px;
+ }
+
+ .Build-with-header .card{
+  width: 34rem;
+ }
+ .Build-with-header .card h5{
+  font-size: 24px;
+ }
+ .Build-with-header .card p{
+  font-size: 16px;
+ }
+/* Build with Neuphony ends */
+}
+
+
+@media (max-width:992px){
+  /* img content */
+  .bottom-left{
+    position: absolute;
+    top:220px;
+    left: 40px;
+  }
+  .bottom-left h1{
+      font-size: 28px;
+  }
+  .bottom-left h2{
+    font-size: 21px;
+}
+  /* img content */
+    /* card1 content */
+.card{
+  border-radius: 1rem;
+  margin-top: 20px;
+  padding: 3px;
+  background-color:rgba(246, 242, 242, 0.886);
+}
+.card h1{
+  margin-top: auto;
+  font-size: 30px;
+}
+.card p{
+  margin-top: auto;
+  font-size: 18px;
+}
+
+.card img{
+  width: 70px;
+}
+.card .card-text{
+
+  font-size: 13px;
+}
+
+.card .margin-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  grid-row-gap: 20px;
+}
+
+/* card1 content */
+/* Brain-Research-Desktop1 */
+.Brain-Research-Desktop1 {
+  border-radius: 1rem;
+  padding: 8px;
+  /* width: 100%; */
+  background-color:#2196f3;
+  color:white;
+}
+
+.Brain-Research-Desktop1 h3{
+  font-size: 20px;
+}
+.Brain-Research-Desktop1 p{
+  font-size: 16px;
+}
+
+/* Brain-Research-Desktop1 */
+/* Brain-Research-Desktop2 */
+.Brain-Research-Desktop2{
+  height: 307px;
+    padding: 20px;
+    border-radius:1rem;
+}
+.Brain-Research-Desktop2 h4{
+  font-size: 20px;
+}
+.Brain-Research-Desktop2 p{
+  font-size: 16px;
+}
+/* Brain-Research-Desktop2 */
+/* Brain-Research-Desktop3 */
+.Brain-Research-Desktop3{
+  height: 307px;
+  padding: 14px;
+
+  background-color:black;
+  border-radius:1rem;
+  color:white;
+}
+.Brain-Research-Desktop3 h4{
+font-size: 18px;
+}
+.Brain-Research-Desktop3 p{
+font-size: 16px;
+}
+/* Brain-Research-Desktop3 */
+
+  /* Neuphony Headband Product Information and product description */
+
+  #default #xzoom-fancy{
+
+    width: 80%;
+  }
+
+  #default img{
+    width: 16%;
+  }
+  .Neuphony-Headband-Product .Neurofeedback-device h1{
+
+    font-size: 25px;
+  }
+  .Neuphony-Headband-Product .Neurofeedback-device p{
+
+    font-size: 15px;
+  }
+  /* Neuphony Headband Product Information and product description ends*/
+
+  /* table content starts */
+
+.product-description h2{
+  font-size: 30px;
+}
+ul li{
+
+  font-size: 25px;
+
+}
+.producttabledesc2{
+    width: 100%;
+    font-size: 20px;
+}
+
+.productdeschori-content h5{
+  font-size: 20px;
+}
+.productdeschori-content h3{
+  font-size: 23px;
+}
+/* table content ends */
+
+/* How to Use Ten Brain Research Flex Cap  */
+
+.brain-research-Desktop-app h2{
+  font-size: 22px;
+}
+.brain-research-Desktop-app p{
+  padding: 3px;
+  font-size: 16px;
+}
+/* How to Use Ten Brain Research Flex Cap end */
+/* features */
+.Features-Of-brain-Application h2{
+  font-size: 27px;
+}
+.Features-Of-brain-Application h3{
+  font-size: 24px;
+}
+/* features ends*/
+/* card slides section */
+
+.my-slider .card{
+  height:20rem;
+}
+
+.my-slider .card img{
+  width: 100%;
+}
+
+.my-slider .card h4{
+  font-size: 18px;
+}
+
+.my-slider .card p{
+  font-size: 16px;
+}
+
+/* card slides section */
+/* Build with Neuphony starts */
+
+
+.Build-with-header h2{
+  font-size: 27px;
+ }
+ .Build-with-header h4{
+  font-size: 16px;
+ }
+
+ .Build-with-header .card{
+  width: 28rem;
+ }
+ .Build-with-header .card h5{
+  font-size: 20px;
+ }
+ .Build-with-header .card p{
+  font-size: 16px;
+ }
+/* Build with Neuphony ends */
+
+/* slider content starts */
+.slider-content-sli h2{
+  font-size: 25px;
+}
+.slider-content-sli  .slider1 p{
+  font-size: 15px;
+}
+
+/* slider content ends */
+}
+
+
+@media (max-width:768px){
+  /* img content */
+  .bottom-left{
+    position: absolute;
+    top:150px;
+    left: 38px;
+  }
+  .bottom-left h1{
+      font-size: 25px;
+  }
+  .bottom-left h2{
+    font-size: 19px;
+}
+  /* img content */
+    /* card1 content */
+.card{
+  border-radius: 1rem;
+  margin-top: 10px;
+  padding: 1px;
+  background-color:rgba(246, 242, 242, 0.886);
+}
+.card h1{
+  font-size: 25px;
+}
+.card p{
+  font-size: 14px;
+}
+
+.card img{
+  width: 70px;
+}
+
+.card .card-text{
+  padding: 4px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.card .margin-bottom {
+  display: flex;
+  padding: 0px;
+  flex-wrap: wrap;
+  grid-row-gap: 8px;
+}
+
+/* card1 content */
+/* Brain-Research-Desktop1 */
+.Brain-Research-Desktop1 {
+  border-radius: 1rem;
+  padding: 4px;
+  background-color:#2196f3;
+  color:white;
+}
+
+.Brain-Research-Desktop1 h3{
+  font-size: 18px;
+}
+.Brain-Research-Desktop1 p{
+  font-size: 12px;
+}
+
+/* Brain-Research-Desktop1 */
+/* Brain-Research-Desktop2 */
+.Brain-Research-Desktop2{
+    height: 236px;
+    padding: 10px;
+    width: 170px;
+    border-radius:1rem;
+}
+.Brain-Research-Desktop2 h4{
+  font-size: 16px;
+}
+.Brain-Research-Desktop2 p{
+  font-size: 12px;
+}
+/* Brain-Research-Desktop2 */
+/* Brain-Research-Desktop3 */
+.Brain-Research-Desktop3{
+  height: 236px;
+  padding: 10px;
+  width: 170px;
+  background-color:black;
+  border-radius:1rem;
+  color:white;
+}
+.Brain-Research-Desktop3 h4{
+font-size: 16px;
+}
+.Brain-Research-Desktop3 p{
+font-size: 12px;
+}
+/* Brain-Research-Desktop3 */
+ /* Neuphony Headband Product Information and product description */
+
+ #default img{
+  width: 24%;
+}
+
+.Neuphony-Headband-Product .Neurofeedback-device h1{
+  text-align: left;
+  font-size: 22px;
+}
+.Neuphony-Headband-Product .Neurofeedback-device p{
+  text-align: left;
+  font-size: 11px;
+}
+/* Neuphony Headband Product Information and product description ends*/
+
+  /* table content starts */
+
+.product-description h2{
+    font-size: 25px;
+  }
+  ul li{
+    font-size: 20px;
+
+  }
+  .producttabledesc2{
+      width: 100%;
+      font-size: 14px;
+  }
+
+  .productdeschori-content h5{
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .productdeschori-content h3{
+    font-size: 17px;
+  }
+  /* table content ends */
+/* How to Use Ten Brain Research Flex Cap  */
+
+.brain-research-Desktop-app h2{
+  font-size: 16px;
+}
+.brain-research-Desktop-app p{
+  padding: 2px;
+  font-size: 14px;
+}
+/* How to Use Ten Brain Research Flex Cap end */
+
+/* features */
+.Features-Of-brain-Application h2{
+  font-size: 22px;
+}
+.Features-Of-brain-Application h3{
+  padding: 0;
+  font-size: 20px;
+}
+/* features ends*/
+/* card slides section */
+
+.my-slider .card{
+  height:18rem;
+}
+
+.my-slider .card img{
+  width: 100%;
+}
+
+.my-slider .card h4{
+  font-size: 17px;
+}
+
+.my-slider .card p{
+  font-size: 14px;
+}
+
+/* card slides section */
+
+/* Build with Neuphony starts */
+.Build-with-header h2{
+  font-size: 25px;
+ }
+ .Build-with-header h4{
+  font-size: 16px;
+ }
+
+ .Build-with-header .card{
+  width: 21rem;
+ }
+ .Build-with-header .card h5{
+  font-size: 16px;
+ }
+ .Build-with-header .card p{
+  font-size: 13px;
+ }
+/* Build with Neuphony ends */
+/* slider content starts */
+.slider-content-sli h2{
+  font-size: 25px;
+}
+.slider-content-sli  .slider1 p{
+  font-size: 12px;
+}
+.slider-content-sli  .slider1 h5{
+  font-size: 14px;
+}
+/* slider content ends */
+}
+
+
+@media (max-width:576px){
+  /* img content */
+  .bottom-left{
+    position: absolute;
+    top:100px;
+    left: 32px;
+  }
+  .bottom-left h1{
+      font-size: 18px;
+  }
+  .bottom-left h2{
+    font-size: 14px;
+}
+  /* img content */
+    /* card1 content */
+.card{
+  border-radius:5px;
+  margin-top: 10px;
+  padding: 2px;
+  background-color:rgba(246, 242, 242, 0.886);
+}
+.card h1{
+  font-size: 18px;
+}
+.card p{
+  font-size: 12px;
+}
+
+.card img{
+  width: 50px;
+}
+
+.card .card-text{
+  padding: 1px;
+  text-align: center;
+  font-size: 9px;
+}
+
+.card .margin-bottom {
+  display: flex;
+  padding: 0px;
+  flex-wrap: wrap;
+  grid-row-gap: 8px;
+}
+
+/* card1 content */
+/* Brain-Research-Desktop1 */
+.Brain-Research-Desktop1 {
+  border-radius:5px;
+  padding: 3px;
+  background-color:#2196f3;
+  color:white;
+}
+
+.Brain-Research-Desktop1 h3{
+  font-size: 12px;
+}
+.Brain-Research-Desktop1 p{
+  font-size: 10px;
+}
+
+/* Brain-Research-Desktop1 */
+/* Brain-Research-Desktop2 */
+.Brain-Research-Desktop2{
+    height: 184px;
+
+    /* padding: 10px; */
+    width: 120px;
+    border-radius:5px;
+}
+.Brain-Research-Desktop2 h4{
+  font-size: 12px;
+}
+.Brain-Research-Desktop2 p{
+
+  font-size: 10px;
+}
+/* Brain-Research-Desktop2 */
+/* Brain-Research-Desktop3 */
+.Brain-Research-Desktop3{
+  height: 184px;
+  /* padding: 10px; */
+  width: 120px;
+  background-color:black;
+  border-radius:5px;
+  color:white;
+}
+.Brain-Research-Desktop3 h4{
+font-size: 12px;
+}
+.Brain-Research-Desktop3 p{
+font-size: 10px;
+}
+/* Brain-Research-Desktop3 */
+
+
+#default img{
+  width: 60px;
+}
+.Neuphony-Headband-Product .Neurofeedback-device h1{
+  text-align: left;
+  font-size: 20px;
+}
+.Neuphony-Headband-Product .Neurofeedback-device p{
+  text-align: left;
+  font-size: 10px;
+}
+/* Neuphony Headband Product Information and product description ends*/
+
+  /* table content starts */
+
+  .product-description h2{
+    font-size: 20px;
+  }
+  ul li{
+    font-size: 15px;
+
+  }
+  .producttabledesc2{
+      width: 100%;
+      font-size: 10px;
+  }
+
+  .productdeschori-content h5{
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .productdeschori-content h3{
+    font-size: 12px;
+  }
+  /* table content ends */
+
+/* How to Use Ten Brain Research Flex Cap  */
+
+.brain-research-Desktop-app h2{
+  font-size: 14px;
+}
+.brain-research-Desktop-app p{
+  padding: 2px;
+  font-size: 13px;
+}
+/* How to Use Ten Brain Research Flex Cap end */
+
+/* features */
+.Features-Of-brain-Application h2{
+  font-size: 20px;
+}
+.Features-Of-brain-Application h3{
+  padding: 0;
+  font-size: 18px;
+}
+/* features ends*/
+
+
+/* Build with Neuphony starts */
+
+
+ .Build-with-header .card{
+  width: 30rem;
+ }
+ .Build-with-header .card h5{
+  font-size: 18px;
+ }
+ .Build-with-header .card p{
+  font-size: 16px;
+ }
+/* Build with Neuphony ends */
+
+/* card slides section */
+
+.my-slider .card{
+  height:25rem;
+}
+
+.my-slider .card img{
+  width: 100%;
+}
+
+.my-slider .card h4{
+  font-size: 18px;
+}
+
+.my-slider .card p{
+  font-size: 15px;
+}
+
+/* card slides section */
+
+}
+
+@media (max-width:320px){
+    /* img content */
+    .bottom-left{
+      position: absolute;
+      top:40px;
+      left: 20px;
+    }
+    .bottom-left h1{
+        font-size: 11px;
+    }
+    .bottom-left h2{
+      font-size: 10px;
+  }
+    /* img content */
+      /* card1 content */
+  .card{
+
+    border-radius:5px;
+    margin-top: 8px;
+    padding: 2px;
+    background-color:rgba(246, 242, 242, 0.886);
+  }
+  .card h1{
+    font-size: 16px;
+  }
+  .card p{
+    font-size: 13px;
+  }
+
+  .card img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+
+  }
+
+  .card .card-text{
+    padding: 1px;
+    font-size: 10px;
+  }
+
+  .card .margin-bottom {
+    display: flex;
+    padding: 0px;
+    flex-wrap: wrap;
+    grid-row-gap: 5px;
+  }
+  /* card1 content */
+  /* Brain-Research-Desktop1 */
+  .Brain-Research-Desktop1 {
+    border-radius:5px;
+    padding: 5px;
+    background-color:#2196f3;
+    color:white;
+  }
+
+  .Brain-Research-Desktop1 h3{
+    font-size: 16px;
+  }
+  .Brain-Research-Desktop1 p{
+    font-size: 14px;
+  }
+
+  /* Brain-Research-Desktop1 */
+  /* Brain-Research-Desktop2 */
+  .Brain-Research-Desktop2{
+      /* height: 180px; */
+
+      padding: 10px;
+      width: 270px;
+      border-radius:5px;
+  }
+  .Brain-Research-Desktop2 h4{
+    font-size: 16px;
+  }
+  .Brain-Research-Desktop2 p{
+
+    font-size: 14px;
+  }
+  /* Brain-Research-Desktop2 */
+  /* Brain-Research-Desktop3 */
+  .Brain-Research-Desktop3{
+
+    /* padding: 10px; */
+    width: 270px;
+    background-color:black;
+    border-radius:5px;
+    color:white;
+  }
+  .Brain-Research-Desktop3 h4{
+  font-size: 16px;
+  }
+  .Brain-Research-Desktop3 p{
+  font-size: 14px;
+  }
+  /* Brain-Research-Desktop3 */
+/* Neuphony Headband Product Information and product description */
+#default #xzoom-fancy{
+  width: 90%;
+}
+#default img{
+  display: inline-block;
+  width: 30%;
+}
+.Neuphony-Headband-Product .Neurofeedback-device h1{
+  text-align: left;
+  font-size: 18px;
+}
+.Neuphony-Headband-Product .Neurofeedback-device p{
+  text-align: left;
+  font-size: 9px;
+}
+/* Neuphony Headband Product Information and product description ends*/
+/* table content starts */
+.product-description h2{
+  font-size: 20px;
+  padding: 0px;
+}
+ul li{
+  font-size: 12px;
+}
+.producttabledesc2{
+    width: 100%;
+    font-size: 10px;
+}
+.productdeschori-content h5{
+  font-size: 10px;
+  font-weight: 400;
+}
+.productdeschori-content h3{
+  font-size: 11px;
+}
+/* table content ends */
+
+/* How to Use Ten Brain Research Flex Cap  */
+
+.brain-research-Desktop-app h2{
+  font-size: 14px;
+}
+.brain-research-Desktop-app p{
+  padding: 2px;
+  font-size: 13px;
+}
+/* How to Use Ten Brain Research Flex Cap end */
+
+/* features */
+.Features-Of-brain-Application h2{
+  font-size: 18px;
+}
+.Features-Of-brain-Application h3{
+  padding: 0;
+  font-size: 15px;
+}
+/* features ends*/
+
+
+
+/* card slides section */
+
+.my-slider .card{
+  height:18rem;
+}
+
+.my-slider .card img{
+  width: 100%;
+}
+
+.my-slider .card h4{
+  font-size: 17px;
+}
+
+.my-slider .card p{
+  font-size: 14px;
+}
+
+/* card slides section */
+
+    /* Build with Neuphony starts */
+
+
+ .Build-with-header h2{
+
+  font-size: 22px;
+ }
+ .Build-with-header h4{
+  font-size: 16px;
+
+ }
+ .Build-with-header .card h5{
+  font-size: 16px;
+
+ }
+ .Build-with-header .card p{
+  font-size: 15px;
+}
+/* Build with Neuphony ends */
+/* slider content starts */
+
+
+.slider-content-sli h2{
+  font-size: 18px;
+}
+.slider-content-sli  .slider1 p{
+  font-size: 12px;
+}
+
+/* slider content ends */
+}

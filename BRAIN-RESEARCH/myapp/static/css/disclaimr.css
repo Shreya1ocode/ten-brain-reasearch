@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+h1 {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+p, li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.bg-light {
+    background-color: #bfcfde !important;
+}
+
+input.form-control {
+    max-width: 300px;
+}
+
+.whatsapp-logo{
+    position: fixed;
+    bottom:20px;
+    left:30px;
+   
+  }
+  
+  .whatsapp-container {
+    position: fixed;
+    bottom: 5rem;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    
+  }
+
+ 
+  .close-button {
+    background-color:black;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color:#ffffff;
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .close-button i {
+    font-size: 1.5rem;
+  }
+  
+  .query-label {
+    background-color: #ffffff;
+    color: #000;
+    padding: 10px 12px;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    white-space: nowrap;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:1px transparent rgb(123, 121, 121);
+  }
+
+.toggle-checkbox {
+    display: none;
+  }
+  .toggle-checkbox:checked ~ .query-label {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .toggle-checkbox:checked + .close-button {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .whatsapp-button img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(100%);
+  }
+  
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  }
+
+
+  /* Whatsapp logo end */

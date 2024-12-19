@@ -13,8 +13,8 @@ def returns(request):
 def reviews(request):
     return render(request, 'Reviews_and_testimonial.html')
 
-def tc(request):
-    return render(request, 't_and_c.html')
+def terms_conditions(request):
+    return render(request, 'Terms-conditions.html')
 
 def disclaimer(request):
     return render(request, 'disclaimer.html')
@@ -35,8 +35,9 @@ def setup(request):
 def flexcap(request):
     return render(request, 'flexcap.html')
 
-def headband(request):
-    return render(request, 'eeg-headband.html')
+
+
+
 
 
 

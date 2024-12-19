@@ -23,14 +23,14 @@ urlpatterns = [
     path('privacy/', include('myapp.urls')), 
     path('return/', include('myapp.urls')),  
     path('reviews/', include('myapp.urls')),  
-    path('tc/', include('myapp.urls')),  
+    path('terms_conditions/', include('myapp.urls')),  
     path('disclaimer/', include('myapp.urls')),   
     path('blog/', include('myapp.urls')),   
     path('desktop/', include('myapp.urls')),
     path('aboutus/', include('myapp.urls')),
     path('setup/', include('myapp.urls')),
     path('flexcap/', include('myapp.urls')),
-    path('eeg-headband/', include('myapp.urls')),
+
         
 ]
 

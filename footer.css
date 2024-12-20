@@ -1,7 +1,7 @@
-body , html {
+/* body , html {
 
     font-size: 17px;
-}
+} */
 
 .shipping svg{
     width: 12%;
@@ -60,4 +60,5 @@ body , html {
     .row-footer3{
         font-size: small;
     }
-}
+    
+    }

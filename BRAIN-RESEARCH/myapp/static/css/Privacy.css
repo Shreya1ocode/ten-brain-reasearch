@@ -94,14 +94,11 @@ main {
   list-style-type: circle;
 }
 
-a {
-  color: #007bff;
+.policy-section a {
+
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
 
 .address h2 {
   font-size: 20px;

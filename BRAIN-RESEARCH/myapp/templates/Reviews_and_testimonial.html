@@ -1,5 +1,5 @@
-
-
+{% extends 'base.html' %}
+{% block 'main' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +16,7 @@
 
    
 </head>
-<body> 
-    {% include 'header1.html' %}
+<body>
     <div class="hero-section">
         <img src="{% static 'images\brain-img.png' %}" alt="Hero Image">
         <div class="hero-text">Ten Brain Research Customer Reviews & Testimonials</div>
@@ -117,8 +116,10 @@
           </div>
       </div>
 
-      <!-- footer content starts -->
+      
     
-      {% include 'footer.html' %}
+      
 </body>
 </html>
+
+{% endblock 'main' %}

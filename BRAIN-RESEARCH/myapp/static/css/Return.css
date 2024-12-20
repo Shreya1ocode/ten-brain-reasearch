@@ -1,249 +1,296 @@
-
-
-
-  /* General Styles */
-* {
-
-  margin: 0;
-  padding: 0;
+/* General Styles */
+body {
+    font-family: Times, serif;
+    margin: 0;
+    padding: 0;
+   
+    
+  }
   
-  
-}
-
-.container {
-  max-width: 900px;
-  margin:  30px auto;
-  padding: 20px 30px;
-  line-height: 1.5;
-  font-family: Times, serif;
-  /* box-sizing: border-box; */
-
-}
-
-h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
-  /* color: #444; */
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin-top: 20px;
-  /* color: #555; */
-}
-
-h3 {
-  font-size: 1.2em;
-  margin-top: 15px;
-  /* color: #666; */
-}
-
-p {
-  margin-bottom: 10px;
-  font-size: 1em;
-  line-height: 1.6;
-}
-
-ol {
-  margin-left: 20px;
-  padding-left: 20px;
-}
-
-ul {
-  margin-left: 20px;
-  padding-left: 20px;
-}
-
-strong {
-  color: #000;
-}
-
-a {
-  color: #1a73e8;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-
-/* Responsive Design */
-
-@media (max-width: 768px) {
   .container {
-    padding: 15px;
-    margin:auto;
-
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    /* background: #fff; */
+    border-radius: 8px;
+    line-height: 1.6;
+    box-sizing: border-box;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   }
-
-  h1 {
-    font-size: 1.8em;
-  }
-
-  h2 {
-    font-size: 1.3em;
-  }
-
-  h3 {
-    font-size: 1.1em;
-  }
-
-  p {
-    font-size: 0.9em;
-  }
-}
-
-.subscription-section {
-  text-align: center;
-  background-color: #d6d6d3;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.subscription-section h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #333333;
-}
-
-.subscription-section p {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #666666;
-}
-
-.subscription-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.subscription-form input[type="email"] {
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  flex: 1;
-  max-width: 300px;
-}
-
-.subscription-form button {
-  padding: 10px 20px;
-  font-size: 14px;
-  color: #ffffff;
-  background-color: #4a69bd;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.subscription-form button:hover {
-  background-color: #3b55a3;
-}
-
-@media (max-width: 600px) {
-  .subscription-form {
-    flex-direction: column;
-  }
-
-  .subscription-form input[type="email"] {
-    margin-bottom: 10px;
-  }
-}
- /* whatsapp logo */
- .whatsapp-logo{
-  position: fixed;
-  bottom:20px;
-  left:30px;
- 
-}
-
-.whatsapp-container {
-  position: fixed;
-  bottom: 5rem;
-  left: 20px;
-  display: flex;
-  align-items: center;
-  z-index: 1000;
   
-}
+  h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    /* color: #444; */
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    /* color: #555; */
+  }
+  
+  h3 {
+    font-size: 1.2em;
+    margin-top: 15px;
+    /* color: #666; */
+  }
+  
+  p {
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  
+  ol {
+    margin-left: 20px;
+    padding-left: 20px;
+  }
+  
+  ul {
+    margin-left: 20px;
+    padding-left: 20px;
+  }
+  
+  strong {
+    color: #000;
+  }
+  
+  a {
+  
+    text-decoration: none;
+  }
 
+  
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 1.8em;
+    }
+  
+    h2 {
+      font-size: 1.3em;
+    }
+  
+    h3 {
+      font-size: 1.1em;
+    }
+  
+    p {
+      font-size: 0.9em;
+    }
+  }
+  .subscription-section {
+    text-align: center;
+    background-color: #d6d6d3;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subscription-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  
+  .subscription-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666666;
+  }
+  
+  .subscription-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .subscription-form input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .subscription-form button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #4a69bd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscription-form button:hover {
+    background-color: #3b55a3;
+  }
+  
+  @media (max-width: 600px) {
+    .subscription-form {
+      flex-direction: column;
+    }
+  
+    .subscription-form input[type="email"] {
+      margin-bottom: 10px;
+    }
+  }
+   /* whatsapp logo */
+   .whatsapp-logo{
+    position: fixed;
+    bottom:20px;
+    left:30px;
+   
+  }
+  
+  .whatsapp-container {
+    position: fixed;
+    bottom: 5rem;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    
+  }
 
-.close-button {
-  background-color:black;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 10px;
-  color:#ffffff;
-  border-radius: 50%;
-  width:30px;
-  height:30px;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.close-button i {
-  font-size: 1.5rem;
-}
-
-.query-label {
-  background-color: #ffffff;
-  color: #000;
-  padding: 10px 12px;
-  font-size: 15px;
-  font-weight: 500;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  margin-right: 10px;
-  white-space: nowrap;
-  border-radius: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border:1px transparent rgb(123, 121, 121);
-}
+ 
+  .close-button {
+    background-color:black;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color:#ffffff;
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .close-button i {
+    font-size: 1.5rem;
+  }
+  
+  .query-label {
+    background-color: #ffffff;
+    color: #000;
+    padding: 10px 12px;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    white-space: nowrap;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:1px transparent rgb(123, 121, 121);
+  }
 
 .toggle-checkbox {
-  display: none;
+    display: none;
+  }
+  .toggle-checkbox:checked ~ .query-label {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .toggle-checkbox:checked + .close-button {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .whatsapp-button img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(100%);
+  }
+  
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  }
+
+
+  /* Whatsapp logo end */
+ 
+
+
+.footerimg1{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 53px;
 }
-.toggle-checkbox:checked ~ .query-label {
-  opacity: 0;
-  visibility: hidden;
+.footercontent1{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 15px;
 }
-.toggle-checkbox:checked + .close-button {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+.large{
+  font-size: 22px;
 }
-
-.whatsapp-button {
-  width: 50px;
-  height: 50px;
-  background-color: #25d366;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s, box-shadow 0.2s;
+.small {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.whatsapp-button img {
-  width: 24px;
-  height: 24px;
-  filter: brightness(100%);
+.Company{
+  text-align: left;
+  margin-left: 220px;
 }
 
-.whatsapp-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+#policy{
+  text-decoration: none;
+  text-align: justify;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.policy1{
+  margin-left: 240px;
+  font-size: 110%;
+  line-height: 1;
+}
+.img{
+  
+  margin: 20px;
+}
+.row-footer1{
+  text-align: center;
+  margin-left: 180px;
 }
 
-
-/* Whatsapp logo end */
-
-
+.row-footer2{
+  text-align: left;
+  margin-left: 150px;
+}
+    
+    
+    @media (max-width: 600px) {
+      .query-label {
+        display: none; 
+      }
+    }

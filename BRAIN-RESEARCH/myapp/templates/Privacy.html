@@ -1,4 +1,5 @@
-{% load static %}
+{% extends 'base.html' %}
+{% block 'main' %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy</title>
    
-   
+    {% load static %}
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -15,7 +16,7 @@
     <link rel="stylesheet" href="{% static 'css/Privacy.css' %}" />
   </head>
   <body>
-    {% include 'header1.html'%}
+    
     <div class="heading">
    
       <h1>PRIVACY POLICY</h1>
@@ -35,7 +36,7 @@
             reason, we have developed an all-inclusive platform that serves a
             wide spectrum of people. In order to secure your data provided on
             our platform, Ten Brain Research or
-            <a href="mailto:info@entrepreneurshipnetwork.net"
+            <a style="text-decoration: none;" href="mailto:info@entrepreneurshipnetwork.net"
               >info@entrepreneurshipnetwork.net</a
             >
             we have implemented this Privacy Policy (referred to as the
@@ -810,6 +811,7 @@
   
                   <!-- footer content starts -->
      
-      {% include 'footer.html' %}
+      
   </body>
 </html>
+{% endblock 'main' %}

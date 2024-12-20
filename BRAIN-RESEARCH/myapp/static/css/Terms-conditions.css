@@ -53,10 +53,10 @@ a {
     color: #007BFF;
     text-decoration: none;
 }
-
+/* 
 a:hover {
     text-decoration: underline;
-}
+} */
 
 strong {
     color: #000;

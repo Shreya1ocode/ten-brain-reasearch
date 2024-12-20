@@ -14,6 +14,8 @@ urlpatterns = [
     path('setup/',views.setup, name='setup'),
     path('flexcap/',views.flexcap, name='flexcap'),
      path('refund/',views.refund, name='refund'),
+    
+     path('returns/',views.returns, name='returns'),
 ]
 
 

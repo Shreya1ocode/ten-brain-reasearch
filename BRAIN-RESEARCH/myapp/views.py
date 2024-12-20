@@ -35,7 +35,8 @@ def setup(request):
 def flexcap(request):
     return render(request, 'flexcap.html')
 
-
+def refund(request):
+    return render(request, 'Refund.html')
 
 
 

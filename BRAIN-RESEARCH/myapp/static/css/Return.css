@@ -2,18 +2,22 @@
 
 
   /* General Styles */
-body {
-  font-family: Times, serif;
+* {
+
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  line-height: 1.5;
+  
+  
 }
 
 .container {
   max-width: 900px;
-  margin: auto;
-  padding: 60px;
+  margin:  30px auto;
+  padding: 20px 30px;
+  line-height: 1.5;
+  font-family: Times, serif;
+  /* box-sizing: border-box; */
+
 }
 
 h1 {
@@ -71,6 +75,7 @@ a:hover {
   .container {
     padding: 15px;
     margin:auto;
+
   }
 
   h1 {

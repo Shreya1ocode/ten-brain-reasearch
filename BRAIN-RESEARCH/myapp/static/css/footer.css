@@ -1,5 +1,5 @@
-body , html {
-    font-style: italic;
+ .main{
+
     font-size: 17px;
 }
 
@@ -35,9 +35,7 @@ body , html {
 
 
 @media  (max-width : 320px){
-    body, html{
-        text-align: center;
-    }
+    
     .w3-black .shipping h4{
         font-size: 22px;
     }

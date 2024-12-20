@@ -30,6 +30,7 @@ urlpatterns = [
     path('aboutus/', include('myapp.urls')),
     path('setup/', include('myapp.urls')),
     path('flexcap/', include('myapp.urls')),
+    path('refund/', include('myapp.urls')),
 
         
 ]

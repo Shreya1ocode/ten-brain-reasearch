@@ -16,11 +16,11 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{% static 'footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
   </head>
   <body>
     <!-- footer content starts -->
-    <div class="container-fliud text-bg-dark">
+    <div class="container-fliud text-bg-dark main ">
       <div class="row">
         <div class="col-sm-4 w3-black">
           <div class="shipping">
@@ -101,14 +101,16 @@
             <h4>Service</h4>
             <a href=""><p>Frequently Asked Questions</p></a>
             <a href="{% url 'setup'%}"><p>Set up Guide For Ten Brain research Flexcap</p></a>
-            <a href=""><p>Desktop App User Manual</p></a>
+            <a href="{% url 'desktop' %}"><p>Desktop App User Manual</p></a>
             <a href=""><p>How to Setup EXG Synapse</p></a>
             <a href=""><p>Blog</p></a>
             <a href=""><p>Contact Us</p></a>
           </div>
         </div>
       </div>
-
+      <div class="row-footer3 mt-2" >
+        <p>Copyright 2024 &copy; Ten Entrepreneurship Network All Rights Reserved</p>
+    </div>
     </div>
     <!-- footer content ends -->
   </body>

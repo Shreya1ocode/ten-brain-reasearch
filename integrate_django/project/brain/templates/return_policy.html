@@ -1,0 +1,284 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+
+
+<style>
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .content {
+    padding: 20px;
+  }
+  /* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    /* color: #333; */
+    /* background-color: #f9f9f9; 
+  } */
+  
+  .heading {
+    text-align: center;
+    padding: 20px 10px;
+    /* background-color: #fff; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .heading h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 0;
+    color: #000;
+  }
+  
+  main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    /* background-color: #fff; */
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+    border-radius: 8px;
+  }
+  
+  .policy-section {
+    margin-bottom: 20px;
+  }
+  
+  .policy-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    /* color: #444; */
+  }
+  
+  .policy-section ul,
+  .policy-section ol {
+    margin-left: 20px;
+    padding-left: 0;
+  }
+  
+  .policy-section ul li,
+  .policy-section ol li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+    /* color: #555; */
+  }
+  
+  .policy-section ol li {
+    list-style-type: disc;
+  }
+  .policy-section ol ol li {
+    list-style-type: circle;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .address h2 {
+    font-size: 20px;
+  }
+  
+  .subscription-section {
+    text-align: center;
+    background-color: #f1f1f1 !important;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subscription-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  
+  .subscription-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666666;
+  }
+  
+  .subscription-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .subscription-form input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .subscription-form button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #4a69bd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscription-form button:hover {
+    background-color: #3b55a3;
+  }
+  
+  @media (max-width: 600px) {
+    .subscription-form {
+      flex-direction: column;
+    }
+  
+    .subscription-form input[type="email"] {
+      margin-bottom: 10px;
+    }
+  }
+  
+  .whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .query-label {
+    background-color: #ffffff;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 40%;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+  
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .whatsapp-button img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(100%);
+  }
+  
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  }
+  
+  
+  @media (max-width: 600px) {
+    .query-label {
+      display: none; 
+    }
+  }
+  </style>
+
+<div class="heading">
+    <h1>RETURN POLICY</h1>
+  </div>
+  <main>
+    <section class="policy-section">
+      <p>Thank you for choosing our PRODUCTS. We kindly ask you to review our policy, terms, and procedures carefully. These guidelines offer essential details about your rights and responsibilities as a user when purchasing any PRODUCT from us.</p>
+
+        <h2>TERMS OF RETURN</h2>
+        <h3>IN RESPECT OF PRODUCT:</h3>
+        <p>The Company will approve returns for PRODUCTS sold under the following conditions:</p>
+        <ol>
+            <li>If the User is dissatisfied with the PRODUCT, they must provide an adequate justification for initiating a return.</li>
+            <li>If the PRODUCT does not match its description.
+                <ul>
+                    <li>When the user opens the box, they discover that the product is ruined.</li>
+                </ul>
+            </li>
+            <li>If Package is already opened on delivery.</li>
+        </ol>
+        <p>Within seven days of the product's delivery date, the company welcomes returns as long as the product hasn't been used, recycled, or damaged by the user. The products must be returned with the included accessories. We may be reached by users via a <a href="mailto:info@entrepreneurshipnetwork.net">info@entrepreneurshipnetwork.net</a> request. Please be aware that receiving supporting documentation, such as unpacking videos and photos, is a must for processing a return request..</p>
+        <p><strong>*At the company's discretion, the full refund will only be granted if the product is returned undamaged.</strong></p>
+
+        <h2>CANCELLATION TERMS</h2>
+        <ol>
+            <li>Within 24 hours, the company will accept cancellations of purchased products, and the payment will be reimbursed in accordance with the refund terms.</li>
+            <li>If the product is canceled within 24 hours of the order, the company will accept it and repay the money in accordance with the refund terms.</li></li>
+        </ol>
+        
+    </section>
+    
+  </main>
+   
+  <div class="subscription-section">
+    <h2>New from Ten Brain Research?</h2>
+    <p>Get the latest from Ten Brain Research by subscribing now.</p>
+    <form class="subscription-form" method="post" action="/submit_subscription">
+      {% csrf_token %}
+      {% if success_msg %}
+                    <div id="alerts" class="alert alert-success" role="alert">{{success_msg}}
+                    </div>
+                {% endif %}
+      <input type="email" name="uemail" placeholder="Email" required  />
+      <input type="hidden" name="page_url" value="return_policy">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+  <!-- <div class="whatsapp-container">
+    <div class="query-label">Have a query?</div>
+    <div>
+      <a
+        href="https://wa.me/your-number"
+        target="_blank"
+        class="whatsapp-button"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+        />
+      </a>
+    </div>
+  </div>     -->
+      
+{% endblock 'main' %}

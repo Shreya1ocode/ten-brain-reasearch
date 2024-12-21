@@ -1,0 +1,582 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+<style type="text/css">
+		
+    /* Global Styles */
+    /* body {
+        font-family: Arial, sans-serif;
+    }
+    h4{
+        margin-left: 260px;
+        padding: 9px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        color: white;
+    }
+    b{
+        color: black;
+
+    } */
+
+
+    /* Streaming Icon Styles */
+    .streaming-icons img {
+        margin: 0 10px;
+        width: 40px;
+        height: auto;
+    }
+
+    
+
+    /* Episode Section */
+    .episode {
+        margin-bottom: 30px;
+    }
+
+    .episode img {
+        width: 100%;
+        max-width: 150px;
+        margin-top: 15px;
+    }
+
+    /* Section Background Colors */
+    .bg-dark-blue {
+        background-color: #003366;
+        color: white;
+    }
+
+    .bg-light-blue {
+        background-color: #f4f4f4;
+        color: black;
+    }
+
+    
+
+    /* Text Spacing */
+    p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    
+     .streaming-icons img {
+        margin: 0 10px;
+        width: 40px;
+        height: auto;
+    }
+    .subscription-section {
+  text-align: center;
+  background-color: #f1f1f1 !important;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.subscription-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666666;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.subscription-form input[type="email"] {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.subscription-form button {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #4a69bd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscription-form button:hover {
+  background-color: #3b55a3;
+}
+
+@media (max-width: 600px) {
+  .subscription-form {
+    flex-direction: column;
+  }
+
+  .subscription-form input[type="email"] {
+    margin-bottom: 10px;
+  }
+}
+
+    /* Subscription Form Styles */
+    @media (max-width: 992px) {
+        .podcast-image{
+            margin-left: 17%;
+        }
+    }
+    .learn-more-class{
+    text-decoration: none;
+    color: white;
+    font-weight:bold ;
+    background-color: #ff9800 !important;
+    padding: 10px 17px;
+    border-radius: 20px;
+  }
+    
+</style>
+
+<div class="container-fluid">
+
+    <div class= "row text-white bg-black">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8 mt-4 mb-5">
+                    <h3> Feel It In Your Brain Podcast</h3>
+                    <p>Feel it in your B5ain with Ria Rustagi” is Ten Brain Research’s podcast. We get along in candid conversations with people trying to make a difference in the workplace, mental health, finance, women’s leadership, and other areas.</p>
+                    <p>Available on all audio streaming platforms:</p>
+                <!-- <div class="streaming-icons mt-3" style="text-align: center;">
+                    <a href="https://spotify.com/your-podcast-link" target="_blank">
+                        <img src="https://www.Ten Brain Research.com/img/ria-rastogi/spotify.png" alt="Spotify" class="mt-3">
+                    </a>
+                    <a href="https://apple.com/your-podcast-link" target="_blank">
+                        <img src="https://www.Ten Brain Research.com/img/ria-rastogi/apple.png" alt="Apple Podcasts" class="mt-3">
+                    </a>
+                    <a href="https://google.com/your-podcast-link" target="_blank">
+                        <img src="https://www.Ten Brain Research.com/img/ria-rastogi/google.png" alt="Google Podcasts" class="mt-3">
+                    </a>
+                    <a href="https://amazon.com/your-podcast-link" target="_blank">
+                        <img src="https://www.Ten Brain Research.com/img/ria-rastogi/amazon.png" alt="Amazon Music" class="mt-3">
+                    </a>
+                    <br>
+                    <p class="mt-3">Available on all audio streaming platforms!</p>
+                </div> -->
+                </div>
+                <div class="col-sm-2 mt-4 mb-5 podcast-image" >
+                    <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+    <div  class="row text-black bg-white">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8 mt-4 mb-4">
+                    <h3> <b>EP 1: Rejections are Not A Pause | Monika Khatwani</b></h3>
+                    <p> <b>Is it true that our brains completely stop learning at a certain age?</b>
+
+    <p>How late is too late to change one’s path in life and begin something new?</p>
+
+    <b>Do rejections at work demotivate you?</b>
+
+    <p>Is your mental health at risk as a result of a work-life imbalance? Will you dare to prioritize your mental health over your job?</p>
+
+    <b>Every Rejection is a Learning Curve.</b>
+
+    <p>Catch Ria Rustagi (CEO & Founder – Of Ten Brain Research) in conversation with Monika Khatwani (Corporate Trainer and Clinical Psychologist) about Corporate Mental Health, Neuroplasticity, Work-Life Balance, Employee Well-Being, and much more.</p>
+                        <a class="learn-more-class" >Tune In Now</a>
+
+                </div>
+                <div class="col-sm-2 mt-4 mb-4 podcast-image">
+                    <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+
+    </div>
+    <div  class="row text-black" style="background-color: #f1f1f1!important;">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8 mt-4 mb-4">
+                    <h3> <b>EP 2: F.E.A.R - Face Everything And Rise with DanThy Nguyen</b></h3>
+                    <p> <b>Small habits build up into who you are</b>
+
+    <p>Every day is a new adventure, a new journey to become into who you want to be. Don’t allow any setbacks stand in the way of your comeback. Let’s hear a story of resilience, determination and dedication, that was spurred by letting go of all fears and taking a step toward the victory in life.</p>
+
+    <b>Are you determined enough to let go of all that is holding you back?</b>
+
+    <p>DanThy Nguyen is an Accredited Certified Coach (ACC) with the International Coaching Federation (ICF). An accident survivor, she released her first book – FEAR (Face everything and Rise), based on her dealing with emotions, fears and comeback story.</p>
+    <a class="learn-more-class" >Tune In Now</a>
+
+                </div>
+                <div class="col-sm-2 mt-4 mb-4 podcast-image">
+                <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">            
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+
+    </div>
+    <div  class="row text-black bg-light">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8  mt-4 mb-4">
+                    <h3> <b>EP 3: The Concept of SUPREWOMAN with Yavantika Malani</b></h3>
+                    <p> <b>The concept of SUPERWOMAN is overhyped!</b>
+
+    <p>It’s unfortunate how women still have to strive for equal chances and endure harassment, wage conflict, mansplaining, and much more. There are battles at the workplace, in-home, with society, and with oneself..</p>
+
+    <b>Why do only women need to understand the basic maths involved in managing it all?</b>
+
+    <p>Why do we have to choose between our careers and our personal lives, when instead it could get better by sharing?</p>
+
+    <p>Catch our co-founder Ria Rustagi get in an open discussion with Yavantika Malani, the co-founder of ReadOn,<b> on gender differences, unfair workplace treatment</b> as compared to male co-workers, views on feminism, and how their ideology is to bring a change for women out there looking for inspiration.</p>
+    <a class="learn-more-class" >Tune In Now</a>
+
+                </div>
+                <div class="col-sm-2  mt-4 mb-4 podcast-image">
+                    <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">            
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+
+    </div>
+    <!-- </div> -->
+    <div  class="row text-black" style="background-color: #f1f1f1!important;">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8  mt-4 mb-4">
+                    <h3> <b>EP 4: Journey of A Family through Autism with Dr. Sumana B.</b></h3>
+                    <p> Dr. Sumana Bhattacharya is Renowned Parent counselor, and mother of a child diagnosed with Autism Spectrum. The journey of her and her son is very inspiring, we talk about:</p>
+
+    <p>How they diagnosed Autism? How to choose Acceptance over Struggle? Why autism happens – Heavy Metals ? Impact of Yoga and Meditation on Brain? Social Engagement and Autism? Social Engagement and Autism and much more.</p>
+    <a class="learn-more-class" >Tune In Now</a>
+
+                </div>
+                <div class="col-sm-2  mt-4 mb-4 podcast-image">
+                    <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">            
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+
+    </div>
+    <!-- </div> -->
+    <div  class="row text-black bg-light">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8  mt-4 mb-4">
+                    <h3> <b>EP 5: Mental Fortitude of a CA Aspirant with CA Shantanu Jain</b></h3>
+                    <p><b>Trying, trying, and trying!! But, it’s not happening!</b> And, now it feels so stressful. At the same time, you see people who are getting AIR #1. What do you think, <b>what does it take to be in the top 10 All India Ranker in CA exams?</b>Is there something that is lacking in you or is it just luck? Someone gotta tell you a way out to deal with the stress while you prepare for your CA exams.
+
+    <p>Catch our co-founder Ria Rustagi get in a discussion with CA Shantanu Jain (AIR 10), Co-founder of ReadOn,, around mental health compromises and challenges in the finance sector and competitive exams.</p>
+
+    <p>In this podcast, Shantanu Jain also touches on the very sensitive topic of the <b>mental health of CA Aspirants</b> and how can someone achieve all that keeping Mental Health aspects in mind.</p>
+    <a class="learn-more-class" >Tune In Now</a>
+
+                </div>
+                <div class="col-sm-2 mt-4 mb-4 podcast-image">
+                <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">            
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+
+    </div>
+    <!-- </div> -->
+    <div  class="row text-black" style="background-color: #f1f1f1!important;">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8  mt-4 mb-4">
+                    <h3> <b>EP 6: Why is Gen-Z So Anxious with Jodi Aman</b></h3>
+                    <p>“Denial of Instant Gratification is the seed of anxiety “</p>
+
+    <p><b>And with their entire lives shifted on the internet – GenZ (teenagers) is more likely to suffer the most.</b></p>
+
+    <p>Few points we touched upon in this episode:</p>
+
+    <p>– How Anxiety works on an unconscious level – <b>uproot anxiety by decoding it.</b></p>
+
+    <p>– Getting back control of your life by finding <b>“diamond confidence,</b> and</p>
+
+    <p>– Creating practical miracles even in the most difficult times – feeling worthy, empowered, and in control</p>
+
+
+
+    </p>
+    <a class="learn-more-class" >Tune In Now</a>
+
+                </div>
+                <div class="col-sm-2  mt-4 mb-4 podcast-image">
+                    <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">            
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+
+    </div>
+    <!-- </div> -->
+    <div  class="row text-black bg-light">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8  mt-4 mb-4">
+                    <h3> <b>EP 7: Traditional & Modern Approaches around Mental Health with Dr. Jas Gill</b></h3>
+                    <p>There has been a drastic change in perspective, approach, technology, and innovation when we talk about mental health today vs the older times. Most of people think about the fact that people in ancient times didn’t have any mental health problems at all. Is it really true?
+
+    <p>If it’s not, what’s the truth behind it? How did they deal with all that going on in their lives?</p>
+
+    <p>Catch our co-founder, Ria Rustagi, in a discussion with Dr. Jas Gill who is extremely articulate about neuroscience and mental health. Take a peek into their brains full of clarity, wisdom, and balance.</p>
+
+
+
+    </p>
+    <a class="learn-more-class" >Tune In Now</a>
+
+                </div>
+                <div class="col-sm-2  mt-4 mb-4 podcast-image">
+                    <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">            
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+        </div>
+    <div  class="row text-black" style="background-color: #f1f1f1!important;">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8  mt-4 mb-4">
+                    <h3> <b> EP 8: Is Workplace the Reason for Your Stress with Sophie Bachmann</b></h3>
+                    <p>Do you feel “9 to 5” is not your thing? Everything you do won’t be enough? You’re doing too much but it’s not taking you anywhere? Do you feel you are the imposter and feel bad about yourself?</p>
+
+    <p>Well, if you could relate to any of these things. This podcast episode is for you. Catch our Co-founder & CEO, Ria Rustagi with a very well-known corporate work mindfulness trainer, Sophie Bachmann!</p>
+
+    <p>This episode digs deeper into corporate mental health, the struggles faced in the workplace & of course the importance of mindfulness!🧘‍♀️
+
+    </p>
+
+    <a class="learn-more-class" >Tune In Now</a>
+                </div>
+                <div class="col-sm-2  mt-4 mb-4 podcast-image">
+                    <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">            
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+        </div>
+    <div  class="row text-black bg-light">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8  mt-4 mb-4">
+                    <h3> <b> EP 9: Why Would You Need Therapy with Mallika Bhatia</b></h3>
+                    <p>What is   #psychotherapy? How do psychotherapists diagnose mental health conditions such as anxiety, stress, and depression? Is therapy for me? When should I seek a therapist ? How does therapy work?</p>
+
+    <p>This podcast episode is for you. Catch our Co-founder & CEO, Ria Rustagi with a very well-known Life-coach & Psychotherapist, Mallika Bhatia.</p>
+
+
+
+
+    </p>
+
+    <a class="learn-more-class" >Tune In Now</a>
+                </div>
+                <div class="col-sm-2  mt-4 mb-4 podcast-image">
+                    <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">            
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+        </div>
+    <div  class="row text-black" style="background-color: #f1f1f1!important;">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8  mt-4 mb-4">
+                    <h3> <b> EP 10: Body Positivity, Mental Health & Yin Yoga with Kristin Eyschen</b></h3>
+                    <p>Kristin Eyschen or Kris Oak is a Yin yoga & meditation teacher, a mental health advocate and also works as talent acquisition manager.</p>
+
+    <p>Her own mental health issues during her Master’s degree studies have led her on a beautiful yet challenging path of healing & self-discovery in the beginning of 2016. This path made her want to support others too in slowing down & creating space for themselves to ultimately find their own balance in life..</p></p>
+
+
+                </div>
+                <div class="col-sm-2  mt-4 mb-4 podcast-image">
+                    <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">            
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+        </div>
+    <div  class="row text-black bg-light">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8  mt-4 mb-4">
+                    <h3> <b> EP 11: Is Generation-Z Really Different with Sanjivani Pargal</b></h3>
+                    <p>“They all say they understand but no one actually cares about me or the challenges I go through.” “I feel like keeping my problems or issues to myself rather than sharing with someone.” “People will think I’m weak and take advantage eventually.”</p>
+
+    <p>If you’ve said these things or resonate with any of these above-mentioned things, then this episode can be a right fit for you.</p>
+
+    <p>Catch our Co-founder & CEO, Ria Rustagi with a 20-year-old psychology student, Sanjivani where they share their experiences and challenges (being a millennial and Gen Z) around the education system, academic validation, relationships, day-to-day struggles, Careers, impacts of social media, society and much more.</p>
+    <p class="w3-center">
+    <a href="https://open.spotify.com/episode/3xQ84go1YGkRivHwHCGrqx?si=uyeneAP0Q76UYisnKsWL6w" class="w3-button w3-orange w3-text-white w3-round-xxlarge">Tune in Now</a>
+    </p>
+
+
+
+
+
+
+    </p>
+    <a class="learn-more-class" >Tune In Now</a>
+
+                </div>
+                <div class="col-sm-2  mt-4 mb-4 podcast-image">
+                    <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">            
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+        </div>
+    <div  class="row text-black" style="background-color: #f1f1f1!important;">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8  mt-4 mb-4">
+                    <h3> <b> EP 12: Shhh Don't Talk About Mental Health with Arjun Gupta</b></h3>
+                    <p>“I am a boy, I am strong”, “Boys don’t have depression”,<b> “Depression is for the weak“</b>, “I’m alright, I don’t need any help”
+
+    <p>If you’ve ever come across such statements or felt the same in any phase of your life or if you’re a student who is trying to figure out and deal with stress, anxiety, depression, or any other mental health condition, then this episode is for you to listen to.</p>
+
+    <p>Catch our Co-founder & CEO, Ria Rustagi with Arjun Gupta (Author), an MBBS student turned psychologist where he shares his experiences while he felt empty inside, even after realizing his lifelong dream. He was later diagnosed with <b>clinical depression and even tried to commit suicide.</b> But he bounced back & rose up.</p>
+
+    <p>If you have ever asked yourself <b>“How To Overcome Depression“</b>, “How to accept yourself” or ” How to love yourself”, then you must listen to this episode of “Feel It In Your Brain with Ria Rustagi”.</p>
+    </p>
+    </p>
+    <a class="learn-more-class" >Tune In Now</a>
+                </div>
+                <div class="col-sm-2  mt-4 mb-4 podcast-image">
+                    <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">            
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+        </div>
+    <div  class="row text-black bg-light">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8  mt-4 mb-4">
+                    <h3> <b> EP 13: Turning the Pain into Passion with Jasdeep Mago</b></h3>
+                    <p>“In 2017 after the death of a dear friend, who lost his life battling depression, Jasdeep found herself surrounded by people who had no knowledge or awareness about mental Illnesses.</p>
+
+    <p>Her aim was clear, a change was needed, and She was going to bring it. From hosting public awareness campaigns with a footfall of 1800 people, to crowdfunding an entire production event to starting a subsidized clinic and hosting free mental health camps, her mission was clear and turning into reality.</p>
+
+    <p>Catch our Co-founder & CEO, Ria Rustagi, in conversation with Jasdeep Mango where they talk about turning pain into passion, wellness at the workplace and busting some myths around mental health, therapy, and mental health measures.</p>
+    <a class="learn-more-class" >Tune In Now</a>
+                </div>
+                <div class="col-sm-2  mt-4 mb-4 podcast-image">
+                    <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">            
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div  class="row text-black bg-light">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="row ">
+                <div class="col-sm-8  mt-4 mb-4">
+                    <h3> <b> EP 14: Training the Brain of National Level Athlete with Raj Vinayak</b></h3>
+                    <p>You’ve seen Virat Kohli & Cristiano Ronaldo acing their games i.e. cricket & football respectively.</p>
+
+    <p>But there is a lot that goes behind the scenes whether it’s the training process, consistency, fitness or keeping cool during challenging situations or getting back in the zone after losing a game.</p>
+
+    <p>In this episode, catch our Co-founder & CEO, Ria Rustagi, in conversation with Raj Vinayak where they talk about the mindset of an athlete, the training process, challenges, and Idols along with their mental health before, during & after the game.</p>
+
+    <p>We also did a ‘Braintastic’ experiment with Raj where he used Ten Brain Research to unlock the true potential of his mind.</p>
+    <a class="learn-more-class" >Tune In Now</a>
+                </div>
+                <div class="col-sm-2  mt-4 mb-4 podcast-image">
+                    <img src="{% static 'assets/podcast-images/streaming-platforms.webp' %}">            
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    
+</div>
+<!-- </main> -->
+
+
+
+
+<script src="script.js"></script>
+
+<div class="subscription-section">
+    <h2>New from Ten Brain Research?</h2>
+    <p>Get the latest from Ten Brain Research by subscribing now.</p>
+    <form class="subscription-form" method="post" action="/submit_subscription">
+        {% csrf_token %}
+        {% if success_msg %}
+                      <div id="alerts" class="alert alert-success" role="alert">{{success_msg}}
+                      </div>
+                  {% endif %}
+        <input type="email" name="uemail" placeholder="Email" required  />
+        <input type="hidden" name="page_url" value="metal_health_podcast">
+        <button type="submit">Subscribe</button>
+      </form>
+  </div>
+{% endblock 'main' %}

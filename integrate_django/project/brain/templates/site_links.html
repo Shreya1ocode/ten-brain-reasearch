@@ -1,0 +1,275 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+<style>
+    
+    .content{
+    margin: 1px 0px 0px;
+    padding: 32px 16px;
+}
+
+.hedding{
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px 0px;
+}
+
+.cols3{
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.first{
+    width: 25%;
+    padding: 8px 16px;
+}
+
+.second{
+    width: 25%;
+    padding: 8px 16px;
+}
+
+.third{
+    width: 25%;
+    padding: 8px 16px;
+}
+
+.unorder{
+    list-style-type: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+.unorder li{
+    border-bottom: 1px solid #ddd;
+    height: 90px;
+    align-content: center;
+    padding: 0px 16px;
+}
+
+.anchor{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.unorder li:hover{
+    background-color: #E91E63;
+    color: white;
+}
+
+.anchor:hover{
+    color: white;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablet Screens (max-width: 793px) */
+@media only screen and (max-width: 793px){
+    .container{
+        width: 100%;
+    }
+
+    .unorder{
+        font-size: 16px;
+    }
+    
+    .unorder li{
+        height: 15%;
+        padding: 10px 8px;
+    }
+    
+}
+
+/* For Tablet Screens (max-width: 659px) */
+@media only screen and (max-width: 659px){
+    .container{
+        width: 100%;
+    }
+
+    .unorder{
+        font-size: 15px;
+    }
+    
+    .unorder li{
+        height: 95px;
+        padding: 0px 6px;
+    }
+    
+}
+
+/* For Tablet Screens (max-width: 607px) */
+@media only screen and (max-width: 607px){
+    .container{
+        width: 100%;
+    }
+
+    .unorder{
+        font-size: 13px;
+    }
+    
+    .unorder li{
+        height: 81px;
+        padding: 0px 6px;
+    }
+    
+}
+
+/* For Tablet Screens (max-width: 428px) */
+@media only screen and (max-width: 428px){
+    .container{
+        width: 100%;
+    }
+    
+    .cols3{
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+        display: block;
+        justify-items: center;
+    }
+    
+    .first{
+        width: 100%;
+        padding: 8px 16px;
+    }
+    
+    .second{
+        width: 100%;
+        padding: 8px 16px;
+    }
+    
+    .third{
+        width: 100%;
+        padding: 8px 16px;
+    }
+    
+    .unorder{
+        list-style-type: none;
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+
+/* For Tablet Screens (max-width: 162px) */
+@media only screen and (max-width: 162px){
+    .container{
+        width: 100%;
+    }
+    
+    .cols3{
+        width: 100%;
+        font-size: 13px;
+    }
+    
+    .first{
+        width: 100%;
+        padding: 8px 16px;
+    }
+    
+    .second{
+        width: 100%;
+        padding: 8px 16px;
+    }
+    
+    .third{
+        width: 100%;
+        padding: 8px 16px;
+    }
+    
+    .unorder{
+        list-style-type: none;
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+</style>
+<!-- <div class="container"> -->
+    <div class="content">
+        <h1 class="hedding">Sitelinks</h1>
+        <div class="cols3">
+            <div class="first">
+                <ul class="unorder">
+                    <li>
+                        <a href="/aboutus" class="anchor">About Us</a>
+                    </li>
+                    <li>
+                        <a href="/blogs" class="anchor">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/contactus" class="anchor">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="/ten_brain_exg_synapse" class="anchor">EXG Synapse</a>
+                    </li>
+                    <li>
+                        <a href="/ten-brain-eeg-headband" class="anchor">Ten Brain Research EEG Headband</a>
+                    </li>
+                    <li>
+                        <a href="/ten_brain_eeg_flexcap" class="anchor">Ten Brain Research Flex cap</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="second">
+                <ul class="unorder">
+                    <li>
+                        <a href="/disclaimer" class="anchor">Disclaimer</a>
+                    </li>
+                    <li>
+                        <a href="/neuroscience_kits" class="anchor">Neuroscience Kits</a>
+                    </li>
+                    <li>
+                        <a href="/metal_health_podcast" class="anchor">Brain Metal Health Podcast</a>
+                    </li>
+                    <li>
+                        <a href="/faq" class="anchor">Frequently Asked Questions</a>
+                    </li>
+                    <li>
+                        <a href="/how_it_works" class="anchor">How it works</a>
+                    </li>
+                    <!-- <li>
+                        <a href="" class="anchor">How Install Desktop Application</a>
+                    </li> -->
+                    <li>
+                        <a href="/" class="anchor">Ten Brain Research</a>
+                    </li>
+                    <!-- <li>
+                        <a href="" class="anchor">Neuphony Desktop Application</a>
+                    </li>
+                    <li>
+                        <a href="" class="anchor">Neuphony Mobile Application</a>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="third">
+                <ul class="unorder">
+                    <li>
+                        <a href="/privacy_policy" class="anchor">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="/refund_policy" class="anchor">Refund Policy</a>
+                    </li>
+                    <li>
+                        <a href="/return_policy" class="anchor">Return Policy</a>
+                    </li>
+                    <li>
+                        <a href="/terms_condition" class="anchor">Term and Conditions</a>
+                    </li>
+                    <li>
+                        <a href="/testimonials-and-reviews" class="anchor">Testimonials and Reviews</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->
+{% endblock 'main' %}

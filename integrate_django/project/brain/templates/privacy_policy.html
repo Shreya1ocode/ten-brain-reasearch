@@ -1,0 +1,1013 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+
+<style>
+/* body {
+  font-family: Times, serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  /* background-color: #fff; 
+} */
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+.content {
+  padding: 20px;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  /* color: #333; */
+  /* background-color: #f9f9f9; */
+}
+
+.heading {
+  text-align: center;
+  padding: 20px 10px;
+  /* background-color: #fff; */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.heading h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #000;
+}
+
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  /* background-color: #fff; */
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  border-radius: 8px;
+}
+
+.policy-section {
+  margin-bottom: 20px;
+}
+
+.policy-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  /* color: #444; */
+}
+
+.policy-section ul,
+.policy-section ol {
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.policy-section ul li,
+.policy-section ol li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+  /* color: #555; */
+}
+
+.policy-section ol li {
+  list-style-type: disc;
+}
+.policy-section ol ol li {
+  list-style-type: circle;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.address h2 {
+  font-size: 20px;
+}
+
+.subscription-section {
+  text-align: center;
+  background-color: #f1f1f1 !important;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.subscription-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666666;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.subscription-form input[type="email"] {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.subscription-form button {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #4a69bd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscription-form button:hover {
+  background-color: #3b55a3;
+}
+
+@media (max-width: 600px) {
+  .subscription-form {
+    flex-direction: column;
+  }
+
+  .subscription-form input[type="email"] {
+    margin-bottom: 10px;
+  }
+}
+
+/* .whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.query-label {
+  background-color: #ffffff;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 40%;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.whatsapp-button {
+  width: 50px;
+  height: 50px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.whatsapp-button img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(100%);
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+
+@media (max-width: 600px) {
+  .query-label {
+    display: none; 
+  }
+} */
+</style>
+<div class="heading">
+    <h1>PRIVACY POLICY</h1>
+  </div>
+  <main>
+    <section class="policy-section">
+      <h2>1. INTRODUCTION TO Ten Brain Research</h2>
+      <ul>
+        <li>
+          In accordance with the Companies Act of 2013,TEN BRAIN RESEARCH, a
+          private company and a registered office at DELHI, 110087, has
+          developed this application and website that enables you to
+          effectively offer bulk message services.
+        </li>
+        <li>
+          We recognize the value of offering effective services. For this
+          reason, we have developed an all-inclusive platform that serves a
+          wide spectrum of people. In order to secure your data provided on
+          our platform, Ten Brain Research or
+          <a href="mailto:info@entrepreneurshipnetwork.net"
+            >info@entrepreneurshipnetwork.net</a
+          >
+          we have implemented this Privacy Policy (referred to as the
+          "Policy").
+        </li>
+      </ul>
+    </section>
+    <section class="policy-section">
+      <h2>2. INTRODUCTION TO PRIVACY POLICY</h2>
+      <ol>
+        <li>
+          The purpose of this policy is to safeguard the information you
+          provide to the business. It outlines our guidelines and procedures
+          for gathering, using, storing, disclosing, and safeguarding your
+          personally identifiable information or other data that is gathered
+          on our platform for all the reasons specified in this Policy and in
+          accordance with the current laws.
+        </li>
+        <li>
+          The author of this policy guarantees a consistent dedication to your
+          privacy with regard to safeguarding the priceless information you
+          may divulge on the Company's Platform. Information regarding the
+          Platform is contained in this Policy.
+        </li>
+        <li>
+          We may gather and, under some conditions, share information about
+          you with your consent in order to give you our continuous use of the
+          Platform. To guarantee improved security
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>3. DEFINING PARAMETERS</h2>
+      <ol>
+        <li>
+          Applicable Laws – shall mean and refer to all the laws, rules,
+          ordinances, by-laws, etc., and amendments after that, applicable
+          within the territory of India.
+        </li>
+        <li>
+          Content – shall refer to all the text, advertisement, graphics, User
+          interfaces, visual interfaces, photographs, trademarks, logos, brand
+          names, descriptions, sounds, music, games details, and artwork.
+        </li>
+        <li>
+          Third Parties – shall mean and refer to all the legal entities,
+          either individual or entity linked on the Platform apart from the
+          Users and the creator of this Platform, respectively.
+        </li>
+        <li>
+          Service – shall mean and refer develops wearable products using EEG
+          technology to measure the cognitive scores of the individuals
+          through the Platform.
+        </li>
+        <li>
+          Cookies – it is a s mall piece of data/ software code that
+          automatically tracks and stores the Data and the pattern on your
+          hard drive
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>4. ANALYZATION</h2>
+      <ol>
+        <li>For interpretation in this Policy:</li>
+        <ol>
+          <li>
+            Unless otherwise indicated by the context, the terms "Customer,"
+            "User," "you," "your," and "yours" shall refer to any natural or
+            legal person who is either using our platform or our services;
+          </li>
+          <li>
+            In this Policy, unless the context indicates otherwise, terms that
+            indicate the singular will also include the plural, and vice
+            versa;
+          </li>
+          <li>
+            Unless otherwise indicated by the context, the terms "any gender"
+            in this Policy refer to all genders for interpretational reasons;
+          </li>
+          <li>
+            This policy's headers are just included for convenience; and
+          </li>
+          <li>
+            The Terms of Use, this Privacy Policy, and any other pertinent
+            policies as updated on the Platform are the only rules that apply
+            when using this platform.
+          </li>
+        </ol>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>5. OBSERVANCES</h2>
+      <ol>
+        <li>
+          The Information Technology Act of 2000, its implementing
+          regulations, and the updated laws on electronic records in other
+          acts are the basis for this policy's formulation and implementation.
+          A computer system created this electronic document, which doesn't
+          need any digital or physical signatures. Rule 3 (1) of the
+          Information Technology (Intermediaries Guidelines) Rules, 2011 and
+          Rule 4 of the Information Technology (Reasonable Security Practices
+          and Procedures And Sensitive Personal Data or Information) Rules,
+          2011 of the Information Technology Act, 2000, amended by the
+          Information Technology Amendment Act, 2008, require the publication
+          of the Terms of Use and practices for access and usage of any
+          functional platform. This legal document is published in accordance
+          with these provisions.
+        </li>
+        <li>
+          The General Data Protection Regulation (GDPR), which grants people
+          specific data rights, served as the model for this policy. To assist
+          Users in exercising their rights, we are pleased to provide
+          transparency and access controls. Individuals are entitled to the
+          following rights, unless otherwise restricted by applicable law:
+        </li>
+        <ol>
+          <li>
+            right of access: the ability to know about and ask for access to
+            the information we handle about you
+          </li>
+          <li>
+            right to rectification – the right to request that we amend or
+            update your data where it is inaccurate or incomplete;
+          </li>
+          <li>
+            right to restrict – the right to request that we temporarily or
+            permanently stop processing all or some of your personal data;
+          </li>
+          <li>
+            right to object – the right to object to us processing your
+            personal data on grounds relating to your particular situation.
+            Along with the right to object to your personal data being
+            processed for direct marketing purposes;
+          </li>
+          <li>
+            right to data portability – the right to request a copy of your
+            personal data in electronic format and the right to transmit that
+            personal data for use in another part’s service; and
+          </li>
+          <li>
+            right not to be subject to automated decision-making, the right to
+            not be subject to a decision based solely on automated
+            decision-making, including profiling, where the decision would
+            have a legal effect on you or produce a similarly significant
+            effect.
+          </li>
+        </ol>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>6. USABILITY</h2>
+      <ol>
+        <li>
+          Any natural or legal person who uses our platform, whether via
+          browsing or using its services, is subject to this policy. Your
+          account registration on this platform. You are likewise subject to
+          this policy if you use the platform continuously without creating an
+          account or registering. All individuals and natural legal persons
+          are covered by this policy and any periodic adjustments to it.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>7. WHY DO WE GET INFORMATION?</h2>
+      <ol>
+        <li>
+          To give you the greatest services and a smooth platform browsing
+          experience, we could gather specific information. We might gather
+          certain data. Every day, we work to enhance the Platform's services
+          and user experience.
+        </li>
+        <li>
+          In accordance with relevant legislation, we gather and retain the
+          data for any legal and regulatory purposes. In order to inform you
+          of any modifications to the Platform's operation or policy, we
+          gather and save your data.
+        </li>
+        <li>
+          The information you provide shall be used to provide and improve the
+          service for you and all users and the following services, including
+          but not limited to:
+        </li>
+        <ol>
+          <li>to provide you with services on your request;</li>
+          <li>for maintaining an internal record;</li>
+          <li>for raising invoices and maintenance of service records;</li>
+          <li>
+            to enhance the Services provided on the Platform, including our
+            Game interface, mode, style, etc.; and
+          </li>
+          <li>
+            for maintaining records under the legal and statutory provisions.
+          </li>
+        </ol>
+        <li>
+          To better identify you, collect general demographic information, and
+          provide additional services, we use your tracking information,
+          including IP addresses and Device IDs. Your personal information
+          will not be traded, sold, or licensed. Unless they follow our
+          instructions or we are compelled by law to do so, we will not
+          provide your personal information to third parties. To maintain the
+          web system and handle issues, we shall utilize the information
+          gathered from our server logs, which includes users' IP addresses
+          and the sites they have viewed. In order to better understand how
+          users interact with our platform and provide them with tailored
+          information and advertisements based on their choices, we also
+          employ third-party analytics, tracking, optimization, and targeting
+          technologies.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>8. WHAT ARE WE GATHERING?</h2>
+      <ol>
+        <li>
+          We are committed to respecting your online privacy. We further
+          recognise your need for appropriate protection and management of any
+          Personal Information you share with us. We may collect the following
+          information:
+        </li>
+        <ol>
+          <li>
+            Your email address, last name, and first name will be gathered if
+            you sign up using your Google Account;
+          </li>
+          <li>
+            The Platform obtains rights for location access, storage
+            permissions, and other purposes in order to gather information.
+          </li>
+          <li>
+            The user's name, address, registered phone number, registered mail
+            ID, and other details will be gathered;
+          </li>
+          <li>
+            tracking details, including but not restricted to your device's IP
+            address and Device ID when online. This data might include the URL
+            you just left (whether or not it is on the Platform), the URL you
+            visit next (whether or not it is on the Platform), the browser
+            information on your computer or device, and additional data
+            related to your interactions with the Platform; and
+          </li>
+          <li>specifics of the analytics platform's use.</li>
+        </ol>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>9. IN WHAT WAY DO WE GET THE DATA?</h2>
+      <ol>
+        <li>
+          When collecting personal information, we will identify the purposes
+          for which the information is being collected; if the purposes are
+          not clear to you, you have the right to ask the company to explain
+          the purpose of the collection, and you will not be required to
+          divulge any information until the purpose is fulfilled. We will only
+          collect and use your personal information for the purposes that we
+          have specified, with the consent of the individual in question or as
+          required by law, and we will only keep personal information for as
+          long as is necessary to accomplish those purposes. We will collect
+          personal information fair and lawful methods, and with the knowledge
+          and consent of the individual concerned.
+        </li>
+        <li>
+          In addition to being accurate, comprehensive, and current to the
+          degree required, personal data should be pertinent to the intended
+          uses.
+        </li>
+        <li>
+          We collect information about your activity on our Platform, which
+          includes the sites from which you accessed our Platform, the date
+          and time of each visit, searches you have performed, listings or
+          advertisement banners you clicked, your interaction with such
+          advertisements or listings, duration of your visit and the order in
+          which you visit the content on our Platform.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>10. VERIFICATION OF YOUR TEN BRAIN CREATION ACCOUNT</h2>
+      <ol>
+        <li>
+          We use WhatsApp and SMS verification to verify the accounts of fake
+          users, making sure that each account is linked to a real and
+          distinct user. In the event that you decline to confirm your
+          account, it will be active and you will have restricted access to
+          our services.
+        </li>
+        <li>
+          You will be prompted to select one Ten Brain Research account if you
+          establish several ones using the same email address or cellphone
+          number. All of these accounts will have restricted functionality.
+          The selected account will resume full operation, while the remaining
+          accounts will either stay permanently disabled or have reduced
+          capability.
+        </li>
+        <li>
+          Within a 24-hour period, users can request two SMS or WhatsApp
+          messages with verification codes. Each account is validated once
+          before the user confirms it via WhatsApp or SMS. Your Ten Brain
+          Research Account will continue to be linked to the mobile number you
+          provided for the WhatsApp/SMS verification once you have verified
+          it. You must get in touch with our Customer Support staff if you
+          would want to modify the cellphone number linked to your Ten Brain
+          Research account.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>11. HOW DO WE RETAIN THE DATA AND SECURITY?</h2>
+      <ol>
+        <li>
+          Data is seen as an asset that has to be safeguarded against loss and
+          unauthorized access. We use a variety of security measures to
+          prevent members both inside and outside the company from gaining
+          unauthorized access to such data. To safeguard the personal data
+          that is provided to us and the data that we access, we adhere to
+          well recognized industry standards.
+        </li>
+        <li>
+          We have put in place the organizational and technological safeguards
+          that are appropriate and required to protect your personal data, and
+          all of the information we receive about you is kept on secure
+          servers. We regularly assess the network's security and the
+          effectiveness of its internal information security program, which
+          aims to:
+        </li>
+        <ol>
+          <li>
+            assist in protecting your data against unintentional or illegal
+            loss, access, or disclosure;
+          </li>
+          <li>
+            determine the threats to our network's security that are
+            reasonably foreseeable;
+          </li>
+          <li>
+            reduce security threats through frequent testing and risk
+            assessment. Additionally, we make sure that SSL technology is used
+            to encrypt all payment data.
+          </li>
+          <li>
+            Please be aware that data transfer via the Internet or other open
+            networks is never totally secure, even with the safeguards we have
+            put in place to protect your data. Your personal information might
+            be accessed by unauthorized parties. To secure the data, we have
+            implemented a number of security measures.
+          </li>
+          <li>
+            However, no approach is 100% safe in the event of data loss during
+            restoration or theft, as is the situation with most electronic
+            transactions. Nevertheless, no security system is impregnable,
+            notwithstanding the effectiveness of encryption technologies. Our
+            company is unable to guarantee the confidentiality of our database
+            or that the data you submit won't be intercepted during its online
+            transmission to the company.
+          </li>
+        </ol>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>12. LINKS TO THIRD GROUP WEBSITES</h2>
+      <ol>
+        <li>
+          Advertisements from third parties and connections to their websites,
+          mobile platforms, and other resources could be included on the
+          platform. Any other websites and mobile platforms that are owned or
+          operated by businesses or individuals other than us are outside our
+          control, as are any of the resources or information found on them.
+          You understand that we have no control over the availability of any
+          other websites or resources, and we do not support any
+          advertisements, services, or other content found on or accessible
+          through these websites, mobile platforms, or resources.
+        </li>
+        <li>
+          You understand and agree that we are not responsible for any loss or
+          harm that you might experience as a result of those external
+          websites or resources being available to you, or as a result of your
+          reliance on the existence, completeness, or accuracy of any
+          advertising, services, or other materials on or accessible through
+          those websites and mobile platforms. The collection, storage,
+          retention, and sharing of your personal information may be governed
+          by the privacy rules of the external third-party website, mobile
+          platforms, and resource providers. We advise going into the mobile
+          platform and website and looking over their privacy rules.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>13. COOKIES</h2>
+      <ol>
+        <li>
+          If you consent, we may store a little text file called a cookie on
+          your computer's hard drive or in your browser. You consent to our
+          usage of cookies if you keep on browsing the website. Information
+          stored in cookies is moved to the hard disk of your computer. You
+          may configure your browser to reject all or certain cookies, or to
+          notify you when cookies are established or accessed by the platform.
+          Please be aware that certain features of our platform may stop
+          working or become unavailable if you reject or disable cookies. The
+          following is a list of the kinds of cookies we use:
+        </li>
+        <ol>
+          <li>
+            Cookies that are absolutely essential. These cookies are necessary
+            for our platform to function. They include, for instance, cookies
+            that let you utilize a shopping cart, e-billing services, and
+            secure portions of our platform.
+          </li>
+          <li>
+            cookies for analysis and performance. They enable us to identify
+            and tally the number of users as well as see how users use our
+            platform. For instance, this makes it easier for consumers to
+            locate what they're searching for, which helps us enhance the way
+            our platform functions.
+          </li>
+          <li>
+            cookies for functionality.When you return to our platform, these
+            will recognize you. This allows us to remember your preferences
+            (such your preferred language or area), greet you by name, and
+            personalize our content for you.
+          </li>
+          <li>
+            Cookies are the target. These cookies keep track of the pages you
+            visit on our platform, the links you click, and your overall
+            experience. In order to better tailor our platform and advertising
+            to your interests, we will utilize your information. Additionally,
+            we might provide personal information to outside parties for this
+            reason.
+          </li>
+        </ol>
+        <li>
+          To administer user sessions, save your selected language, and
+          present pertinent ads, we employ cookies. Cookies are little text
+          files that are downloaded to the hard disk of your device from a web
+          server. Cookies may gather your login, browsing history,
+          preferences, and the time and date of your visit. You may configure
+          your browser to reject all or certain cookies, or to notify you when
+          cookies are placed or accessed by the platform. Please be aware that
+          certain features of our services and platform may stop working or
+          become inoperable if you reject or disable cookies. Please refer to
+          our Policy on Cookies and Similar Technologies for further details
+          on the cookies we use.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>14. GOOGLE ANALYTICS</h2>
+      <ol>
+        <li>
+          We use Google Analytics to learn how you use our material and
+          determine how we can improve it. By tracking your navigation across
+          our website, these cookies gather anonymous information about your
+          origins, the sites you see, and the amount of time you spend there.
+          Google keeps this information in order to generate reports. There is
+          no personal information stored by these cookies.
+        </li>
+        <li>
+          Google may send and retain your IP address and other data created by
+          the cookie about how you use the Platform on servers located in the
+          United States. Google may utilize this data to assess how you use
+          the Platform, analyze Platform activity reports for us, and provide
+          additional Platform and internet usage-related services. In
+          addition, Google may give this information to outside parties as
+          mandated by law or when such parties handle the data on Google's
+          behalf. Your IP address will not be linked by Google to any other
+          information it owns. You provide permission for this platform to
+          process your Google data in the ways and for the reasons listed
+          above.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>15. GOOGLE ADSENSE</h2>
+      <ol>
+        <li>
+          An application called Google AdSense enables Platform publishers to
+          show ads to site visitors in return for money based on impressions
+          or clicks. Google does this by delivering advertisements that are
+          tailored to a Platform User or visitor using cookies and tracking
+          technologies. In this context, users are given the following terms:
+        </li>
+        <ol>
+          <li>
+            Cookies are used by third-party vendors, such as Google, to
+            display advertisements based on your past usage of our platform or
+            other websites and mobile platforms;
+          </li>
+          <li>
+            When you visit our platform and/or other websites and mobile
+            platforms on the Internet, Google uses advertising cookies to
+            allow us and our partners to show you ads;
+          </li>
+          <li>
+            You may visit Ads Settings to opt out of personalized advertising.
+          </li>
+          <li>
+            All third-party adverts on our platform are only meant to be
+            informational. The veracity of the advertising is not guaranteed
+            or subject to responsibility by the Platform or the Company.
+          </li>
+          <li>
+            The Company will never allow its rivals to place advertisements on
+            the Platform; and
+          </li>
+          <li>
+            You can opt not to accept cookies that allow third parties to show
+            their ads, or you can click on the links in the ads at your own
+            risk.
+          </li>
+        </ol>
+      </ol>
+    </section>
+    <section>
+      <h2>16. RIGHTS FOR YOU</h2>
+      <ol>
+        <li>
+          You are entitled to the following rights about your data, unless
+          there is an exemption:
+        </li>
+        <ol>
+          <li>
+            the right to ask for a copy of the information we have on file
+            about you;
+          </li>
+          <li>
+            the right to request that any personal information that is
+            discovered to be erroneous or outdated be corrected;
+          </li>
+        </ol>
+        <li>
+          You can exercise your privacy rights and choices by sending an email
+          to our support with a Data Deletion Request if you do not want us to
+          process your data. We might be unable to fulfill your request in
+          some circumstances, such as if you request that we remove your
+          transaction data and we are required by law to maintain a record of
+          that transaction in order to comply with the law.
+        </li>
+        <li>
+          You have the right to a copy of all the personal information we have
+          on file about you if you have an account with any of our services.
+          When you log in, you also have the right to ask that we limit how we
+          use the data in your account.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>17. THE PRIVATE IDENTITY</h2>
+      <ol>
+        <li>
+          Additionally, you agree that the Platform could include information
+          that we have marked as secret and that you will not share it without
+          our prior written approval. Your information is considered
+          confidential and will not be shared with any other party unless
+          compelled by law to be shared with the relevant authorities. We
+          promise not to utilize your email address for unwanted
+          correspondence or sell, distribute, or rent your personal
+          information to any third party. Any emails we send will only be
+          related to the delivery of agreed-upon services, and you have the
+          right, at any time, to request that we stop sending them.
+        </li>
+        <li>
+          We will communicate with you by email, SMS or app notification in
+          connection with our Services/Platform to confirm your registration,
+          to inform you in case your ad listing has become live/expired and to
+          other transactional messages in relation to our Services. As we must
+          provide you with such transactional messages, you may be unable to
+          opt -out of such messages.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>18. YOUR INFORMATION DISCLOSED BY US</h2>
+      <ol>
+        <li>
+          The owners and users of your survey replies are the survey
+          developers for our platform, and we may host surveys for them. Your
+          answers are neither owned nor sold by us. The survey designers will
+          be informed of everything you specifically reveal in your answers.
+          To find out how your survey answers could be shared, please get in
+          touch with the poll's developer directly.
+        </li>
+        <li>
+          If the information is publicly accessible in the public domain or
+          provided in accordance with the Right to Information Act of 2005,
+          its regulations, or any other currently enacted law, it will not be
+          deemed sensitive.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>19. GETTING TO, ANALYZING, AND EDITING YOUR PROFILE</h2>
+      <ol>
+        <li>
+          With the exception of the email address, you can check and edit the
+          information you have entered. The website will provide an option to
+          assist such a change, and the user is responsible for facilitating
+          the platform and the change.
+        </li>
+        <li>
+          If you modify any of your information, we might or might not keep
+          track of it. For specific purposes, like resolving disputes,
+          troubleshooting issues, and enforcing our terms and conditions, we
+          won't keep information you have asked us to remove in our files.
+        </li>
+        <li>
+          We will completely delete such old data from all of our databases,
+          including "backup" systems. If you think any of the information we
+          have on you is inaccurate or lacking, please delete your profile so
+          that no one else may see it. Any inaccurate information must
+          therefore be immediately corrected by the user.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>
+        20. Data downloads, consent withdrawals, and data removal requests
+      </h2>
+      <ol>
+        <li>
+          We reserve the right to remove, suspend, or remove your account from
+          our platform if we find any actions or behaviors that go against
+          this policy or any other policies that apply to you. Additionally,
+          if you breach this Policy or in any of the following other
+          circumstances, we have the right to cancel or limit your access to
+          our Platform:
+        </li>
+        <ol>
+          <li>
+            if, while creating or registering your account, you supply any
+            inaccurate, erroneous, or significantly changed information or
+            data;
+          </li>
+          <li>
+            posting any information that is ambiguous, vulgar, indecent,
+            inconsistent, or only connected to you or any other party;
+          </li>
+          <li>
+            in the event that you provide and supply services to clients in a
+            way that is inconsistent, ambiguous, offensive, significantly
+            altered, and flawed; and
+          </li>
+          <li>
+            Any other behavior that is directly contrary to this policy, the
+            company's other policies, or any other agreement the company may
+            have with you in order to provide services.
+          </li>
+        </ol>
+        <li>
+          To withdraw your consent or to request the download or delete your
+          data with us for any or all our services at any time, please email
+          us at:<a href="mailto:info@entrepreneurshipnetwork.net"
+            >info@entrepreneurshipnetwork.net</a
+          >
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>21. Adaptability</h2>
+      <ol>
+        <li>
+          Every clause in this privacy statement will always be distinct from,
+          independent of, and severable from every other clause in this
+          agreement, unless the context of this agreement specifies otherwise.
+          This privacy policy's remaining clauses will remain unaffected if
+          one or more of the clauses are found to be invalid.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>22. MODIFICATION</h2>
+      <ol>
+        <li>
+          You acknowledge and agree that in the event that the applicable laws
+          or the Company's policies, procedures, and standards change, we
+          reserve the exclusive right, in our discretion, to update and modify
+          this Policy. For a better understanding and to stay up to date on
+          any revisions, you must read the policy on a regular basis.
+          Periodically, the Platform will post the updated Policy. You will be
+          deemed to have accepted the Company's updated policy if you keep
+          using the Platform.
+        </li>
+        <li>
+          You can email our support at any moment to terminate your account if
+          you're unhappy with the way we handle your personal data and the
+          options we give you.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>23. Enforcing the law and resolving disputes</h2>
+      <ol>
+        <li>
+          Regarding the interpretation, validity, Platform, or alleged
+          violation of any provision or section of this Policy, any claims,
+          disagreements, or conflicts between the Parties must be settled in
+          accordance with Indian law. It will be heard by the appropriate
+          courts in Delhi, India.
+        </li>
+        <li>
+          The parties shall, in the first instance, attempt to settle any
+          dispute arising out of or related to this privacy policy, including
+          any dispute regarding its validity, through mediation conducted by
+          the Centre for Online Resolution of Disputes ("CORD") and conducted
+          in compliance with the CORD Rules of Mediation, by a single mediator
+          designated by CORD. Subject to a contrary agreement between the
+          Parties, if mediation fails to resolve any such dispute within 45
+          days of the dispute's initiation, the matter will ultimately be
+          settled by arbitration administered by CORD and conducted in
+          conformity with CORD's Rules of Arbitration by a single arbitrator
+          chosen by CORD. English will be the arbitration's language. Delhi,
+          India, will serve as the arbitration's location.
+        </li>
+        <li>
+          You acknowledge that India's laws, rules, and regulations will apply
+          to the Privacy Policy, Terms of Use, and any other agreements
+          between the Parties.
+        </li>
+      </ol>
+    </section>
+    <section class="policy-section">
+      <h2>24. COMPLAINTS AND CONVERSATIONS</h2>
+      <ol>
+        <li>
+          You may reach us by email at
+          <a href="mailto:info@entrepreneurshipnetwork.net"
+            >info@entrepreneurshipnetwork.net</a
+          >
+          if you have any questions or issues about our privacy statement.
+        </li>
+      </ol>
+    </section>
+    <section class="address">
+      <h2>TEN BRAIN RESEARCH</h2>
+      <h2>DELHI</h2>
+    </section>
+  </main>
+
+  <div class="subscription-section">
+    <h2>New from Ten Brain Research?</h2>
+    <p>Get the latest from Ten Brain Research by subscribing now.</p>
+    <form class="subscription-form" method="post" action="/submit_subscription">
+      {% csrf_token %}
+      {% if success_msg %}
+                    <div id="alerts" class="alert alert-success" role="alert">{{success_msg}}
+                    </div>
+                {% endif %}
+      <input type="email" name="uemail" placeholder="Email" required  />
+      <input type="hidden" name="page_url" value="privacy_policy">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+  <!-- <div class="whatsapp-container">
+    <div class="query-label">Have a query?</div>
+    <div>
+      <a
+        href="https://wa.me/your-number"
+        target="_blank"
+        class="whatsapp-button"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+        />
+      </a>
+    </div>
+  </div> -->
+  {% endblock 'main' %}

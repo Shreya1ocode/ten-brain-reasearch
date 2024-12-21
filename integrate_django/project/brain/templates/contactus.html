@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+<!--main start-->
+    <div class="bg-white text-black">
+        <div class="row">
+            <h3 style="text-align: center;"><b>CONTACT US</b></h3>
+            <div class="col-sm-12">
+                <img src="{% static 'assets/contactus-images/contactus.webp' %}" width="100%">
+            </div>
+        </div>
+
+        <!--We’re Here to Help You Thrive start-->
+        <div class="row mt-2">
+            <h3 class="mt-4" style="text-align: center;"><b>We’re Here to Help You Thrive</b></h3>
+            <div class="col-sm-2"></div>            
+            <div class="col-sm-8">
+                <h6 class="mt-3" style="text-align: center;">Whether you have questions about our products, need support, or want to explore collaboration opportunities, our team is ready to assist. Reach out to us, and we’ll make sure you get the information you need. At Ten Brain Research, your brain health and wellness are our priority.</h6>
+                <div class="row mt-5">
+                    <div class="col-sm-6">
+                        <div class="card"  style="border-radius: 17px; border: 1px #000 solid;">
+                            <div class="card-body" style="padding-bottom: 0px !important;">
+                              <h4 class="card-title mt-3"><b>Write to us</b></h4>
+                              <p  style="text-align: left; margin-bottom: 0px !important;">For Marketing & PR related queries: <a href="#" style="color: red;">hey@Ten Brain Research.com</a></p>
+                              <p  style="text-align: left; margin-bottom: 0px !important;">For collaborations and customer support: <a href="#" style="color: red;">support@Ten Brain Research.com</a></p>
+                              <p  style="text-align: left; margin-bottom: 0px !important;">Willing To join the team?: <a href="#" style="color: red;">careers@Ten Brain Research.com</a></p><br>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 training-main">
+                        <div class="card"  style="border-radius: 17px; border: 1px #000 solid;">
+                            <div class="card-body" style="padding: 22px;">
+                                <h4 class="card-title mt-3" style="text-align: center;"><b>Follow us on Social Media</b></h4>
+                                <p style="text-align: center;"><img src="{% static 'assets/contactus-images/linkdin.webp' %}"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+        <!--end We’re Here to Help You Thrive-->
+        
+        <!--Fill in this form to get in touch with us start-->
+        <div class="row mt-5">
+            <h3 class="mt-4" style="text-align: center;">Fill in this form to get in touch <br> with us</h3>
+            <div class="col-sm-4"></div>            
+            <div class="col-sm-4" style="text-align: left;">
+                {% if success_msg %}
+                    <div id="alerts" class="alert alert-success" role="alert">{{success_msg}}
+                    </div>
+                {% endif %}
+                <form action="/contactus" method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Your Name</label>
+                        <input type="text" name="uname" class="form-control" id="exampleInputName" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" name="uemail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Mobile</label>
+                        <input type="number" name="umobile" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputCountry" class="form-label">Country</label>
+                        <input type="text" name="ucountry" class="form-control" id="exampleInputCountry" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputMessage" class="form-label">Message</label>
+                        <textarea class="form-control" name="umessage" id="exampleInputMessage" aria-describedby="emailHelp"></textarea>
+                        <!-- <input type="email" name="uemail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+                    </div>
+                      
+                      <button type="submit" class="btn btn-warning" style="background-color: #ff9800 !important;">Send Message</button>
+                </form>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+        <!--end Fill in this form to get in touch with us-->
+
+        <div class="row mt-2 mb-5">
+            <div class="col-sm-2"></div>            
+            <div class="col-sm-8">
+                <div class="row mt-5">
+                    <div class="col-sm-6">
+                        <div class="card"  style="border-radius: 17px; border: 1px #000 solid; height: 390px;">
+                            <div class="card-body" style="padding: 22px;">
+                              <h4 class="card-title mt-3"><b>Office Address</b></h4>
+                              <p  style="text-align: left; margin-bottom: 0px !important;"><b>India accelerator<br>
+                                Noida up<br>
+                                India-201301</b></p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 training-main">
+                        <div class="card"  style="border-radius: 17px; border: 1px #000 solid; height: 390px;">
+                            <div class="card-body">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3512.2278812114937!2d77.2033654150744!3d28.533313682437996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1cb6c2574c1d%3A0x64dbed2829f0113f!2sAshoka%20Lane%2C%204%2C%20Dera%20Mandi%20Rd%2C%20Mandi%20Village%2C%20Mehrauli%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sin!4v1603124531785!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">                    
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+
+
+    </div>
+    <!--main end-->
+    {% endblock 'main' %}

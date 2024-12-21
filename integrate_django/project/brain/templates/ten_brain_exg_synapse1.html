@@ -1,0 +1,704 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+
+<style>
+    
+.head {
+    width: 100%; /* Full width for header */
+    height: auto; /* Adjusts based on image aspect ratio */
+    position: relative; /* To position the small image and text within */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.head img {
+    width: 100%; /* Ensure the header image takes up full width */
+    height: auto; /* Maintains aspect ratio */
+}
+.center-text {
+text-align: center; /* Center the text horizontally */
+position: absolute; /* Positioning relative to the header */
+top: 0%; /* Position it a bit lower within the header */
+left: 50%;
+transform: translateX(-50%); /* Center the element horizontally */
+color: white; /* Make sure the text is white */
+font-family: Arial, sans-serif; /* Use a clean font */
+}
+
+.center-text h2 {
+font-size: 2rem;
+margin-bottom: 10px; /* Space below the heading */
+}
+
+.center-text h3 {
+font-size: 1.5rem;
+margin-bottom: 20px; /* Space below the subheading */
+}
+
+.center-text p {
+font-size: 1rem;
+line-height: 1.5;
+}
+
+
+.small-img-text {
+    position: absolute; /* Position the small images over the header image */
+    top: 75%; /* Adjust position from top */
+    left: 50%; /* Center them horizontally */
+    transform: translateX(-50%); /* Center alignment */
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-between; /* Space between the small images */
+    width: 70%; /* Adjust width based on the number of small images */
+}
+
+.small-img-text img {
+    width: 50px; /* Size of the small image */
+    height: auto;
+}
+
+.container {
+    padding: 50px;
+}
+
+.card-custom {
+    background-color: #000;
+    border: 1px solid #444;
+    color: white;
+    font-size: smaller;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+
+.card-custom h4,
+.card-custom h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #39FF14; /* Neon Green Highlight */
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.spacing {
+    margin: 20px 0;
+}
+
+.intro-heading {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.video-frame {
+    border: 1px solid white; /* White border */
+    border-radius: 15px; /* Curved corners */
+    overflow: hidden; /* Ensures the corners appear curved */
+    margin-top: 20px; /* Adds space between text and video */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 767px) {
+    .small-img-text {
+        position: absolute;
+        top: 65%; /* Adjust position for smaller screens */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%; /* Increase the width for small screens */
+        justify-content: space-evenly; /* Spread out the small images evenly */
+    }
+    .body {
+        position: absolute;
+        top: 65%; /* Adjust position for smaller screens */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%; /* Increase the width for small screens */
+        justify-content: space-evenly; /* Spread out the small images evenly */
+    }
+
+    .small-img-text img {
+        width: 40px; /* Resize small images for mobile */
+        height: auto;
+    }
+
+    .container {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    .card-custom {
+        font-size: small; /* Reduce font size on small screens */
+        padding: 15px; /* Less padding */
+    }
+
+    .intro-heading h3 {
+        font-size: 1.5rem; /* Adjust heading size for small screens */
+    }
+
+    .video-frame iframe {
+        width: 100%; /* Make iframe responsive */
+        height: auto; /* Adjust height */
+    }
+}
+
+@media (max-width: 576px) {
+    .card-custom {
+        padding: 10px; /* Less padding for very small screens */
+    }
+
+    .intro-heading h3 {
+        font-size: 1.2rem; /* Adjust heading size further */
+    }
+}
+
+/* Packages and Bundles Styles */
+.packages-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+.packages-container .card img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 20px; /* Adds space between the image and the text */
+}
+
+.packages-container .card h2 {
+margin-top: 15px; /* Adds space above the text */
+}
+
+.packages-container .card p {
+margin-top: 10px; /* Adds space between the heading and paragraph */
+}
+
+.card {
+   background-color: #98b5d4;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    width: 300px;
+}
+
+.card-title {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.card-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.tabs-container {
+margin: 50px auto;
+max-width: 800px;
+border: 1px solid #fff;
+border-radius: 10px;
+background-color: #1a1a1a;
+}
+.nav-tabs {
+border-bottom: 1px solid #fff;
+}
+.nav-tabs .nav-link {
+color: #fff;
+border: none;
+background-color: transparent;
+}
+.nav-tabs .nav-link.active {
+background-color: #ff9800;
+color: #000;
+font-weight: bold;
+}
+.tab-content {
+padding: 20px;
+}
+h1 {
+color: #ffffff;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+th, td {
+border: 1px solid #fff;
+padding: 10px;
+text-align: left;
+}
+th {
+background-color: #ff9800;
+color: #000;
+}
+
+
+h1 {
+color: #fff; /* White color for the title */ 
+text-align: center;
+margin-bottom: 30px;
+}
+.card {
+background-color: #1a1a1a;
+border: 1px solid #fff;
+border-radius: 10px;
+}
+.card h5 {
+color: #fff; /* White color for the card headers */
+text-align: center;
+margin-top: 15px;
+}
+.card ul {
+list-style-type: disc; /* Ensure bullet points are displayed */
+padding-left: 20px; /* Add spacing for indentation */
+color: #fff; /* White color for the list items */
+}
+.card ul li {
+margin: 5px 0;
+}
+
+.box {
+   padding-right: 100px;
+    padding-left: auto;
+    background-color: #000000; /* Light gray */
+    border: 1px solid #dee2e6; /* Border */
+    height: 200px;
+    width: auto;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+  }
+</style>
+
+<div class="bg-black text-white">
+<div class="head">
+    <img src="{% static 'assets/ten_brain_exg_synapse-images/header.png' %}" alt="Ten Brain Research EXG Synapse">
+    <div class="center-text">
+        <h2><span>India leading DIY Brain-Computer Interface Kit</span> </h2>
+        
+        <p>Dive into the world of human-computer interface with  the </p>
+           
+    </div>
+    
+    <!-- Small Images with Space -->
+    <div class="small-img-text">
+        <img src="{% static 'assets/ten_brain_exg_synapse-images/EEG.png' %}" alt="EEG Image">
+        
+        <img src="{% static 'assets/ten_brain_exg_synapse-images/ECG.png' %}" alt="ECG Image">
+        <img src="{% static 'assets/ten_brain_exg_synapse-images/EMG.png' %}" alt="EMG Image">
+        <img src="{% static 'assets/ten_brain_exg_synapse-images/EOG.png' %}" alt="EOG Image">
+    </div>
+    
+</div>
+
+
+<div class="container">
+    <!-- Two Column Layout -->
+    <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-6">
+            <div class="card-custom spacing">
+                <h5>Discover Neuroscience with the Ten Brain Research EXG Synapse</h5>
+                <p>Dive into the world of brain-computer interface with our DIY kit.</p>
+            </div>
+            <!-- Row for Build & Discover and Driven By The Community -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card-custom spacing">
+                        <img src="{% static 'assets/ten_brain_exg_synapse-images/Discover.png' %}" alt="Discover" class="img-fluid">
+                        <h4>Build & Discover</h4>
+                        <p>Affordable and Complete: Get hands-on with brain-computer interface technology at an incredible value.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom spacing">
+                        <h4>Driven By The Community</h4>
+                        <p>Collaborate and Innovate: With open-source accessibility, join a community dedicated to pushing the boundaries of neuroscience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-md-6 text-center">
+            <div class="card-custom spacing">
+                <h4 class="mb-4">For All Explorers</h4>
+                <p>Simple and Comprehensive: Whether you’re studying, researching, or just passionate about neuroscience, Synapse is your perfect companion.</p>
+                <div class="image-section">
+                    <img src="{% static 'assets/ten_brain_exg_synapse-images/Explorers.png' %}" alt="Ten Brain Research EXG Synapse" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Intro Heading -->
+    <div class="intro-heading">
+        <h3>Introducing Ten Brain Research EXG Synapse DIY Neuroscience Kits</h3>
+        <div class="video-frame">
+            <iframe width="947" height="448" src="https://www.youtube.com/embed/jTDCuVDt-ms" 
+                    title="Unlock the Future of HCI &amp; BCI Projects | Introducing Ten Brain Research EXG Synapse DIY Neuroscience Kits" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    <!-- Packages and Bundles Section -->
+<div class="packages-container">
+    <div class="card">
+       
+        <img src="{% static 'assets/ten_brain_exg_synapse-images/Box.png' %}" alt="" height="90px" width="70px" class="center">
+        <h2 class="card-title">In The Box</h2>
+        <p class="card-text">The Kit comes with everything you need to get started, including sensors and accessories for seamless biosignal acquisition</p>
+        <button class="btn">Schematic</button>
+    
+    </div>
+    <div class="card">
+        <img src="{% static 'assets/ten_brain_exg_synapse-images/Streaming.png' %}" alt="" height="90px" width="70px">
+        <h2 class="card-title">Visualization and Streaming</h2>
+        <p class="card-text">Easily visualize your data with our visualizer or integrate it into larger projects with Lab Streaming Layer support.</p>
+        <button class="btn">Learn More</button>
+    </div>
+    <div class="card">
+        <img src="{% static 'assets/ten_brain_exg_synapse-images/Projects (1).png' %}" alt="" height="90px" width="70px">
+        <h2 class="card-title">Open Source Projects</h2>
+        <p class="card-text">Access our Github repository for various biosignal acquisition examples and start creating your own projects..</p>
+        <button class="btn">Access Github Repository</button>
+    </div>
+ </div>
+ <div class="product">
+    <h3 class="text-center"><b>Ten Brain Research EXG Synapse Product Information</b></h3>
+    <div class="row align-items-center">
+        <!-- Left Column: Image -->
+        <div class="col-md-6 text-center">
+            <img src="{% static 'assets/ten_brain_exg_synapse-images/synapseproduct1.webp' %}" alt="Ten Brain Research EXG Synapse Product Image" class="img-fluid" style="max-width: 300px; height: auto;">
+        </div>
+        <!-- Right Column: Product Details -->
+        <div class="col-md-6">
+            <h4>Ten Brain Research EXG Synapse</h4>
+            <p>
+                DIY HCI/BCI & Robotics Kit for beginners with biopotential signal compatibility, covering ECG, EEG, EOG, and EMG.
+            </p>
+        </div>
+    </div>   
+ </div>
+ <div class="container">
+    <div class="text-center my-4">
+      <h1>Product Description</h1>
+    </div>
+    <div class="tabs-container">
+      <ul class="nav nav-tabs justify-content-center" id="productTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true">
+            About Synapse
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button" role="tab" aria-controls="specs" aria-selected="false">
+            Technical Specifications
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="productTabsContent">
+        <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+          <p style="background-color: #000 !important;">
+            Dive into DIY neuroscience with EXG Synapse Kits! Perfect for students and innovators, effortlessly capture EMG, ECG, EEG, and EOG signals. Explore the brain and muscles—it’s hands-on and exciting. 
+            Ten Brain Research Synapse has comprehensive biopotential signal compatibility, covering ECG, EEG, EOG, and EMG, ensuring a versatile solution for various physiological monitoring applications. 
+            It seamlessly pairs with any MCU featuring ADC, expanding compatibility across platforms like Arduino, ESP32, STM32, and more. 
+            Enjoy flexibility with an optional bypass of the bandpass filter allowing tailored signal output for diverse analysis.
+          </p>
+        </div>
+        <div class="tab-pane fade" id="specs" role="tabpanel" aria-labelledby="specs-tab">
+          <table>
+            <thead>
+              <tr>
+                <th>Specification</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  style="background-color: #000 !important;">
+                <td>Input Voltage</td>
+                <td>3.3V</td>
+              </tr>
+              <tr style="background-color: #000 !important;">
+                <td>Input Impedance</td>
+                <td>20<sup>9</sup> Ω</td>
+              </tr>
+              <tr style="background-color: #000 !important;">
+                <td>Compatible Hardware</td>
+                <td>Any ADC input</td>
+              </tr>
+              <tr style="background-color: #000 !important;">
+                <td>Biopotentials</td>
+                <td>ECG, EMG, EOG, or EEG (configurable bandpass) | By default configured for a bandwidth of 1.6Hz to 47Hz and Gain 50</td>
+              </tr>
+              <tr style="background-color: #000 !important;">
+                <td>No. of Channels</td>
+                <td>1</td>
+              </tr>
+              <tr style="background-color: #000 !important;">
+                <td>Electrodes</td>
+                <td>3</td>
+              </tr>
+              <tr style="background-color: #000 !important;">
+                <td>Dimensions</td>
+                <td>30.0 x 33.0 mm</td>
+              </tr>
+              <tr style="background-color: #000 !important;">
+                <td>Open Source</td>
+                <td>Hardware</td>
+              </tr>
+              <tr style="background-color: #000 !important;">
+                <td>Special Features</td>
+                <td>Very Compact and space-utilized EXG Synapse</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- </div>
+</div> -->
+<div class="container">
+    <h1>Introducing Ten Brain Research EXG Synapse DIY Neuroscience Kits</h1>
+    <div class="row g-4">
+      <!-- Explorer Edition -->
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card h-100 p-3">
+          <h5>Explorer Edition</h5>
+          <ul>
+            <li>PCB: 1 unit</li>
+            <li>Jumper Cables: 10 pcs each of F2F & MtoF</li>
+            <li>Snap Cables: 3 units</li>
+            <li>Straight Pin Headers: 6 units</li>
+            <li>Angled Pin Headers: 6 units</li>
+            <li>Resistors: 1 unit each of 1MR, 1.5MR, 1.8MR, 2.1MR</li>
+            <li>Capacitors: 1 unit each of 3nF, 0.1uF, 0.2uF, 0.5uF</li>
+            <li>Head Strap: 1 unit</li>
+            <li>Medical EXG Sensors: 6 units</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Innovator Bundle -->
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card h-100 p-3">
+          <h5>Innovator Bundle</h5>
+          <ul>
+            <li>PCB: 1 unit</li>
+            <li>Jumper Cables: 10 pcs each of F2F & MtoF</li>
+            <li>Snap Cables: 3 units</li>
+            <li>Straight Pin Headers: 6 units</li>
+            <li>Angled Pin Headers: 6 units</li>
+            <li>Resistors: 1 unit each of 1MR, 1.5MR, 1.8MR, 2.1MR</li>
+            <li>Capacitors: 1 unit each of 3nF, 0.1uF, 0.2uF, 0.5uF</li>
+            <li>Head Strap: 1 unit</li>
+            <li>Medical EXG Sensors: 18 units</li>
+            <li>ESP 32 Microcontroller: 1 unit</li>
+            <li>Micro USB Cable: 1 unit</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Pioneer Pro Kit -->
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card h-100 p-3">
+          <h5>Pioneer Pro Kit</h5>
+          <ul>
+            <li>PCB: 1 unit</li>
+            <li>Jumper Cables: 10 pcs each of F2F & MtoF</li>
+            <li>Snap Cables: 3 units</li>
+            <li>Straight Pin Headers: 6 units</li>
+            <li>Angled Pin Headers: 6 units</li>
+            <li>Resistors: 1 unit each of 1MR, 1.5MR, 1.8MR, 2.1MR</li>
+            <li>Capacitors: 1 unit each of 3nF, 0.1uF, 0.2uF, 0.5uF</li>
+            <li>ESP 32 Microcontroller: 1 unit</li>
+            <li>Micro USB Cable: 1 unit</li>
+            <li>NuPrep Gel (25g): 1 unit</li>
+            <li>Wet Wipes: 1 pack</li>
+            <li>Head Strap: 1 unit</li>
+            <li>Medical EXG Sensors: 30 units</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="intro-heading">
+    <h3>Introducing Ten Brain Research EXG Synapse DIY Neuroscience Kits</h3>
+    <div >
+        <iframe width="100%" height="448" src="https://www.youtube.com/embed/jTDCuVDt-ms" 
+                title="Unlock the Future of HCI &amp; BCI Projects | Introducing Ten Brain Research EXG Synapse DIY Neuroscience Kits" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+</div>
+  <!-- </div> -->
+  <div class="container mt-5">
+    <!-- First Row -->
+    <div class="row">
+      <div class="col-md-6 col-sm-12 mb-4">
+        <div class="box">
+            <h3>Explore Biopotential Data</h3>
+            <p>Capture and analyze diverse body signals for health and tech applications with Synapse. Perfect for student projects in ECG, EMG, EOG, and EEG.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 mb-4">
+        <div class="box">
+            <h3>Project Pathways</h3>
+            <p>From health monitors to interactive tech, Synapse provides the data for various creative and practical student projects.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Second Row -->
+    <div class="row">
+      <div class="col-md-6 col-sm-12 mb-4">
+        <div class="box">
+            <h3>Accessible Technology</h3>
+            <p>Get started on your neuroscience journey with Synapse, priced for accessibility and designed for versatility.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 mb-4">
+        <div class="box">
+            <h3>Explore and Learn with "HCI & Biofeedback Kit" Ready in a Box</h3>
+            <p>Discover the fusion of technology and wellness with our “HCI” Ready Kit in a Box, featuring a biofeedback kit designed to deepen your understanding and engagement with human-computer interaction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+  
+        <!--Get In Touch-->
+        <div class="row mt-4  ms-3 me-3">
+            <h5><p style="text-align: center;">Get In Touch</p></h5>
+            <h2><p style="text-align: center;"><b>Get in touch with our team to see how Ten Brain Research can help you</b></p></h2>
+            <h6><p style="text-align: center;"><b>Get in touch with our team to see how Ten Brain Research can revolutionize interaction with technology</b></p></h6>
+            <div class="col-sm-2"></div>
+              <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <img src="{% static 'assets/eeg-images/demo.webp' %}" width="600" class="get-in-touch-img">
+                    </div>
+                    <!-- <div class="clearfix"></div> -->
+                    <div class="col-sm-6 get-in">
+                      <form action="/ten-brain-eeg-headband" method="post" autocomplete="off">
+                        {% if success_msg %}
+                            <div id="alerts" class="alert alert-success" role="alert">{{success_msg}}
+                            </div>
+                        {% endif %}
+                          {% csrf_token %}
+                        <div class="form-group">
+                          <label for="exampleInputEmail1" class="label-text">Your Name</label>
+                          <input type="text" class="form-control text-form" name="uname" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group mt-3">
+                          <label for="exampleInputEmail1" class="label-text">Email ID</label>
+                          <input type="email" class="form-control text-form" name="uemail" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email ID">
+                        </div>
+                        <div class="form-group mt-3">
+                          <label for="exampleInputEmail1" class="label-text">Phone No</label>
+                          <input type="number" class="form-control text-form" name="umobile" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Phone No">
+                        </div>
+                        <div class="form-group mt-3">
+                          <label for="exampleInputEmail1" class="label-text">Country</label>
+                          <input type="text" class="form-control text-form" name="ucountry" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Country">
+                        </div>
+                        <div class="form-group mt-3">
+                          <label for="exampleInputEmail1" class="label-text">Your Message</label>
+                          <input type="text" class="form-control text-form" name="umessage" size="30" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your message">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-warning mt-3 submit-btn">Submit</button>
+                      </form>
+                    </div>
+                  </div>
+              </div>
+            <div class="col-sm-2"></div>
+          </div>
+          <!--end Get in touch-->
+  
+          <!--Related Products-->
+          <div class="row mt-4">
+            <h5><p style="text-align: center;">Related Products</p></h5>
+            <h2><p style="text-align: center;"><b>Embark on a journey of Brain Exploration with us</b></p></h2>
+            <div class="col-sm-1"></div>
+              <div class="col-sm-10">
+                  <div class="row">
+                    <div class="wrapper">
+                      <div class="my-slider">
+                        <div class="card card-related-products" style="height: 100%; border-radius: 10%; color: #fff;;">
+                          <img class="card-img-top" src="{% static 'assets/eeg-images/relaed products/Ten Brain ResearchFlexCap.webp' %}" alt="Card image cap"  style="border-radius: 25px; margin-left: 10px; padding-right: 25px;">
+                          <div class="card-body">
+                            <h4 class="card-title" style="text-align: center;">Ten Brain Research Flex Cap</h4>
+                            <p class="card-text" style="text-align: center;">8 – Channel Wireless and Dry EEG Headset. Movable Electrodes and compatible with Ten Brain Research Desktop Application</p>
+                          </div>
+                        </div>
+                        <div class="card card-related-products" style="height: 100%; border-radius: 10%; color: #fff;;">
+                          <img class="card-img-top" src="{% static 'assets/eeg-images/relaed products/Ten Brain ResearchEXGSynapse.webp' %}" alt="Card image cap"  style="border-radius: 25px; margin-left: 10px; padding-right: 25px;">
+                          <div class="card-body">
+                            <h4 class="card-title" style="text-align: center;">Ten Brain Research EXG Synapse</h4>
+                            <p class="card-text" style="text-align: center;">DIY Neuroscience Kit. A BCI/HCI ready Kit with comprehensive biopotential signal compatibility</p>
+                          </div>
+                        </div>
+                        <div class="card card-related-products" style="height: 100%; border-radius: 10%; color: #fff;;">
+                          <img class="card-img-top" src="{% static 'assets/eeg-images/relaed products/Ten Brain ResearchDesktopApp.webp' %}" alt="Card image cap"  style="border-radius: 25px; margin-left: 10px; padding-right: 25px;">
+                          <div class="card-body">
+                            <h4 class="card-title" style="text-align: center;">Ten Brain Research Desktop App</h4>
+                            <p class="card-text" style="text-align: center;">One Stop Solution for Real-time EEG Data, Band Powers and Cognitive Insights (Connection via Cable OR Bluetooth dongle)</p>
+                          </div>
+                        </div>
+                        <div class="card card-related-products" style="height: 100%; border-radius: 10%; color: #fff;;">
+                          <img class="card-img-top" src="{% static 'assets/eeg-images/relaed products/Ten Brain ResearchMobileApplication.webp' %}" alt="Card image cap"  style="border-radius: 25px; margin-left: 10px; padding-right: 25px;">
+                          <div class="card-body">
+                            <h4 class="card-title" style="text-align: center;">Ten Brain Research Mobile Application</h4>
+                            <p class="card-text" style="text-align: center;">Brain training &amp; Meditation App . Guided and Music Meditations backed by Neuroscience with Cognitive Insights</p>
+                          </div>
+                        </div>
+                        <div class="card card-related-products" style="height: 100%; border-radius: 10%; color: #fff;;">
+                          <img class="card-img-top" src="{% static 'assets/eeg-images/relaed products/Ten Brain ResearchMobileApplication.webp' %}" alt="Card image cap"  style="border-radius: 25px; margin-left: 10px; padding-right: 25px;">
+                          <div class="card-body">
+                            <h4 class="card-title" style="text-align: center;">Ten Brain Research Headband</h4>
+                            <p class="card-text" style="text-align: center;">6 – Channel Wireless and Dry EEG Headset. (Compatible with Ten Brain Research Mobile Application and Ten Brain Research Desktop Application)</p>
+                          </div>
+                        </div>
+                        
+                                              
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-sm-1"></div>
+          </div>
+          <!--end related Products-->
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+{% endblock 'main' %}

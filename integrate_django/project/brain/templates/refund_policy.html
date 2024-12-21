@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+<div class="container">
+    <h1>REFUND POLICY</h1>
+    <h3>1. <strong>TERMS OF REFUND</strong></h3>
+    <p>
+        The following requirements must be met in order for the company to provide the user a refund within 15–21 business days:
+    </p>
+    <ol>
+        <li>if the user want to return the product because they are unhappy with it.</li>
+        <li>
+            if the user requested to cancel the order for the product within 24 hours after placing it.
+            <ul>
+                <li>If the delivered product is damaged, differs from what was requested, or the box is opened prior to delivery, the client will receive a replacement.</li>
+            </ul>
+        </li>
+        <li>Online payment methods will either issue a store credit or a refund to the original account in which the purchase was made.</li>
+        <li>
+            In the event of a complete policy return, the company will inspect the products and conduct a quality check. Within 15–21 business days following the inspection and quality verification, the money return will be completed.
+        </li>
+    </ol>
+</div>
+<div class="subscription-section">
+    <h2>New from Ten Brain Research?</h2>
+    <p>Get the latest from Ten Brain Research by subscribing now.</p>
+    <form class="subscription-form" method="post" action="/submit_subscription">
+        {% csrf_token %}
+        {% if success_msg %}
+                      <div id="alerts" class="alert alert-success" role="alert">{{success_msg}}
+                      </div>
+                  {% endif %}
+        <input type="email" name="uemail" placeholder="Email" required  />
+        <input type="hidden" name="page_url" value="refund_policy">
+        <button type="submit">Subscribe</button>
+      </form>
+</div>
+{% endblock 'main' %}

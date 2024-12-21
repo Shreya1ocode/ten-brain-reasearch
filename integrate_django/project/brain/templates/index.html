@@ -1,0 +1,372 @@
+
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+<style>
+    
+/* General header styling */
+/* .header {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* WhatsApp Logo Styling 
+.whatsapp-logo {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000; /* Ensures it's always on top 
+}
+
+.whatsapp-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Make it circular 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-logo img:hover {
+  transform: scale(1.1); /* Slight zoom on hover 
+}
+
+.logo {
+  height: auto;
+  max-width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures navigation items wrap on smaller screens 
+}
+
+.nav-link {
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff9900;
+} */
+
+/* Info Section Styling */
+/* .info-section {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+.info-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.info-text {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+} */
+
+/* Main Content */
+main {
+  background-color: #f8f9fa;
+  padding: 40px 10px;
+  /* margin: 20px auto; */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+main .content {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+main .content h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+main .content p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+}
+
+main .video iframe {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact-section .form-group {
+  text-align: left; /* Align form fields to the left */
+}
+
+.contact-section label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px; /* Spacing below each label */
+  color: #333;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%; /* Full width */
+  max-width: 500px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 1rem;
+  margin-bottom: 15px; /* Spacing between inputs */
+  box-shadow: none;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #ff9900;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 153, 0, 0.5);
+}
+
+.contact-section {
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  flex-direction: column; /* Stack inputs vertically */
+  align-items: flex-start; /* Align inputs to the left */
+  padding: 20px;
+}
+.button{
+  display: flex;
+  justify-content: flex-start
+}
+.contact-section .btn-warning {
+  width:100%;
+  max-width: 490px;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-weight: bold;
+  background-color: #ff9900;
+  border: none;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+
+  
+}
+
+.contact-section .btn-warning:hover {
+  background-color: #e68a00;
+}
+
+/* Media Queries for Responsive Design */
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  main .content h2 {
+    font-size: 1.5rem;
+  }
+
+  main .content p {
+    font-size: 0.9rem;
+  }
+
+  main .video iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-section input,
+  .contact-section textarea,
+  .contact-section .btn-warning {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-title {
+    font-size: 1.2rem;
+  }
+
+  .info-text {
+    font-size: 0.9rem;
+  }
+
+  main .content h2 {
+    font-size: 1.2rem;
+  }
+
+  main .content p {
+    font-size: 0.8rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+}
+
+
+@media (max-width: 480px) {
+  .info-title {
+    font-size: 1.2rem;
+  }
+
+  .info-text {
+    font-size: 0.9rem;
+  }
+
+  main .content h2 {
+    font-size: 1.2rem;
+  }
+
+  main .content p {
+    font-size: 0.8rem;
+  }
+
+
+}
+
+</style>
+    
+  <!-- <header class="header py-3">
+    <div class="container text-center">
+      <div class="d-flex flex-column align-items-center">
+        <!-- Logo 
+       
+        <svg preserveAspectRatio="xMidYMid meet" data-bbox="0.36 0.279 243.208 201.268" viewBox="0 0 243.913 220" height="150" width="243.913" xmlns="http://www.w3.org/2000/svg" data-type="ugc" role="presentation" aria-hidden="true">
+          <g>
+              <g opacity=".86">
+                  <path strokeWidth=".5" strokeMiterlimit="10" stroke="#e9b00d" fill="#e9b00d" d="M139.358 159.816s5.42-26.187 27.014-38.576a13.973 13.973 0 0 0 4.065-3.52l23.864-30.639a11.721 11.721 0 0 1 12.02-4.417c4 1 7.321 4.083 4.681 12.319-5.28 16.6-22.368 36.711-22.368 36.711s.51 6.036 4.769 1.513 18.549-27.665 18.549-27.665l7.515-14.255a11.879 11.879 0 0 0 1.32-4.417l2.534-26.574 2.816-17.282a9.292 9.292 0 0 1 2.851-5.4c3.52-3.238 10.066-7.039 13.445 5.086 3.8 13.6-2.921 53.87-5.808 69.691a29.2 29.2 0 0 1-5.086 11.862c-8.06 11.087-27.208 36.8-42.659 52.444v21.858a2.992 2.992 0 0 1-2.992 2.992h-42.8a1.531 1.531 0 0 1-1.549-1.426z"></path>
+                  <path strokeWidth=".5" strokeMiterlimit="10" stroke="#e9b00d" fill="#e9b00d" d="M214.522 76.345s2.517-29.671 4.277-34.951-10.804 5.28-9.556 32.188z"></path>
+                  <path strokeWidth=".5" strokeMiterlimit="10" stroke="#e9b00d" fill="#e9b00d" d="M202.713 73.071s3.114-18.936 4.523-21.611-7.8-2.27-10.049 21.611z"></path>
+                  <path strokeWidth=".5" strokeMiterlimit="10" stroke="#e9b00d" fill="#e9b00d" d="M104.568 159.816s-5.438-26.187-27.032-38.576a13.9 13.9 0 0 1-4.048-3.52L49.625 86.991a11.738 11.738 0 0 0-12.038-4.417c-3.977 1-7.321 4.083-4.681 12.319 5.28 16.6 22.386 36.711 22.386 36.711s-.51 6.089-4.787 1.549-18.532-27.647-18.532-27.647l-7.519-14.255a11.879 11.879 0 0 1-1.32-4.417L20.587 60.26l-2.8-17.282a9.38 9.38 0 0 0-2.851-5.4c-3.52-3.238-10.066-7.039-13.445 5.086-3.784 13.6 2.9 53.87 5.808 69.691a28.967 28.967 0 0 0 5.086 11.862c8.06 11.087 27.208 36.8 42.642 52.444v21.858a3.009 3.009 0 0 0 3.009 2.992h42.783a1.531 1.531 0 0 0 1.566-1.426z"></path>
+                  <path strokeWidth=".5" strokeMiterlimit="10" stroke="#e9b00d" fill="#e9b00d" d="M29.387 76.345s-2.52-29.671-4.277-34.951 10.823 5.28 9.556 32.188z"></path>
+                  <path strokeWidth=".5" strokeMiterlimit="10" stroke="#e9b00d" fill="#e9b00d" d="M41.213 73.071S38.186 54.135 36.69 51.46s7.78-2.27 10.049 21.611z"></path>
+                  <path strokeWidth=".5" strokeMiterlimit="10" stroke="#e9b00d" fill="#e9b00d" d="M131.695 13.481l10.313 10.93c8.623-9.169 22-9.609 29.407-2.745a18.567 18.567 0 0 1 3.52 22.368c-4.8 8.166-16.367 11.4-26.011 6.16a196.508 196.508 0 0 1-28.915-27.278 110.45 110.45 0 0 0-18.478-17.477c-2.165-1.619-3.96-2.165-8.923-3.766-8.5-2.728-19.587-.9-28.281 5.28a34.757 34.757 0 0 0-13.586 36.711 34.687 34.687 0 0 0 26.521 24.638c11.07 2.217 23.723-1.021 30.939-9.063a28.172 28.172 0 0 0 1.883-2.393L99.257 45.529c-.422.581-6.776 8.9-16.842 8.166a18.954 18.954 0 0 1-17.331-17.722 18.831 18.831 0 0 1 13.2-18.6 19.851 19.851 0 0 1 20.1 5.913c5.192 5.385 8.553 7.884 23.142 23 5.86 6.089 5.614 5.79 6.916 7.039 5.438 5.28 10.348 9.943 16.719 12.565 12.618 5.28 25.272-.141 26.644-.757a34.969 34.969 0 0 0 17.352-16.6c.6-1.267 7.48-16.3-.757-31.044A34.7 34.7 0 0 0 151.811.916a35.391 35.391 0 0 0-20.116 12.565z"></path>
+              </g>
+          </g>
+          <text x="50%" y="220" font-size="20" fill="#e9b00d" text-anchor="middle" font-family="Arial, sans-serif" >
+              TEN BRAIN RESEARCH
+          </text>
+      </svg>
+      
+        <!-- Navigation 
+        <nav class="nav">
+            <!-- Products Dropdown 
+            <div class="dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                id="productsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                <li><a class="dropdown-item" href="#product1">Product 1</a></li>
+                <li><a class="dropdown-item" href="#product2">Product 2</a></li>
+                <li><a class="dropdown-item" href="#product3">Product 3</a></li>
+              </ul>
+            </div>
+          <a href="#how-it-works" class="nav-link">How It Works?</a>
+          <a href="#blog" class="nav-link">Blog</a>
+        </nav>
+      </div>
+    </div>
+</header> -->
+    <main>
+        <div class="content text-center py-5">
+            <h1><strong>Thank you for everything!</strong></h1>
+            <p><strong>October 2024 marks the completion of Ten Brain Research’s four years, and this four-year journey has been nothing but great.</strong></p>
+            <p><strong>With a heavy heart, we have to share with you that as of October 2024, Ten Brain Research will not be operational anymore. But rest assured, we will continue providing the same (if not better) level of support to all our customers.</strong></p>
+          </div>
+          <div class="video text-center py-5">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4mYB_ooOgMY?si=7_giGUc8Fp9Prx58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          
+        
+      
+
+        <section class="contact-section py-5">
+            <div class="container text-center">
+                <h2 class="mb-4"><span>Get In Touch</span></h2>
+                <p class="mb-4">
+                    <strong>If you have any queries regarding Ten Brain Research, its products, or anything else, feel free to reach out to us at 
+                    <strong>support@tenbrainreserach.com</strong> or fill out the form below:</strong>
+                </p>
+                <div class="row align-items-center">
+                    <!-- Image Section -->
+                    <div class="col-md-6 text-center">
+                        <img src="{% static 'assets/home-images/gettouchlogo.png' %}" alt="Ten Brain Research Product" class="img-fluid rounded">
+                    </div>
+                    <!-- Form Section -->
+                    <div class="col-md-6">
+                        {% if success_msg %}
+                          <div id="alerts" class="alert alert-success" role="alert">{{success_msg}}
+                          </div>
+                      {% endif %}
+                        <form action="/" method="post">
+                            {% csrf_token %}
+                          <section class="contact-section">
+                            <!-- <form method="post" action="/contactus"> -->
+                              <label for="name">Name</label>
+                              <input type="text" name="uname" id="name" placeholder="Your Name" />
+                          
+                              <label for="email">Email ID</label>
+                              <input type="email" name="uemail" id="email" placeholder="Your Email" />
+                          
+                              <label for="phone">Phone</label>
+                              <input type="tel" name="umobile" id="phone" placeholder="Your Phone Number" />
+                          
+                              <label for="message">Message</label>
+                              <textarea id="message" name="umessage" rows="4" placeholder="Your Message"></textarea>
+                              <div class="align-items-center">
+                                <button type="submit" class="btn btn-warning" style="width: 550px;">Submit</button>
+
+                              </div>
+                              
+                            <!-- </form> -->
+                          </section>
+                         
+                          </div>
+                        
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+      
+    {% endblock 'main' %}
+
+
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> -->

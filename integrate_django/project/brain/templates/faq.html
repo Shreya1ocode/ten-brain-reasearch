@@ -1,0 +1,505 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+<style>
+
+.accordion-container {
+    max-width: 700px;
+    /* margin: 50px auto; */
+    padding: 20px;
+    margin-top: -10px;
+    border-radius: 20px;
+    /* background-color: #111; */
+    /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); */
+}
+
+/* h2 {
+    text-align: center;
+    color: #ffae00;
+    margin-bottom: 20px;
+} */
+
+/* Accordion Styles */
+.accordion-item {
+    /* margin-bottom: 10px; */
+    /* border: 1px solid #333; */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 20px !important;
+}
+
+.accordion-button:hover {
+    color: #ff9800;
+}
+
+.accordion-button.active {
+    background-color: #ff9800;
+    color: #000;
+}
+
+.accordion-content {
+  /* padding: 10px; */
+  font-size: 1em;
+  line-height: 1.6;
+  /* background-color: #fafafa; */
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  margin-top: 10px;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  overflow: hidden;
+
+
+    padding: 30px;
+    display: none;
+    /* background-color: #111; */
+    color: #fff;
+}
+
+.accordion-content a {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+.accordion-content.show {
+    display: block;
+}
+.third-section{
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+.faq-research{
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border: 2px #fff solid;
+    height: 100%;
+}
+
+.subscription-section {
+  text-align: center;
+  background-color: #f1f1f1 !important;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.subscription-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666666;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.subscription-form input[type="email"] {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.subscription-form button {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #4a69bd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscription-form button:hover {
+  background-color: #3b55a3;
+}
+
+@media (max-width: 600px) {
+  .subscription-form {
+    flex-direction: column;
+  }
+
+  .subscription-form input[type="email"] {
+    margin-bottom: 10px;
+  }
+}
+</style>
+<!-- <div class="bg-black text-white"> -->
+<div class="row">
+    <div class="col-sm-12">
+      <img src="{% static 'assets/faq-images/faqs_paint.png' %}" width="100%">
+   </div>
+</div>
+<!-- </div> -->
+<div class="bg-white text-black">
+  <div class="row mt-4">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <h3 style="text-align: center;">Search and Find Answers to All Your Queries</h3>
+        <p style="text-align: center;">Our teams are working on answering each and every query via blogs & resources. Use the search bar to find topics and answers to all your queries.</p>
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+</div>
+
+<div class="bg-black text-white">
+  <!--first section start-->
+  <div class="row mt-4 mb=4">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 mt-5">
+      <div class="row" style="border: #fff solid 2px; border-radius: 15px;">
+        <h3 class="mt-3" style="text-align: center;">Questions About the Company</h3>
+
+        <div class="col-sm-6 mt-4 mb-4">
+          <div class="accordion-container ">
+            <div class="accordion-item">
+              <button class="accordion-button">+ Introduction</button>
+              <div class="accordion-content">
+                  <p>Welcome to our brain research platform. By using this website and its
+                    services, you agree to adhere to these terms and conditions. If you do
+                    not agree, you must discontinue usage immediately.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-container ">
+            <div class="accordion-item">
+              <button class="accordion-button">+ Is Ten Brain Research a certified product?</button>
+              <div class="accordion-content">
+                  <p>Yes, Ten Brain Research is a CE certified, ROHS compliant, ISO certified product.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 mt-4 mb-4">
+          <div class="accordion-container ">
+            <div class="accordion-item">
+              <button class="accordion-button">+ How do I contact Ten Brain Research support?</button>
+              <div class="accordion-content">
+                  <p>You can send in your queries or feedback at info@entrepreneurshipnetwork.net
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <!--first section end-->
+
+  <!--second section start-->
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 mt-5 mb-4">
+      <div class="row" style="border: #fff solid 2px; border-radius: 15px;">
+        <h3 class="mt-3" style="text-align: center;">Questions about the Ten Brain Research Headband and Flex Cap</h3>
+
+        <div class="col-sm-6 mt-4 mb-4">
+          <div class="accordion-container ">
+            <div class="accordion-item">
+              <button class="accordion-button">+ How does Ten Brain Research work?</button>
+              <div class="accordion-content">
+                  <p>Ten Brain Research’s flagship product is the EEG Flex Cap, which allows users to monitor brain activity in real-time, making it accessible for use in various fields such as neuroscience research, cognitive behavior therapy, and wellness coaching. The company aims to revolutionize brain health while promoting mental health awareness and reducing stigma. Ten Brain Research has been featured on platforms like Shark Tank India and Forbes, and it caters to a diverse audience including researchers, practitioners, and institutions.
+                  </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-container ">
+            <div class="accordion-item">
+              <button class="accordion-button">+ Are there any harmful effects of using Ten Brain Research?</button>
+              <div class="accordion-content">
+                  <p>No! There are no harmful effects of using Ten Brain Research. It’s more like a smartwatch which just monitors your brain.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-container ">
+            <div class="accordion-item">
+              <button class="accordion-button">+ How many Sensors do Ten Brain Research have?</button>
+              <div class="accordion-content">
+                  <p>Ten Brain Research has two options for headsets. Our headband comes with 8 Dry EEG sensors – 6 Signal + 2 Ref and the Flexcap comes with 10 sensors – 8 Signal + 2 Ref. In the cap, you can change the sensor locations based on the 10-20 system.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 mt-4 mb-4">
+          <div class="accordion-container ">
+            <div class="accordion-item">
+              <button class="accordion-button">+ How to use Ten Brain Research Headband and Mobile Application?</button>
+              <div class="accordion-content">
+                  <p>Our mobile application, based on the data, recommends you meditation techniques to help you achieve your desired state. Our application also tracks your brain activity during the session and provides real-time auditory feedback when you deviate.
+                  </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-container ">
+            <div class="accordion-item">
+              <button class="accordion-button">+ Is there any subscription fee for the Ten Brain Research Mobile App?</button>
+              <div class="accordion-content">
+                  <p>Whenever you purchase a Ten Brain Research Headband, it gives you free access to the Mobile Application.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <!--second section end-->
+
+  <!--third section start-->
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 mt-5 mb-4">
+      <div class="row">         
+        <div class="col-sm-6">
+            <div class="card faq-research">
+              <h5 style="text-align: center;" class="mt-4">Questions about Ten Brain Research Brain Gym</h5>
+                <div class="card-body">
+                  <div class="accordion-container ">
+                    <div class="accordion-item">
+                      <button class="accordion-button">+ How to book a Ten Brain Research Session?</button>
+                      <div class="accordion-content">
+                          <p>To book a session, select your preferred location, date, time and number of sessions. Based on your selection, pay the amount and you’re done. You can then physically visit the center at the scheduled date and time. You’ll receive a confirmation via email as well.
+                            <br>
+                            In case you have any queries, you can always reach out to info@entrepreneurshipnetwork.net	
+                          </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-container ">
+                    <div class="accordion-item">
+                      <button class="accordion-button">+ Can Ten Brain Research help with reduce stress? How does it work?</button>
+                      <div class="accordion-content">
+                          <p>Yes, Ten Brain Research can help you reduce stress by training your brain with Neurofeedback. Over sessions, Ten Brain Research helps you overcome anxiety and you can see the improvements in your insights as well.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-container ">
+                    <div class="accordion-item">
+                      <button class="accordion-button">+ What are the benefits of the Ten Brain Research pod sessions?</button>
+                      <div class="accordion-content">
+                          <p>Ten Brain Research pod sessions are designed by neuroscientists which help you find out which area of your life is causing you stress and helps you reduce and improve your brain health with meditation and other activities.
+                          </p>
+                          <p>
+                          And on top of that, you can track your improvements and brain performance with Ten Brain Research alongside.
+                          </p><p>
+                          Ten Brain Research helps you measure and improve focus, attention span, calmness levels, Mood and PDR of your brain.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-container ">
+                    <div class="accordion-item">
+                      <button class="accordion-button">+ How many sessions should a beginner should take?</button>
+                      <div class="accordion-content">
+                          <p>We recommend at least four sessions plan for a beginner. Once you can see the improvements and find the sessions helpful. You can always book more and more sessions.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card faq-research">
+            <h5 style="text-align: center;" class="mt-4">EEG and Technology</h5>
+              <div class="card-body">
+                <div class="accordion-container ">
+                  <div class="accordion-item">
+                    <button class="accordion-button">+ What is the technology behind Ten Brain Research headband?</button>
+                    <div class="accordion-content">
+                        <p>Ten Brain Research brings you the benefits of neurofeedback at the comfort of your home. The headband senses the electrical activity from your brain and over sessions, it trains your brain on how to achieve the desired state itself.	
+                        </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-container ">
+                  <div class="accordion-item">
+                    <button class="accordion-button">+ How it measures stress/anxiety or different cognitive states?</button>
+                    <div class="accordion-content">
+                        <p>All cognitive states, including stress and anxiety, defines your state of mind. With different cognitive states different patterns in EEG are observed. For example, in stress and anxiety the cingulate cortex is very active and hence we observe higher.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-container ">
+                  <div class="accordion-item">
+                    <button class="accordion-button">+ What is Neuroplasticity?</button>
+                    <div class="accordion-content">
+                        <p>Our brain has the ability to structurally change itself irrespective of our age, by forming new neural connections. Neurofeedback uses this ability to teach our brain to self-regulate its functions.	</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-container ">
+                  <div class="accordion-item">
+                    <button class="accordion-button">+ How accurate is the data we get from Ten Brain Research?</button>
+                    <div class="accordion-content">
+                        <p>The data you get from Ten Brain Research is highly accurate and has an efficacy rate of 98% as compared to a Gold standard EEG device.		</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+  
+  <!--third section end-->
+
+  <!--fourth section start-->
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 mt-5 mb-4">
+      <div class="row">         
+        <div class="col-sm-6">
+            <div class="card faq-research">
+              <h5 style="text-align: center;" class="mt-4">How to Use Ten Brain Research?</h5>
+                <div class="card-body">
+                  <div class="accordion-container ">
+                    <div class="accordion-item">
+                      <button class="accordion-button">+ How does the Headband connects to the Ten Brain Research Mobile App?</button>
+                      <div class="accordion-content">
+                          <p>Ten Brain Research Headband connects with just a tap with the mobile application via Bluetooth.
+                          </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-container ">
+                    <div class="accordion-item">
+                      <button class="accordion-button">+ The sensors are not turning green, what should I do?</button>
+                      <div class="accordion-content">
+                          <p>In case you’re not able to touch the sensors, please tighten the strap from the back and the top. You can also try to make a contact between the sensor and the scalp by adjusting your hairstyle in that manner.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-container ">
+                    <div class="accordion-item">
+                      <button class="accordion-button">+ How to wear the Ten Brain Research Headband?</button>
+                      <div class="accordion-content">
+                          <p>First make sure front two sensors touches your forehead properly.
+                          </p><p>
+                          Step-2<br>
+                          The side sensors (above your year ) act as reference of the EEG connection. They should touch the scalp properly.
+                          You’ll see green signs on the sensor connectivity screen on the mobile app for the sensor which are touched.
+                          </p><p>
+                          To know more, you can also visit: How to use Ten Brain Research?</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-container ">
+                    <div class="accordion-item">
+                      <button class="accordion-button">+ I dont' see a graph after my session, What should i do?</button>
+                      <div class="accordion-content">
+                          <p>If you don’t see any graphs after your Ten Brain Research session, then it might be because of the internet connectivity issue. Check your Network settings, connect to a stable internet connection and try again.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card faq-research">
+            <h5 style="text-align: center;" class="mt-4">Research & Brain Training Workshop</h5>
+              <div class="card-body">
+                <div class="accordion-container ">
+                  <div class="accordion-item">
+                    <button class="accordion-button">+ Can I see the real-time EEG Data with Ten Brain Research?</button>
+                    <div class="accordion-content">
+                        <p>Yes, you can see the real-time EEG data with Ten Brain Research. You will need access to Ten Brain Research Desktop Application for the same.
+                        </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-container ">
+                  <div class="accordion-item">
+                    <button class="accordion-button">+ Can I use Ten Brain Research for my research?</button>
+                    <div class="accordion-content">
+                        <p>Yes, you can make use of the Ten Brain Research Desktop application which can help you get Raw EEG data, Band Power, FFT and much more in your research.
+                        </p><p>
+                        There is a cost associated to the desktop app. To get in touch, kindly drop us an email at hey@Ten Brain Research.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-container ">
+                  <div class="accordion-item">
+                    <button class="accordion-button">+ How do I conduct a brain training workshop at my institution/workplace?</button>
+                    <div class="accordion-content">
+                        <p>To conduct a brain training workshop at your institution/workplace, you can reach out to us at hey@Ten Brain Research.com and one of our team members will get in touch with you directly.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <!--fourth section end-->
+
+
+
+
+
+</div>
+ 
+<div class="" style="background-color: #f1f1f1 !important;">
+<div class="subscription-section">
+    <h2 class="mt-5">New from Ten Brain Research?</h2>
+    <p>Get the latest from Ten Brain Research by subscribing now.</p>
+    <form class="subscription-form mb-5">
+      <input type="email" placeholder="Email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+<script>
+  // Accordion functionality
+  const buttons = document.querySelectorAll('.accordion-button');
+
+  buttons.forEach(button => {
+      button.addEventListener('click', () => {
+          // Toggle active class for the clicked button
+          button.classList.toggle('active');
+
+          // Toggle the visibility of the associated content
+          const content = button.nextElementSibling;
+          content.classList.toggle('show');
+          
+          // Collapse other accordion items
+          buttons.forEach(otherButton => {
+              if (otherButton !== button) {
+                  otherButton.classList.remove('active');
+                  otherButton.nextElementSibling.classList.remove('show');
+              }
+          });
+      });
+  });
+</script>
+
+{% endblock 'main' %}

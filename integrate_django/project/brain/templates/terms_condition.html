@@ -1,0 +1,493 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body {
+
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Times, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+
+}
+
+p, li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 100;
+}
+
+ul {
+    margin-left: 20px;
+    list-style: disc;
+    font-weight: 100;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+strong {
+    color: #000;
+}
+
+h3, h4 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+/* Sticky Help Button */
+.query-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.query-button button {
+    background-color: #25D366;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.query-button button:hover {
+    background-color: #1DA851;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .query-button button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+.subscription-section {
+    text-align: center;
+    background-color: #d6d6d3;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subscription-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  
+  .subscription-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666666;
+  }
+  
+  .subscription-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .subscription-form input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .subscription-form button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #4a69bd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscription-form button:hover {
+    background-color: #3b55a3;
+  }
+  
+  @media (max-width: 600px) {
+    .subscription-form {
+      flex-direction: column;
+    }
+  
+    .subscription-form input[type="email"] {
+      margin-bottom: 10px;
+    }
+  }
+   /* whatsapp logo */
+   .whatsapp-logo{
+    position: fixed;
+    bottom:20px;
+    left:30px;
+   
+  }
+  
+  .whatsapp-container {
+    position: fixed;
+    bottom: 5rem;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    
+  }
+
+ 
+  .close-button {
+    background-color:black;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color:#ffffff;
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .close-button i {
+    font-size: 1.5rem;
+  }
+  
+  .query-label {
+    background-color: #ffffff;
+    color: #000;
+    padding: 10px 12px;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    white-space: nowrap;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:1px transparent rgb(123, 121, 121);
+  }
+
+.toggle-checkbox {
+    display: none;
+  }
+  .toggle-checkbox:checked ~ .query-label {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .toggle-checkbox:checked + .close-button {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .whatsapp-button img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(100%);
+  }
+  
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  }
+
+
+  /* Whatsapp logo end */
+ 
+
+
+.footerimg1{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 53px;
+}
+.footercontent1{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 15px;
+}
+.large{
+  font-size: 22px;
+}
+.small {
+  font-size: 18px;
+  font-family: Times, sans-serif;
+}
+
+.Company{
+  text-align: left;
+  margin-left: 220px;
+}
+
+#policy{
+  text-decoration: none;
+  text-align: justify;
+  color: white;
+  font-family: Times, sans-serif;
+}
+.policy1{
+  margin-left: 240px;
+  font-size: 110%;
+  line-height: 1;
+}
+.img{
+  
+  margin: 20px;
+}
+.row-footer1{
+  text-align: center;
+  margin-left: 180px;
+}
+
+.row-footer2{
+  text-align: left;
+  margin-left: 150px;
+}
+    
+    
+    @media (max-width: 600px) {
+      .query-label {
+        display: none; 
+      }
+    }
+</style>
+  
+    <div class="container">
+        <h1>TERM AND CONDITIONS</h1>
+        <h2>Welcome to Ten Brain Research Terms of Service</h2>
+        <p>
+            With a registered address at "India accelerator, Noida UP, 201301" (henceforth referred to as the "Company"), we,  India Accelerator conducting business under the brand name "Tan Brain Research" (henceforth referred to as the "Brand Name"). Our commitment to your confidence is embodied in these Terms of Service (henceforth referred to as the "Terms of Service"), which outline how we plan to use our website to provide Services (described below). The terms and conditions pertaining to your use of our website.
+        </p>
+       
+
+        <h3>1. <strong>Definition and Analysis</strong></h3>
+        <h4><strong>Definition</strong></h4>
+        <ul>
+            <li><strong>Relevant Laws</strong> - refers to all laws, rules, statutes, ordinances, bylaws, and any later revisions that are enforceable inside India's borders.</li>
+
+            <li><strong>Information</strong> - includes all of the following: text, ads, images, user interfaces, visual interfaces, photos, brand names, trademarks, logos, descriptions, sounds, music, and visuals.</li>
+
+            <li><strong>Other Parties</strong> - refers to every legal entity connected to the Website, including individuals and corporations, except users and website proprietors.</li>
+            <li><strong>Services Available</strong> - refers to all of the services that the user may access via the website.</li>
+            <li><strong>Customer</strong> - refers to the people who use the experience and services that we provide.</li>
+        </ul>
+
+        <h4><strong>Interpretation</strong></h4>
+        <ul>
+            <li>In the context of this Terms of Service, "We," "Our," and "Us" will refer to the Company and its owned website, unless otherwise specified.</li>
+
+            <li>For the purposes of these Terms of Service, "You," "Your," "Yourself," and "User" shall refer to natural and legal persons who are users of our website that we have supplied and who are legally able to enter into legally binding contracts.</li>
+
+            <li>You are not permitted to use the titles of any section in these Terms of Service to interpret the terms in a way that may be applicable to you; rather, they are just used to arrange the numerous provisions under these Terms of Service in an orderly fashion. Furthermore, by using the website, you expressly agree that the headers will not have any legal or contractual significance.</li>
+
+            <li>When interpreting the provisions of these provisions of Service, the phrase "Parties" relate to both the Company and the User together.</li>
+
+            <li>The Terms of Service, Privacy Policy, and any other pertinent policies that are posted on the website, as well as any changes or additions we make to them from time to time in our sole discretion, are the only rules that apply when using this website. You agree to abide by the following Terms of Service, Privacy Policy, and any other relevant rules of this website if you, as a user, continue to access and use it.</li>
+        </ul>
+          
+        <h3>2. <strong>Description of the Website</strong></h3>
+    
+        
+            <p>Dedicated to developing innovative wearables that utilize electroencephalography (EEG) technology, Ten Entrepreneurship Network is at the forefront of technological innovation. Our aim is to transform the way we perceive and assess people's cognitive capacities. In an effort to maximize human potential, we have developed a number of goods and services that are intended to unlock the entire range of cognitive talents and scores.</p>
+
+            <p>Dedicated to improving the human experience via innovation, Ten Brain Research is a prominent participant in the EEG technology space. We are passionate about comprehending the human mind and using that knowledge to produce workable solutions for both professional and personal growth.</p>
+
+            <p>You may explore our EEG technology world through our website. It serves as a complete platform where people and businesses can easily place orders, ask questions, and obtain information about our goods and services. Our website serves as a gateway to the future of cognitive assessment, whether you're an inquisitive individual seeking more information or a company searching for cutting-edge cognitive solutions.</p>
+
+            <h4>Services on the Website</h4>
+            <p> we provide a wide range of services, each specifically designed to satisfy our clients' particular requirements:</p>
+
+            <p>Our two state-of-the-art EEG-based hardware devices provide a comprehensive understanding of brain activity and cognitive scores.</p>
+
+            <p>Desktop Application License: Our desktop program gives consumers annual access to our unique software, which gives them comprehensive cognitive analytics.</p>
+            
+            <p>Rental Subscription: To provide accessibility to our technology, we provide the opportunity to rent our gadgets via a subscription model for flexibility and cost.</p>
+            
+            <p>Wellness seminars: We provide wellness seminars to equip people and organizations with the skills and information they need to maximize cognitive function and health.</p>
+
+            <p>Reservations for Sessions: Our website enables people to reserve 40–60 minute sessions with our goods at different locations around India. This practical experience allows people to see firsthand the potential of EEG technology.</p>
+
+            <h3>3. <Strong>Registration</Strong></h3>
+
+            <p>Website users are required to register on the website. In order to register, users must supply the following details:</p>
+
+            <p>Through one-time password (OTP) verification, user authentication is made possible throughout the registration process. Additionally, you may register with your Google account. It is not required to register on the Platform.</p>
+
+            
+            <li><strong>Operations</strong> The Website or any of its elements, including services and capabilities, may be changed, suspended, or discontinued at any time by the Company without prior notice.6.2 The aforementioned Termination Clause will be applicable in the event of any modification, stoppage, or conclusion.</li>
+
+            <li><strong>Eligibility</strong>You affirm and guarantee that you are of legal age, capable of entering into legally binding contracts, and possess the necessary capacity to commit yourself or yourself to these Terms of Service in accordance with the applicable law. However, you may use this website as a minor with your legal guardian's permission. All of the minor's actions will be seen as having been carried out under the guidance of their legal guardian.7.2 In addition, you pledge to abide by these Terms of Service as well as all relevant local, state, federal, and international laws, rules, and regulations.7.3 If you are not qualified to enter into a contract or are not competent to do so, you will not use the website.</li>
+
+            <h3>4. <strong>Gateway for Payment</strong></h3>
+
+            <p>This platform has third-party payment gateways, such as PayPal and RazorPay. Payment-related information will be sent to the customers via the platform. The Platform does not retain or handle any payment-related information, including but not limited to credit card numbers, debit card numbers, UPI IDs, or bank account details. We also disclaim all obligation for any liability resulting from this information.</p>
+
+            <li><strong>Information:</strong> All of the information on the website is protected by copyright, and you (or a third party) are not allowed to republish it without the company's and the copyright owner's prior written authorization.9.2 You alone are in charge of the authenticity, quality, integrity, and/or genuineness of the content you submit on the website. Although you can provide feedback and comments through the website, we have no responsibility whatsoever for any feedback or comments submitted by other users or regarding any of the content on the website.
+                Additionally, the company retains the right to suspend a user's account for an indefinite period of time at its discretion or to terminate a user's account if it is discovered that the user created, shared, or submitted any content—in whole or in part—that was deemed to be false, inaccurate, misleading, offensive, or vulgar. If you create, share, or submit content that is found to be false, incorrect, deceptive, offensive, or vulgar, you are entirely liable for making up any resulting monetary or legal losses.9.3 You have a limited, personal, non-exclusive, non-transferable, and revocable right to view the website's content. No content may be copied, modified, or altered without the company's express written consent.</li>
+
+                <h3>5. <strong>Compensation</strong></h3>
+                 <p>The User agrees to hold Us, our directors, officers, employees, and agents (collectively referred to as "Parties") harmless from any losses, liabilities, claims, damages, demands, costs, and expenses (including legal fees and disbursements related thereto and interest chargeable thereon) that may be incurred by Us as a result of a breach or non-performance of any representation, warranty, covenant, or agreement made by the User or obligation to be performed by the User in accordance with these Terms of Service. Additionally, you agree to hold the company harmless from any claims made by outside parties due to or connected with the following:</p> 
+
+                 <p>1. The way in which you use the website;</p>
+                 <p>2. Your violation of these Terms of Service's terms;</p>
+                 <p>3. Your violation of other parties', users', and/or third-party entities' rights;</p>
+                 <p>4. Your alleged improper conduct in violation of our terms of service;</p>
+                 <p>5. Your behavior about the website.</p>
+
+                 <p>By paying the costs themselves, the User agrees to cooperate fully with the Company's indemnification procedure. Additionally, it is anticipated that you will not settle with any other party to the dispute without first getting the Company's approval.</p>
+
+                 <p>For any losses, including but not limited to loss of data, profits, or usage that may arise from using the Website's services or materials, the Company will not be liable to reimburse the User or any third party. Regardless of whether they were anticipated or the User had been informed of the likelihood of them, this covers damages that might be classified as special, incidental, indirect, consequential, or punitive. Any theory of responsibility, such as negligence, breach of contract or warranty, other tortuous action, or any other claim resulting from the user's use of or access to the Website's services or materials, will not subject the Company to liability.</p>
+
+                 <h3>6. <Strong>Liability Restrictions</Strong></h3>
+                 <p>We will not be held accountable for any potential harm—direct or indirect—that results from using the services. Any direct, indirect, incidental, special, consequential, or exemplary damages—including but not restricted to damages for lost profits, data, or other intangible losses—that arise from the following are examples of such damages:</p>
+                 <p>1. the capacity or incapacity to utilize the services or website;</p>
+                 <p>the ability or inability to use the website or services;</p>
+                 <p>third-party behavior or material on the website;</p>
+                 <p>mistakes or omissions in the information on the website;</p>
+                 <p>transmission halts or disruptions to or from the website;</p>
+                 <p>dissemination of malicious code, including Trojan horses, infections, flaws, and other malware.</p>
+
+                 <p>A legal clause known as the limitation of responsibility limits the amount of damages for which a party may be held accountable in the case of a contract violation or other legal claims.</p>
+
+                 <p>Any damages, liabilities, expenses, or losses resulting from your use of our website or services are not the responsibility of Ten Entrepreneurship Network, its officers, directors, employees, agents, or affiliates. Regardless of whether the losses are founded on a contract, tort, warranty, or any other legal basis, and even if you were aware that such damages would occur, this responsibility exemption is nonetheless applicable.</p>
+
+                 <h3>7. <strong>Termination</strong></h3>
+                 <p>Termination by User: Users can use the website's account deletion procedure or send an email with a "request for deletion" to info@entrepreneurshipnetwork.net to cancel their account that was created on our platform.12.2 Company Termination: For any reason, including but not limited to breaking these terms and conditions or any relevant laws or regulations, the Company may, without prior notice, suspend or terminate a user's access to the Website in whole or in part.
+                    Users will lose access to their accounts and all related data in the event that the company terminates them.12.3 Effect of Termination: You consent to stop using the Website and any associated services as soon as your access to it is terminated. Any information you provide on the website may be deleted by the company at any time after it is terminated.12.4 Account Reinstatement: You can contact the Company to request account reinstatement if either party has terminated your access to the Website. The Company reserves the right to accept or reject such reinstatement request in its sole discretion.
+                 </p>
+
+                 <h3>8. <strong>Communication</strong>
+                </h3>
+                <p>You accept and consent to receive emails or SMS from us and/or any of its representatives at any time by using this website and giving the company your identification and contact details.</p>
+                <p>If you discover any disparity in information about the website or its content, you may report it to "info@entrepreneurshipnetwork.net" and we will investigate it and take the appropriate action. The amount of time needed for inquiry will determine the reaction and resolution (if any problems are discovered).</p>
+                <p>You specifically agree that we may contact you regarding any services you use on the website or anything related thereto, regardless of what is stated above, and that you will hold us harmless from any harassment claims. We specifically agree that the Privacy Policy will apply to any information we disclose.</p>
+
+                <h3>9. <strong>User responsibilities and official commitments to behave</strong></h3>
+                <li>agree to supply authentic credentials on the website as needed during the procedure. You are not allowed to use a false identity. If you have given us inaccurate information, we are not responsible.</li>
+                <li> Agree that, should any information submitted to the website change or be revised, you will be the only one responsible for updating the accurate information on the website.</li>
+                <li>acknowledge that keeping your account private is entirely your responsibility. You promise to let us know right away if your account is used without authorization. We maintain the right to terminate your account for any reason at any time.</li>
+                <li>recognize and accept that the information provided is manually put into the website's database. You also agree that the information submitted into the database is done so for your convenience and quick reference, as well as to expedite the services offered by the website;</li>
+                <li>provide permission for the Website to use, retain, or process all published content, replies, locations, user comments, reviews, and ratings, as well as specific personal information, for marketing and promotional purposes, service personalization, and user-related option and service optimization;</li>
+                <li>acknowledge and agree that the Website or any of its affiliates, or their respective officers, directors, employees, agents, licensors, representatives, operational service providers, advertisers, or suppliers, shall not be held responsible for any loss or damage of any kind, whether direct or indirect, resulting from the use of the Website or these Terms of Service, including but not limited to compensatory, consequential, incidental, indirect, special, or punitive damages, to the fullest extent permitted by law;</li>
+                <li>are prohibited from deleting, copying, altering, recreating, reverse engineering, distributing, sharing, posting, publishing, or producing derivative works from, transferring, or profiting from any information found on the website. Any such usage or restricted use of the website will only be permitted with prior written consent.</li>
+                <p>Additionally, you promise not to:</p>
+                <li>participate in any action that limits or interferes with the availability of the Website or its services (or the servers and networks that are linked to the Website);</li>
+                <li>mimic someone or something, or misrepresent their relationship with someone or something in any other way;</li>
+                <li>breach any rules or regulations that may be applicable to a specific service provided on the website;</li>
+                <li>breach any applicable laws, rules, or regulations that are in effect right now, whether they are in India or not;</li>
+                <li>threatens India's unity, integrity, defense, security, or sovereignty; cordial relations with other countries; public order; incites the commission of any crime that is punishable by law; obstructs the investigation of any crime; or is demeaning to any other country.</li>
+                   
+                <h3>10. <strong>User activity and access are suspended.</strong></h3>
+
+                <p>Regardless of other available legal remedies, we have the right, at our sole discretion, to refuse access and/or activity by immediately deleting your login credentials, either temporarily or permanently, suspending or terminating your association with the website, and/or refusing to use the website without having to give you any prior notice or explanation.</p>
+                 <li>if any of these Terms of Service, Privacy Policy, or other relevant policies are being broken by you;</li>
+                 <li>if the information you have given is incorrect, erroneous, lacking, or incomplete; and</li>
+                 <li>if, in our sole judgment, your activities might result in any loss, harm, or damage to the other Users or the Company.</li>
+
+                 <h3>11. <strong>Rights to Intellectual Property</strong></h3>
+                 <p>Ten Entrepreneurship Network is the owner of the intellectual property rights, including the copyright and trademark, related to the Ten Brain Research. It is totally forbidden to use the name without the appropriate authority.</p>
+                 <p>Except as permitted by the terms of these Terms of Service that will be available on the Website, nothing in this document will grant you the right to use any of the trade names, trademarks, service marks, logos, domain names, information, questions, answers, solutions, reports, and other distinguishing brand features unless specifically agreed in writing. The Website or the relevant copyright or trademark owner is the owner of all logos, trademarks, brand names, service marks, domain names, and other distinguishing brand features of the Website, including content, designs, and graphics produced and developed by the Website or such other Third-Party. Additionally, with regard to the Website, we will be the exclusive proprietor of any associated designs, images, and the like.</p>
+                 <p>You are prohibited from using any of the intellectual property on the website in a way that might confuse current or potential users or in any way denigrate or discredit the website, as decided solely at your own discretion.</p>
+                 <p>You are aware that the proprietors of the products and services in question own all intellectual property, including but not limited to copyrights, and that no such property is ever transferred from the creators.</p>
+                 <p>Furthermore, you understand that if you replicate or violate the intellectual property of the owners, you will be subject to legal action from the respective owners of the copied property. You acknowledge that the contents of this section will remain in effect even if these Terms of Service and/or Privacy Policy are terminated or expire.</p>
+
+                 <h3>12. <strong>Liability and Warranties Disclaimed</strong></h3>
+                 <li>Additionally, you acknowledge and accept that you are using the website at your own risk and that you are exercising your best and most responsible judgment before utilizing any of its features or accessing any of its material.</li>
+                 <li>You acknowledge that no guarantee will be created by any information, resources, activities, or recommendations—whether written or verbal—obtained or accessed via the website, and that we disclaim all liability deriving from such information.</li>
+                 <li>You hereby explicitly assume all related risks connected with using the Website, and we make no guarantees that its features and content will be error-free or uninterrupted, or that the Website or its server will be free of viruses or other dangerous components.</li>
+                 <li>You also agree that the information in this section will remain in effect even if the Terms of Service and/or Privacy Policy are terminated or expire.</li>
+
+                 <h3>13. <strong>A Force majeure event</strong></h3>
+                 <p>If any delay or failure to fulfill our obligations under this agreement results from circumstances outside of our control or from our own fault or negligence, such as acts of war, acts of God, earthquakes, riots, fires, sabotage of festive activities, labor shortages or disputes, internet outages, technical malfunctions, sea cable breakages, hacking, piracy, cheating, illegal or unauthorized, we will not be held liable for damages.</p>
+                 <h3>14. <strong>Jurisdiction and Dispute Resolution</strong></h3>
+                 <p>Subject to a contrary agreement between the Parties, if mediation fails to resolve any such dispute within 30 days of the dispute's initiation, the matter will ultimately be settled by arbitration administered by CORD and conducted in conformity with CORD's Rules of Arbitration by a single arbitrator chosen by CORD. English will be the arbitration's language. Delhi, India, will serve as the arbitration's location.</p>
+                
+                 <h3>15.<strong>ASSERTIVE PROVISIONS</strong></h3>
+                 <p><strong>1. Whole Contract: </strong>All earlier communications, statements, and agreements (whether written, verbal, or otherwise) pertaining to the subject matter hereof are superseded by these Terms of Service, read in conjunction with the Privacy Policy and Disclaimer, which together constitute the entire and final contract between us.</p>
+                 <p><strong>2. The waiver: </strong>Our right to enforce these Terms of Service at a later date will not be impacted in any way by our failure to demand that any of their provisions be performed at any point. In one or more cases, our behavior or other actions will not be interpreted as a waiver of any violation of these terms of service, nor will they be interpreted as a continuing or subsequent waiver of any other breach of these terms of service.</p>
+                 <p><strong>3. Segmentability: </strong>The validity, legality, and enforceability of the remaining provisions and clauses of these Terms of Service shall not be affected or impaired in any way if any of them are found to be invalid, unlawful, or unenforceable by any court or authority of competent jurisdiction. Each of these provisions and clauses of these Terms of Service shall be valid and enforceable to the fullest extent allowed by applicable law. The original rights, intents, and commercial expectations of the parties hereto, as stated herein, shall be preserved to the greatest degree possible while these Terms of Service are modified to the least extent required to address any invalidity, illegality, or unenforceability.</p>
+                 <p><strong>4. Contact Us: </strong>You can reach us or the Grievance Officer by email at info@entrepreneurshipnetwork.net or by letter  at "India accelerator,Noida UP, 201301" if you have any queries concerning these Terms of Service, the Website's policies, or your experience.</p>
+
+    </div>
+    <div class="subscription-section">
+      <h2>New from Ten Brain Research?</h2>
+      <p>Get the latest from Ten Brain Research by subscribing now.</p>
+      <form class="subscription-form" method="post" action="/submit_subscription">
+        {% csrf_token %}
+        {% if success_msg %}
+                      <div id="alerts" class="alert alert-success" role="alert">{{success_msg}}
+                      </div>
+                  {% endif %}
+        <input type="email" name="uemail" placeholder="Email" required  />
+        <input type="hidden" name="page_url" value="terms_condition">
+        <button type="submit">Subscribe</button>
+      </form>
+  </div>
+{% endblock 'main' %}

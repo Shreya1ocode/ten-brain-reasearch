@@ -1,0 +1,286 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+<style>
+    .heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .content {
+      padding: 20px;
+    }
+    /* body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      /* color: #333; */
+      /* background-color: #f9f9f9; 
+    } */
+    
+    .heading {
+      text-align: center;
+      padding: 20px 10px;
+      /* background-color: #fff; */
+      /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    }
+    
+    .heading h1 {
+      font-size: 24px;
+      text-transform: uppercase;
+      margin: 0;
+      color: #000;
+    }
+    
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      /* background-color: #fff; */
+      /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+      border-radius: 8px;
+    }
+    
+    .policy-section {
+      margin-bottom: 20px;
+    }
+    
+    .policy-section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      /* color: #444; */
+    }
+    
+    .policy-section ul,
+    .policy-section ol {
+      margin-left: 20px;
+      padding-left: 0;
+    }
+    
+    .policy-section ul li,
+    .policy-section ol li {
+      margin-bottom: 10px;
+      list-style-type: disc;
+      /* color: #555; */
+    }
+    
+    .policy-section ol li {
+      list-style-type: disc;
+    }
+    .policy-section ol ol li {
+      list-style-type: circle;
+    }
+    
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    .address h2 {
+      font-size: 20px;
+    }
+    
+    .subscription-section {
+      text-align: center;
+      background-color: #f1f1f1 !important;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .subscription-section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #333333;
+    }
+    
+    .subscription-section p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #666666;
+    }
+    
+    .subscription-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .subscription-form input[type="email"] {
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      flex: 1;
+      max-width: 300px;
+    }
+    
+    .subscription-form button {
+      padding: 10px 20px;
+      font-size: 14px;
+      color: #ffffff;
+      background-color: #4a69bd;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .subscription-form button:hover {
+      background-color: #3b55a3;
+    }
+    
+    @media (max-width: 600px) {
+      .subscription-form {
+        flex-direction: column;
+      }
+    
+      .subscription-form input[type="email"] {
+        margin-bottom: 10px;
+      }
+    }
+    
+    .whatsapp-container {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+    }
+    
+    .query-label {
+      background-color: #ffffff;
+      color: #000;
+      padding: 8px 12px;
+      border-radius: 40%;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      margin-right: 10px;
+      white-space: nowrap;
+    }
+    
+    .whatsapp-button {
+      width: 50px;
+      height: 50px;
+      background-color: #25d366;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .whatsapp-button img {
+      width: 24px;
+      height: 24px;
+      filter: brightness(100%);
+    }
+    
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+    }
+    
+    
+    @media (max-width: 600px) {
+      .query-label {
+        display: none; 
+      }
+    }
+    </style>
+  
+<div class="heading">
+    <h1>DISCLAIMER</h1>
+  </div>
+  <main>
+    <section class="policy-section">
+        <p>
+            We strive to maintain the functionality of the website (collectively referred to as the "Platform") and ensure it remains free from disruptions. However, we cannot guarantee success in this endeavor.
+        </p>
+        <p>
+            THE PLATFORM IS OFFERED ON AN “AS IS” AND “AS AVAILABLE” BASIS, WITH NO WARRANTIES OF ANY KIND, EITHER EXPLICIT OR IMPLIED, TO THE EXTENT PERMITTED BY LAW. THIS INCLUDES, BUT IS NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. WHILE THE COMPANY ENDEAVORS TO DELIVER A POSITIVE USER EXPERIENCE, WE DO NOT MAKE ANY GUARANTEES THAT:
+        </p>
+        <ul>
+            <li>(A) THE PLATFORM WILL ALWAYS BE SECURE OR FREE FROM ERRORS,</li>
+            <li>(B) THE PLATFORM WILL OPERATE WITHOUT DELAYS, INTERRUPTIONS, OR FLAWS.</li>
+            <li>(C) ANY CONTENT, USER-GENERATED CONTENT, OR INFORMATION AVAILABLE THROUGH THE PLATFORM WILL BE ACCURATE OR TIMELY.</li>
+        </ul>
+        <p>
+            YOU ACKNOWLEDGE AND ACCEPT THAT YOU MAY ENCOUNTER CONTENT THAT COULD BE OFFENSIVE, UNLAWFUL, MISLEADING, OR OTHERWISE INAPPROPRIATE, FOR WHICH THE COMPANY ASSUMES NO RESPONSIBILITY.
+        </p>
+        <p>
+            THE COMPANY IS NOT LIABLE FOR ANY HARM EXPERIENCED BY USERS WHILE USING THE PLATFORM OR THE SERVICES PROVIDED, INCLUDING LOSS OF DATA OR REVENUE CAUSED BY DELAYS, REGARDLESS OF THE CIRCUMSTANCES OR ACTIONS OF ANY INVOLVED PARTIES. THIS INCLUDES, BUT IS NOT LIMITED TO, DAMAGES RESULTING FROM PERFORMANCE FAILURES, ERRORS, OMISSIONS, INTERRUPTIONS, TRANSMISSION DELAYS, VIRUSES, COMMUNICATION DISRUPTIONS, OR UNAUTHORIZED ACCESS TO DATA. THIS DISCLAIMER APPLIES REGARDLESS OF THE CAUSE, INCLUDING BREACH OF CONTRACT, NEGLIGENCE, OR OTHER LEGAL GROUNDS.
+        </p>
+        <p>
+            THE COMPANY EXPLICITLY STATES IT IS NOT ACCOUNTABLE FOR ANY INCONVENIENCE, HARM, OR LOSS CAUSED TO USERS THROUGH THEIR USE OF THE PLATFORM OR ITS CONTENT, OR DUE TO USERS' ACTIONS. WE MAKE NO REPRESENTATIONS OR WARRANTIES ABOUT THE BEHAVIOR OF USERS.
+        </p>
+        <p>
+            THE CONTENT PROVIDED ON THE PLATFORM IS SUBJECT TO AVAILABILITY AND IS PRESENTED WITHOUT GUARANTEES OR PROMISES FROM THE COMPANY. WHILE THE COMPANY MAKES EFFORTS TO KEEP INFORMATION ACCURATE AND UPDATED, IT DOES NOT GUARANTEE THE COMPLETENESS, ACCURACY, RELIABILITY, OR SUITABILITY OF THE INFORMATION OR ASSOCIATED GRAPHICS ON THE PLATFORM. RELIANCE ON SUCH INFORMATION IS ENTIRELY AT THE USER’S RISK.
+        </p>
+        <p>
+            THE COMPANY BEARS NO RESPONSIBILITY FOR OUTCOMES RESULTING FROM USERS’ USE OF THE PLATFORM. THE USE OF THE PLATFORM IS SOLELY AT THE USER’S DISCRETION, AND ANY NEGLIGENCE ON THE PART OF THE USER DOES NOT IMPOSE LIABILITY, EITHER DIRECTLY OR INDIRECTLY, ON THE COMPANY OR THE PLATFORM.
+        </p>
+        <p>
+            THE COMPANY DISCLAIMS ALL LIABILITY FOR ANY OUTCOMES, WHETHER DIRECT, INDIRECT, OR INCIDENTAL, ARISING FROM THE USE OF THE PLATFORM. UNDER NO CIRCUMSTANCES WILL THE COMPANY BE HELD RESPONSIBLE FOR LOSSES, INCLUDING LOSS OF DATA OR PROFITS, OR DAMAGES RESULTING FROM THE USE OF THE PLATFORM.
+        </p>
+        <p>
+            THE PLATFORM MAY CONTAIN LINKS TO EXTERNAL WEBSITES THAT ARE NOT UNDER THE COMPANY’S CONTROL. WE DO NOT HAVE AUTHORITY OVER THE CONTENT, NATURE, OR AVAILABILITY OF THOSE EXTERNAL SITES. INCLUSION OF SUCH LINKS DOES NOT IMPLY ENDORSEMENT OR AGREEMENT WITH THEIR CONTENT. WHILE WE AIM TO KEEP THE PLATFORM OPERATIONAL, WE ARE NOT RESPONSIBLE FOR TEMPORARY UNAVAILABILITY DUE TO TECHNICAL ISSUES BEYOND OUR CONTROL.
+        </p>
+        <p>
+            TO THE FULLEST EXTENT PERMITTED BY LAW, THE COMPANY ASSUMES NO LIABILITY FOR CLAIMS RELATED TO USER CONTENT, INCLUDING THOSE ARISING FROM INTELLECTUAL PROPERTY RIGHTS, DEFAMATION, PRIVACY, PUBLICITY, OR OTHER LAWS. ADDITIONALLY, THE COMPANY DISCLAIMS RESPONSIBILITY FOR THE MISUSE, LOSS, ALTERATION, OR UNAVAILABILITY OF ANY USER-GENERATED CONTENT.
+        </p>
+        <p>
+            USERS ACKNOWLEDGE AND AGREE THAT DOWNLOADING OR ACCESSING ANY MATERIALS OR DATA FROM THE PLATFORM IS DONE ENTIRELY AT THEIR OWN RISK. USERS ACCEPT FULL RESPONSIBILITY FOR ANY DAMAGE TO THEIR COMPUTER SYSTEMS OR LOSS OF DATA THAT MAY OCCUR AS A RESULT OF SUCH ACTIONS.
+        </p>
+        <p>
+            <strong>M/S. Pankhtech India Private Limited</strong><br>
+            WEST DELHI, DELHI.
+        </p>
+        
+    </section>
+    
+  </main>
+
+  <div class="subscription-section">
+    <h2>New from Ten Brain Research?</h2>
+    <p>Get the latest from Ten Brain Research by subscribing now.</p>
+    <form class="subscription-form" method="post" action="/submit_subscription">
+      {% csrf_token %}
+      {% if success_msg %}
+                    <div id="alerts" class="alert alert-success" role="alert">{{success_msg}}
+                    </div>
+                {% endif %}
+      <input type="email" name="uemail" placeholder="Email" required  />
+      <input type="hidden" name="page_url" value="disclaimer">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+{% endblock 'main' %}

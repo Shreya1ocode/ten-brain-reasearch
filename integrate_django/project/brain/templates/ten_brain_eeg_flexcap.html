@@ -1,0 +1,2234 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neuphony Flex cap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="neuphonyflex.css"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+
+  
+</head>
+<body>
+<div class="container-fluid"> -->
+<style>
+    
+    /* img content */
+    .bottom-left{
+      position: absolute;
+      top:500px;
+      left: 80px;
+    }
+    .bottom-left h1{
+        font-size: 4rem;
+    }
+    .bottom-left h2{
+      font-size: 3rem;
+    }
+    /* img content */
+    /* card1 content */
+    .card{
+      border-radius: 1rem;
+      margin-top: 25px;
+      /* width: 100%; */
+      padding: 4px;
+      background-color:rgba(246, 242, 242, 0.886);
+    }
+    .card h1{
+      margin-top: auto;
+      font-size: 42px;
+    }
+    .card p{
+      margin-top: auto;
+      font-size: 22px;
+    }
+    
+    .card img{
+      padding: 14px;
+      width: 95px;
+    }
+    .card .card-text{
+      padding: 20px;
+      font-size: 21px;
+    }
+    
+    .card .margin-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      /* margin: 5px; */
+      padding: 5px;
+      grid-row-gap: 25px;
+    }
+    
+    /* card1 content */
+    /* Brain-Research-Desktop1 */
+    .Brain-Research-Desktop1 {
+      border-radius: 1rem;
+      padding: 8px;
+      /* width: 100%; */
+      background-color:#2196f3;
+      color:white;
+    }
+    
+    .Brain-Research-Desktop1 h3{
+      font-size: 30px;
+    }
+    .Brain-Research-Desktop1 p{
+      font-size: 22px;
+    }
+    
+    /* Brain-Research-Desktop1 */
+    /* Brain-Research-Desktop2 */
+    .Brain-Research-Desktop2{
+        width: 100%;
+        padding: 26px;
+        height: 27rem;
+        border-radius:1rem;
+    }
+    .Brain-Research-Desktop2 h4{
+      font-size: 26px;
+    }
+    .Brain-Research-Desktop2 p{
+      font-size: 20px;
+    }
+    /* Brain-Research-Desktop2 */
+    /* Brain-Research-Desktop3 */
+    .Brain-Research-Desktop3{
+      width: 100%;
+      padding: 20px;
+      height: 27rem;
+      background-color:black;
+      border-radius:1rem;
+      color:white;
+    }
+    .Brain-Research-Desktop3 h4{
+    font-size: 26px;
+    }
+    .Brain-Research-Desktop3 p{
+    font-size: 20px;
+    }
+    /* Brain-Research-Desktop3 */
+    /* Neuphony Headband Product Information and product description */
+    .Neuphony-Headband-Product{
+      background-color:rgba(246, 242, 242, 0.886);
+        margin-top:2%
+    }
+    .Neuphony-Headband-Product h1{
+      text-align: center;
+      font-size: 35px;
+      padding: 25px;
+      font-weight: 700;
+    }
+    #default #xzoom-fancy{
+      margin: 2%;
+      width: 90%;
+    }
+    #default img{
+      width: 22%;
+    }
+    
+    .Neuphony-Headband-Product .Neurofeedback-device h1{
+      text-align: left;
+      font-size: 40px;
+    }
+    .Neuphony-Headband-Product .Neurofeedback-device p{
+      text-align: left;
+      font-size: 20px;
+    }
+    /* Neuphony Headband Product Information and product description ends*/
+    /*  product description starts*/
+    .product-description h2{
+      text-align: center;
+      padding: 20px;
+      font-size: 45px;
+    }
+    
+    /*  product description ends*/
+    
+    /* table content starts */
+    /* ul li{
+      text-align: center;
+      list-style: none;
+      font-size: 30px;
+      padding: 12px;
+      font-weight: 400;
+      margin-right: 25px;
+    } */
+    .producttabledesc2{
+        width: 100%;
+        font-size: 25px;
+    }
+    .producttabledesc2 th{
+      border: 3px solid black;
+       background-color: grey;
+      color: white;
+    
+    }
+    .producttabledesc2  .light-grey{
+      background-color: lightgray;
+    }
+    
+    
+    .productdeschori-content h5{
+      font-size: 25px;
+    }
+    .productdeschori-content h3{
+      font-size: 32px;
+    }
+    /* table content ends */
+    
+    /* How to Use Ten Brain Research Flex Cap  */
+    
+    .brain-research-Desktop-app h2{
+      font-size: 30px;
+    }
+    .brain-research-Desktop-app p{
+      padding: 5px;
+      font-size: 22px;
+    }
+    /* How to Use Ten Brain Research Flex Cap end */
+    
+    
+    /* features */
+    .Features-Of-brain-Application{
+      background-color:rgba(246, 242, 242, 0.886);
+      margin-top:2%;
+      text-align: center;
+    }
+    .Features-Of-brain-Application h2{
+      padding: 15px;
+      font-size: 35px;
+    }
+    .Features-Of-brain-Application h3{
+      padding: 15px;
+      font-size: 30px;
+    }
+    /* features ends*/
+    
+      /* card slides section */
+    
+      .my-slider .card{
+        height:24rem;
+        margin: 0 8px 0 0;
+        line-height: 1.5
+      }
+    
+      .my-slider .card img{
+        width: 100%;
+      }
+    
+      .my-slider .card h4{
+        font-size: 25px;
+      }
+    
+      .my-slider .card p{
+        font-size: 18px;
+      }
+    
+      /* card slides section */
+    
+    /* Build with Neuphony starts */
+    
+     .Build-with-header{
+      margin: 20px;
+      text-align: center;
+     }
+    
+     .Build-with-header h2{
+      font-size: 40px;
+     }
+     .Build-with-header h4{
+      font-size: 30px;
+      margin: 5px;
+     }
+     .Build-with-header .card{
+      width: 40rem;
+      margin: 10px;
+     }
+     .Build-with-header .card img{
+      width: 100%;
+    
+     }
+     .Build-with-header .card h5{
+      font-size: 30px;
+      text-align: center;
+     }
+     .Build-with-header .card p{
+      font-size: 20px;
+      text-align: center;
+     }
+    /* Build with Neuphony ends */
+    
+    /* slider content starts */
+    .slider-content-sli{
+      background-color:rgba(246, 242, 242, 0.886);
+      margin-top:2%;
+    }
+    .slider-content-sli {
+      text-align: center;
+      padding: 2%;
+    }
+    .slider-content-sli  .slider1 p{
+      font-size: 20px;
+    }
+    
+    .slider-content-sli  .slider1 h5{
+      color: #2196f3;
+    }
+    /* slider content ends */
+    
+    @media (max-width:1400px){
+      /* img content */
+      .bottom-left{
+        position: absolute;
+        top:350px;
+        left: 60px;
+      }
+      .bottom-left h1{
+          font-size: 3rem;
+      }
+      .bottom-left h2{
+        font-size: 2rem;
+    }
+      /* img content */
+      /* Neuphony Headband Product Information and product description */
+    .Neuphony-Headband-Product{
+      background-color:rgba(246, 242, 242, 0.886);
+        margin-top:2%
+    }
+    .Neuphony-Headband-Product h1{
+      text-align: center;
+      font-size: 34px;
+      padding: 25px;
+      font-weight: 700;
+    }
+    #default #xzoom-fancy{
+      margin: 2%;
+      width: 26rem;
+    }
+    #default img{
+      width: 14%;
+    }
+    .Neuphony-Headband-Product .Neurofeedback-device h1{
+      text-align: left;
+      font-size: 32px;
+    }
+    .Neuphony-Headband-Product .Neurofeedback-device p{
+      text-align: left;
+      font-size: 18px;
+    }
+    /* Neuphony Headband Product Information and product description ends*/
+    
+    /* table content starts */
+    ul li{
+      text-align: center;
+      list-style: none;
+      font-size: 25px;
+      padding: 10px;
+      font-weight: 400;
+      margin-right: 20px;
+    }
+    .producttabledesc2{
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    .productdeschori-content h5{
+      font-size: 20px;
+    }
+    .productdeschori-content h3{
+      font-size: 27px;
+    }
+    /* table content ends */
+    
+    /* features */
+    .Features-Of-brain-Application h2{
+      font-size: 30px;
+    }
+    .Features-Of-brain-Application h3{
+      font-size: 28px;
+    }
+    /* features ends*/
+    
+    /* card slides section */
+    
+    .my-slider .card{
+      height:24rem;
+    
+    }
+    
+    .my-slider .card img{
+      width: 100%;
+    }
+    
+    .my-slider .card h4{
+      font-size: 20px;
+    }
+    
+    .my-slider .card p{
+      font-size: 16px;
+    }
+    
+    /* card slides section */
+    
+    /* Build with Neuphony starts */
+    
+    
+     .Build-with-header h2{
+      font-size: 30px;
+     }
+     .Build-with-header h4{
+      font-size: 20px;
+      margin: 5px;
+     }
+    
+     .Build-with-header .card h5{
+      font-size: 25px;
+     }
+     .Build-with-header .card p{
+      font-size: 18px;
+      text-align: center;
+     }
+    /* Build with Neuphony ends */
+    
+    /* slider content starts */
+    .slider-content-sli h2{
+      font-size: 30px;
+    }
+    .slider-content-sli  .slider1 p{
+      font-size: 16px;
+    }
+    
+    .slider-content-sli  .slider1 h5{
+      color: #2196f3;
+    }
+    /* slider content ends */
+    }
+    
+    
+    @media (max-width:1200px){
+      /* img content */
+      .bottom-left{
+        position: absolute;
+        top:300px;
+        left: 50px;
+      }
+      .bottom-left h1{
+          font-size: 2rem;
+      }
+      .bottom-left h2{
+        font-size: 25px;
+    }
+      /* img content */
+    
+      /* card1 content */
+    .card{
+      border-radius: 1rem;
+      margin-top: 20px;
+      padding: 4px;
+      background-color:rgba(246, 242, 242, 0.886);
+    }
+    .card h1{
+      margin-top: auto;
+      font-size: 38px;
+    }
+    .card p{
+      margin-top: auto;
+      font-size: 20px;
+    }
+    
+    .card img{
+      width: 90px;
+    }
+    .card .card-text{
+    
+      font-size: 17px;
+    }
+    
+    .card .margin-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      grid-row-gap: 20px;
+    }
+    
+    /* card1 content */
+    /* Brain-Research-Desktop1 */
+    .Brain-Research-Desktop1 {
+      border-radius: 1rem;
+      padding: 8px;
+      /* width: 100%; */
+      background-color:#2196f3;
+      color:white;
+    }
+    
+    .Brain-Research-Desktop1 h3{
+      font-size: 24px;
+    }
+    .Brain-Research-Desktop1 p{
+      font-size: 20px;
+    }
+    
+    /* Brain-Research-Desktop1 */
+    /* Brain-Research-Desktop2 */
+    .Brain-Research-Desktop2{
+      height: 360px;
+        padding: 25px;
+        border-radius:1rem;
+    }
+    .Brain-Research-Desktop2 h4{
+      font-size: 24px;
+    }
+    .Brain-Research-Desktop2 p{
+      font-size: 18px;
+    }
+    /* Brain-Research-Desktop2 */
+    /* Brain-Research-Desktop3 */
+    .Brain-Research-Desktop3{
+      padding: 20px;
+      height: 360px;
+      background-color:black;
+      border-radius:1rem;
+      color:white;
+    }
+    .Brain-Research-Desktop3 h4{
+    font-size: 24px;
+    }
+    .Brain-Research-Desktop3 p{
+    font-size: 18px;
+    }
+    /* Brain-Research-Desktop3 */
+      /* table content starts */
+    
+    .product-description h2{
+        font-size: 40px;
+      }
+    
+    .productdeschori-content h5{
+      font-size: 20px;
+    }
+    .productdeschori-content h3{
+      font-size: 27px;
+    }
+    /* table content ends */
+    /* How to Use Ten Brain Research Flex Cap  */
+    
+    .brain-research-Desktop-app h2{
+      font-size: 27px;
+    }
+    .brain-research-Desktop-app p{
+      padding: 4px;
+      font-size: 20px;
+    }
+    /* How to Use Ten Brain Research Flex Cap end */
+    /* features */
+    .Features-Of-brain-Application h2{
+      font-size: 26px;
+    }
+    .Features-Of-brain-Application h3{
+      font-size: 24px;
+    }
+    /* features ends*/
+    /* card slides section */
+    
+    .my-slider .card{
+      height:22rem;
+    }
+    
+    .my-slider .card img{
+      width: 100%;
+    }
+    
+    .my-slider .card h4{
+      font-size: 20px;
+    }
+    
+    .my-slider .card p{
+      font-size: 16px;
+    }
+    
+    /* card slides section */
+    
+    
+    /* Build with Neuphony starts */
+    
+    
+    .Build-with-header h2{
+      font-size: 28px;
+     }
+     .Build-with-header h4{
+      font-size: 18px;
+     }
+    
+     .Build-with-header .card{
+      width: 34rem;
+     }
+     .Build-with-header .card h5{
+      font-size: 24px;
+     }
+     .Build-with-header .card p{
+      font-size: 16px;
+     }
+    /* Build with Neuphony ends */
+    }
+    
+    
+    @media (max-width:992px){
+      /* img content */
+      .bottom-left{
+        position: absolute;
+        top:220px;
+        left: 40px;
+      }
+      .bottom-left h1{
+          font-size: 28px;
+      }
+      .bottom-left h2{
+        font-size: 21px;
+    }
+      /* img content */
+        /* card1 content */
+    .card{
+      border-radius: 1rem;
+      margin-top: 20px;
+      padding: 3px;
+      background-color:rgba(246, 242, 242, 0.886);
+    }
+    .card h1{
+      margin-top: auto;
+      font-size: 30px;
+    }
+    .card p{
+      margin-top: auto;
+      font-size: 18px;
+    }
+    
+    .card img{
+      width: 70px;
+    }
+    .card .card-text{
+    
+      font-size: 13px;
+    }
+    
+    .card .margin-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      grid-row-gap: 20px;
+    }
+    
+    /* card1 content */
+    /* Brain-Research-Desktop1 */
+    .Brain-Research-Desktop1 {
+      border-radius: 1rem;
+      padding: 8px;
+      /* width: 100%; */
+      background-color:#2196f3;
+      color:white;
+    }
+    
+    .Brain-Research-Desktop1 h3{
+      font-size: 20px;
+    }
+    .Brain-Research-Desktop1 p{
+      font-size: 16px;
+    }
+    
+    /* Brain-Research-Desktop1 */
+    /* Brain-Research-Desktop2 */
+    .Brain-Research-Desktop2{
+      height: 307px;
+        padding: 20px;
+        border-radius:1rem;
+    }
+    .Brain-Research-Desktop2 h4{
+      font-size: 20px;
+    }
+    .Brain-Research-Desktop2 p{
+      font-size: 16px;
+    }
+    /* Brain-Research-Desktop2 */
+    /* Brain-Research-Desktop3 */
+    .Brain-Research-Desktop3{
+      height: 307px;
+      padding: 14px;
+    
+      background-color:black;
+      border-radius:1rem;
+      color:white;
+    }
+    .Brain-Research-Desktop3 h4{
+    font-size: 18px;
+    }
+    .Brain-Research-Desktop3 p{
+    font-size: 16px;
+    }
+    /* Brain-Research-Desktop3 */
+    
+      /* Neuphony Headband Product Information and product description */
+    
+      #default #xzoom-fancy{
+    
+        width: 80%;
+      }
+    
+      #default img{
+        width: 16%;
+      }
+      .Neuphony-Headband-Product .Neurofeedback-device h1{
+    
+        font-size: 25px;
+      }
+      .Neuphony-Headband-Product .Neurofeedback-device p{
+    
+        font-size: 15px;
+      }
+      /* Neuphony Headband Product Information and product description ends*/
+    
+      /* table content starts */
+    
+    .product-description h2{
+      font-size: 30px;
+    }
+    ul li{
+    
+      font-size: 25px;
+    
+    }
+    .producttabledesc2{
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    .productdeschori-content h5{
+      font-size: 20px;
+    }
+    .productdeschori-content h3{
+      font-size: 23px;
+    }
+    /* table content ends */
+    
+    /* How to Use Ten Brain Research Flex Cap  */
+    
+    .brain-research-Desktop-app h2{
+      font-size: 22px;
+    }
+    .brain-research-Desktop-app p{
+      padding: 3px;
+      font-size: 16px;
+    }
+    /* How to Use Ten Brain Research Flex Cap end */
+    /* features */
+    .Features-Of-brain-Application h2{
+      font-size: 27px;
+    }
+    .Features-Of-brain-Application h3{
+      font-size: 24px;
+    }
+    /* features ends*/
+    /* card slides section */
+    
+    .my-slider .card{
+      height:20rem;
+    }
+    
+    .my-slider .card img{
+      width: 100%;
+    }
+    
+    .my-slider .card h4{
+      font-size: 18px;
+    }
+    
+    .my-slider .card p{
+      font-size: 16px;
+    }
+    
+    /* card slides section */
+    /* Build with Neuphony starts */
+    
+    
+    .Build-with-header h2{
+      font-size: 27px;
+     }
+     .Build-with-header h4{
+      font-size: 16px;
+     }
+    
+     .Build-with-header .card{
+      width: 28rem;
+     }
+     .Build-with-header .card h5{
+      font-size: 20px;
+     }
+     .Build-with-header .card p{
+      font-size: 16px;
+     }
+    /* Build with Neuphony ends */
+    
+    /* slider content starts */
+    .slider-content-sli h2{
+      font-size: 25px;
+    }
+    .slider-content-sli  .slider1 p{
+      font-size: 15px;
+    }
+    
+    /* slider content ends */
+    }
+    
+    
+    @media (max-width:768px){
+      /* img content */
+      .bottom-left{
+        position: absolute;
+        top:150px;
+        left: 38px;
+      }
+      .bottom-left h1{
+          font-size: 25px;
+      }
+      .bottom-left h2{
+        font-size: 19px;
+    }
+      /* img content */
+        /* card1 content */
+    .card{
+      border-radius: 1rem;
+      margin-top: 10px;
+      padding: 1px;
+      background-color:rgba(246, 242, 242, 0.886);
+    }
+    .card h1{
+      font-size: 25px;
+    }
+    .card p{
+      font-size: 14px;
+    }
+    
+    .card img{
+      width: 70px;
+    }
+    
+    .card .card-text{
+      padding: 4px;
+      text-align: left;
+      font-size: 12px;
+    }
+    
+    .card .margin-bottom {
+      display: flex;
+      padding: 0px;
+      flex-wrap: wrap;
+      grid-row-gap: 8px;
+    }
+    
+    /* card1 content */
+    /* Brain-Research-Desktop1 */
+    .Brain-Research-Desktop1 {
+      border-radius: 1rem;
+      padding: 4px;
+      background-color:#2196f3;
+      color:white;
+    }
+    
+    .Brain-Research-Desktop1 h3{
+      font-size: 18px;
+    }
+    .Brain-Research-Desktop1 p{
+      font-size: 12px;
+    }
+    
+    /* Brain-Research-Desktop1 */
+    /* Brain-Research-Desktop2 */
+    .Brain-Research-Desktop2{
+        height: 236px;
+        padding: 10px;
+        width: 170px;
+        border-radius:1rem;
+    }
+    .Brain-Research-Desktop2 h4{
+      font-size: 16px;
+    }
+    .Brain-Research-Desktop2 p{
+      font-size: 12px;
+    }
+    /* Brain-Research-Desktop2 */
+    /* Brain-Research-Desktop3 */
+    .Brain-Research-Desktop3{
+      height: 236px;
+      padding: 10px;
+      width: 170px;
+      background-color:black;
+      border-radius:1rem;
+      color:white;
+    }
+    .Brain-Research-Desktop3 h4{
+    font-size: 16px;
+    }
+    .Brain-Research-Desktop3 p{
+    font-size: 12px;
+    }
+    /* Brain-Research-Desktop3 */
+     /* Neuphony Headband Product Information and product description */
+    
+     #default img{
+      width: 24%;
+    }
+    
+    .Neuphony-Headband-Product .Neurofeedback-device h1{
+      text-align: left;
+      font-size: 22px;
+    }
+    .Neuphony-Headband-Product .Neurofeedback-device p{
+      text-align: left;
+      font-size: 11px;
+    }
+    /* Neuphony Headband Product Information and product description ends*/
+    
+      /* table content starts */
+    
+    .product-description h2{
+        font-size: 25px;
+      }
+      ul li{
+        font-size: 20px;
+    
+      }
+      .producttabledesc2{
+          width: 100%;
+          font-size: 14px;
+      }
+    
+      .productdeschori-content h5{
+        font-size: 15px;
+        font-weight: 400;
+      }
+      .productdeschori-content h3{
+        font-size: 17px;
+      }
+      /* table content ends */
+    /* How to Use Ten Brain Research Flex Cap  */
+    
+    .brain-research-Desktop-app h2{
+      font-size: 16px;
+    }
+    .brain-research-Desktop-app p{
+      padding: 2px;
+      font-size: 14px;
+    }
+    /* How to Use Ten Brain Research Flex Cap end */
+    
+    /* features */
+    .Features-Of-brain-Application h2{
+      font-size: 22px;
+    }
+    .Features-Of-brain-Application h3{
+      padding: 0;
+      font-size: 20px;
+    }
+    /* features ends*/
+    /* card slides section */
+    
+    .my-slider .card{
+      height:18rem;
+    }
+    
+    .my-slider .card img{
+      width: 100%;
+    }
+    
+    .my-slider .card h4{
+      font-size: 17px;
+    }
+    
+    .my-slider .card p{
+      font-size: 14px;
+    }
+    
+    /* card slides section */
+    
+    /* Build with Neuphony starts */
+    .Build-with-header h2{
+      font-size: 25px;
+     }
+     .Build-with-header h4{
+      font-size: 16px;
+     }
+    
+     .Build-with-header .card{
+      width: 21rem;
+     }
+     .Build-with-header .card h5{
+      font-size: 16px;
+     }
+     .Build-with-header .card p{
+      font-size: 13px;
+     }
+    /* Build with Neuphony ends */
+    /* slider content starts */
+    .slider-content-sli h2{
+      font-size: 25px;
+    }
+    .slider-content-sli  .slider1 p{
+      font-size: 12px;
+    }
+    .slider-content-sli  .slider1 h5{
+      font-size: 14px;
+    }
+    /* slider content ends */
+    }
+    
+    
+    @media (max-width:576px){
+      /* img content */
+      .bottom-left{
+        position: absolute;
+        top:100px;
+        left: 32px;
+      }
+      .bottom-left h1{
+          font-size: 18px;
+      }
+      .bottom-left h2{
+        font-size: 14px;
+    }
+      /* img content */
+        /* card1 content */
+    .card{
+      border-radius:5px;
+      margin-top: 10px;
+      padding: 2px;
+      background-color:rgba(246, 242, 242, 0.886);
+    }
+    .card h1{
+      font-size: 18px;
+    }
+    .card p{
+      font-size: 12px;
+    }
+    
+    .card img{
+      width: 50px;
+    }
+    
+    .card .card-text{
+      padding: 1px;
+      text-align: center;
+      font-size: 9px;
+    }
+    
+    .card .margin-bottom {
+      display: flex;
+      padding: 0px;
+      flex-wrap: wrap;
+      grid-row-gap: 8px;
+    }
+    
+    /* card1 content */
+    /* Brain-Research-Desktop1 */
+    .Brain-Research-Desktop1 {
+      border-radius:5px;
+      padding: 3px;
+      background-color:#2196f3;
+      color:white;
+    }
+    
+    .Brain-Research-Desktop1 h3{
+      font-size: 12px;
+    }
+    .Brain-Research-Desktop1 p{
+      font-size: 10px;
+    }
+    
+    /* Brain-Research-Desktop1 */
+    /* Brain-Research-Desktop2 */
+    .Brain-Research-Desktop2{
+        height: 184px;
+    
+        /* padding: 10px; */
+        width: 120px;
+        border-radius:5px;
+    }
+    .Brain-Research-Desktop2 h4{
+      font-size: 12px;
+    }
+    .Brain-Research-Desktop2 p{
+    
+      font-size: 10px;
+    }
+    /* Brain-Research-Desktop2 */
+    /* Brain-Research-Desktop3 */
+    .Brain-Research-Desktop3{
+      height: 184px;
+      /* padding: 10px; */
+      width: 120px;
+      background-color:black;
+      border-radius:5px;
+      color:white;
+    }
+    .Brain-Research-Desktop3 h4{
+    font-size: 12px;
+    }
+    .Brain-Research-Desktop3 p{
+    font-size: 10px;
+    }
+    /* Brain-Research-Desktop3 */
+    
+    
+    #default img{
+      width: 60px;
+    }
+    .Neuphony-Headband-Product .Neurofeedback-device h1{
+      text-align: left;
+      font-size: 20px;
+    }
+    .Neuphony-Headband-Product .Neurofeedback-device p{
+      text-align: left;
+      font-size: 10px;
+    }
+    /* Neuphony Headband Product Information and product description ends*/
+    
+      /* table content starts */
+    
+      .product-description h2{
+        font-size: 20px;
+      }
+      ul li{
+        font-size: 15px;
+    
+      }
+      .producttabledesc2{
+          width: 100%;
+          font-size: 10px;
+      }
+    
+      .productdeschori-content h5{
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .productdeschori-content h3{
+        font-size: 12px;
+      }
+      /* table content ends */
+    
+    /* How to Use Ten Brain Research Flex Cap  */
+    
+    .brain-research-Desktop-app h2{
+      font-size: 14px;
+    }
+    .brain-research-Desktop-app p{
+      padding: 2px;
+      font-size: 13px;
+    }
+    /* How to Use Ten Brain Research Flex Cap end */
+    
+    /* features */
+    .Features-Of-brain-Application h2{
+      font-size: 20px;
+    }
+    .Features-Of-brain-Application h3{
+      padding: 0;
+      font-size: 18px;
+    }
+    /* features ends*/
+    
+    
+    /* Build with Neuphony starts */
+    
+    
+     .Build-with-header .card{
+      width: 30rem;
+     }
+     .Build-with-header .card h5{
+      font-size: 18px;
+     }
+     .Build-with-header .card p{
+      font-size: 16px;
+     }
+    /* Build with Neuphony ends */
+    
+    /* card slides section */
+    
+    .my-slider .card{
+      height:25rem;
+    }
+    
+    .my-slider .card img{
+      width: 100%;
+    }
+    
+    .my-slider .card h4{
+      font-size: 18px;
+    }
+    
+    .my-slider .card p{
+      font-size: 15px;
+    }
+    
+    /* card slides section */
+    
+    }
+    
+    @media (max-width:320px){
+        /* img content */
+        .bottom-left{
+          position: absolute;
+          top:40px;
+          left: 20px;
+        }
+        .bottom-left h1{
+            font-size: 11px;
+        }
+        .bottom-left h2{
+          font-size: 10px;
+      }
+        /* img content */
+          /* card1 content */
+      .card{
+    
+        border-radius:5px;
+        margin-top: 8px;
+        padding: 2px;
+        background-color:rgba(246, 242, 242, 0.886);
+      }
+      .card h1{
+        font-size: 16px;
+      }
+      .card p{
+        font-size: 13px;
+      }
+    
+      .card img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50px;
+    
+      }
+    
+      .card .card-text{
+        padding: 1px;
+        font-size: 10px;
+      }
+    
+      .card .margin-bottom {
+        display: flex;
+        padding: 0px;
+        flex-wrap: wrap;
+        grid-row-gap: 5px;
+      }
+      /* card1 content */
+      /* Brain-Research-Desktop1 */
+      .Brain-Research-Desktop1 {
+        border-radius:5px;
+        padding: 5px;
+        background-color:#2196f3;
+        color:white;
+      }
+    
+      .Brain-Research-Desktop1 h3{
+        font-size: 16px;
+      }
+      .Brain-Research-Desktop1 p{
+        font-size: 14px;
+      }
+    
+      /* Brain-Research-Desktop1 */
+      /* Brain-Research-Desktop2 */
+      .Brain-Research-Desktop2{
+          /* height: 180px; */
+    
+          padding: 10px;
+          width: 270px;
+          border-radius:5px;
+      }
+      .Brain-Research-Desktop2 h4{
+        font-size: 16px;
+      }
+      .Brain-Research-Desktop2 p{
+    
+        font-size: 14px;
+      }
+      /* Brain-Research-Desktop2 */
+      /* Brain-Research-Desktop3 */
+      .Brain-Research-Desktop3{
+    
+        /* padding: 10px; */
+        width: 270px;
+        background-color:black;
+        border-radius:5px;
+        color:white;
+      }
+      .Brain-Research-Desktop3 h4{
+      font-size: 16px;
+      }
+      .Brain-Research-Desktop3 p{
+      font-size: 14px;
+      }
+      /* Brain-Research-Desktop3 */
+    /* Neuphony Headband Product Information and product description */
+    #default #xzoom-fancy{
+      width: 90%;
+    }
+    #default img{
+      display: inline-block;
+      /* width: 30%; */
+    }
+    .Neuphony-Headband-Product .Neurofeedback-device h1{
+      text-align: left;
+      font-size: 18px;
+    }
+    .Neuphony-Headband-Product .Neurofeedback-device p{
+      text-align: left;
+      font-size: 9px;
+    }
+    /* Neuphony Headband Product Information and product description ends*/
+    /* table content starts */
+    .product-description h2{
+      font-size: 20px;
+      padding: 0px;
+    }
+    ul li{
+      font-size: 12px;
+    }
+    .producttabledesc2{
+        width: 100%;
+        font-size: 10px;
+    }
+    .productdeschori-content h5{
+      font-size: 10px;
+      font-weight: 400;
+    }
+    .productdeschori-content h3{
+      font-size: 11px;
+    }
+    /* table content ends */
+    
+    /* How to Use Ten Brain Research Flex Cap  */
+    
+    .brain-research-Desktop-app h2{
+      font-size: 14px;
+    }
+    .brain-research-Desktop-app p{
+      padding: 2px;
+      font-size: 13px;
+    }
+    /* How to Use Ten Brain Research Flex Cap end */
+    
+    /* features */
+    .Features-Of-brain-Application h2{
+      font-size: 18px;
+    }
+    .Features-Of-brain-Application h3{
+      padding: 0;
+      font-size: 15px;
+    }
+    /* features ends*/
+    
+    
+    
+    /* card slides section */
+    
+    .my-slider .card{
+      height:18rem;
+    }
+    
+    .my-slider .card img{
+      width: 100%;
+    }
+    
+    .my-slider .card h4{
+      font-size: 17px;
+    }
+    
+    .my-slider .card p{
+      font-size: 14px;
+    }
+    
+    /* card slides section */
+    
+        /* Build with Neuphony starts */
+    
+    
+     .Build-with-header h2{
+    
+      font-size: 22px;
+     }
+     .Build-with-header h4{
+      font-size: 16px;
+    
+     }
+     .Build-with-header .card h5{
+      font-size: 16px;
+    
+     }
+     .Build-with-header .card p{
+      font-size: 15px;
+    }
+    /* Build with Neuphony ends */
+    /* slider content starts */
+    
+    
+    .slider-content-sli h2{
+      font-size: 18px;
+    }
+    .slider-content-sli  .slider1 p{
+      font-size: 12px;
+    }
+    
+    /* slider content ends */
+    }
+    
+    
+    </style>
+<div class="row">
+    <div class="col-sm-12">
+    <img src="./static/assets/eeg-flexcap-images/NeuphonyFlexcap.webp" width="100%" alt="">
+
+    <div class="col-sm-6 bottom-left">
+      <h1 ><b>TEN Brain Research Flexcap</b></h1>
+      <h2 >Experience Brain Feedback At Home</h2>
+      </div>
+    </div>
+  </div>
+<!-- img section -->
+<!-- India’s first EEG wearable -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <h1><b>India’s first EEG wearable</b></h1>
+        <p>Exceptional brain monitoring with Ten Brain Research Flex Cap, featuring 8 precision sensors and advanced Bluetooth 4.2 for seamless data transmission </p>
+        <!-- 1st row -->
+          <div class="margin-bottom">
+          <div class="row">
+            <div class="col-sm-4">
+            <img src="./static/assets/eeg-flexcap-images/8ChannelEEG.webp" class="card-img-top" alt="8ChannelEEG">
+            <p class="card-text">8 Channel EEG</p>
+            </div>
+            <div class="col-sm-4">
+              <img src="./static/assets/eeg-flexcap-images/BatteryLife.webp" class="card-img-top"  alt="BatteryLife​">
+              <p class="card-text">Rechargable Battery with upto 8hrs Battery Life​ </p>
+            </div>
+            <div class="col-sm-4">
+            <img src="./static/assets/eeg-flexcap-images/Wireless.webp" class="card-img-top"  alt="WirelessConnectivit">
+            <p class="card-text" >Wireless Connectivity with Windows & MacOS​ </p>
+            </div>
+          </div>
+            <!-- 1st row -->
+            <!-- 2nd row -->
+            <div class="row">
+            <div class="col-sm-4">
+              <img src="./static/assets/eeg-flexcap-images/EasyFitment.webp" class="card-img-top" alt="VariableCapSizes">
+              <p class="card-text" >Variable Cap Sizes for Easy Fitment on All Head Sizes ​ </p>
+              </div>
+              <div class="col-sm-4">
+                <img src="./static/assets/eeg-flexcap-images/Highquality.webp" class="card-img-top"  alt="qualityhardware">
+                <p class="card-text" >Sleek Design and High quality hardware </p>
+              </div>
+              <div class="col-sm-4">
+                <img src="./static/assets/eeg-flexcap-images/Experience.webp" class="card-img-top" alt="ExperienceNeurofeedback">
+                <p class="card-text" >Experience Neurofeedback at Home </p>
+              </div>
+            </div>
+          </div>
+          <!-- 2nd row -->
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+      <div class="card Brain-Research-Desktop1">
+        <h3>Real-time analysis with Ten Brain Research Desktop App Track real-time EEG data, brain</h3>
+        <p>To track real-time EEG data and conduct real-time brain analysis using the Ten Brain Research Desktop App, you’ll need to integrate your EEG device (e.g., the Flex Cap or other compatible EEG hardware) with the software, and ensure proper configuration for monitoring and analyzing brainwave activity in real-time.</p>
+      </div>
+      <div class="col-sm-6 ">
+        <div class="card Brain-Research-Desktop2">
+          <h4 > Features to ease your research and development</h4>
+          <p>The Ten Brain Research flexcap Integrates with the desktop and mobile app that provides Cognitive Insights into the brain by tracking real time brain data</p>
+        </div>
+      </div>
+      <div class="col-sm-6 ">
+        <div class="card Brain-Research-Desktop3">
+          <h4>Develop Brain Computer Applications With Ten Brain Research</h4>
+          <p>Developing Brain-Computer Applications (BCAs) with the Ten Brain Research platform involves integrating brainwave data from EEG devices with software tools.</p>
+          </div>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+<!-- India’s first EEG wearable -->
+ <!-- Neuphony Headband Product Information and product description-->
+ 
+
+
+
+
+<div class="Neuphony-Headband-Product">
+  <!-- <div class="container">
+  <div class="row mt-3">
+    <div class="col-sm-2"></div>        
+    <div class="col-sm-8">
+        <h3><p style="text-align: center;"><B>Ten Brain Research Product Information</B></p></h3>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <div class="row mt-3">
+  
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 mt-5">
+        <div class="row">
+            <div class="col-sm-6">
+              <section id="default" class="padding-top0">
+                <div class="row">
+                  <div class="large-5 column">
+                    <div class="xzoom-container">
+                      <img  style="width: 500px;" class="xzoom product-information-img" id="xzoom-default" src="{% static 'assets/eeg-images/headband/headband1.webp' %}" xoriginal="{% static 'assets/eeg-images/headband/headband1.webp' %}" />
+                      <div class="xzoom-thumbs">
+                        <a href="{% static 'assets/eeg-images/headband/headband1.webp' %}">
+                          <img class="xzoom-gallery" width="80" src="{% static 'assets/eeg-images/headband/headband1.webp' %}"  xpreview="{% static 'assets/eeg-images/headband/headband2.webp' %}" title="The description goes here">
+                        </a>
+                          
+                        <a href="{% static 'assets/eeg-images/headband/headband2.webp' %}">
+                          <img class="xzoom-gallery" width="80" src="{% static 'assets/eeg-images/headband/headband2.webp' %}" title="The description goes here">
+                        </a>
+                          
+                        <a href="{% static 'assets/eeg-images/headband/headband3.webp' %}">
+                          <img class="xzoom-gallery" width="80" src="{% static 'assets/eeg-images/headband/headband3.webp' %}" title="The description goes here">
+                        </a>
+                          
+                        
+                      </div>
+                    </div>        
+                  </div>
+                  <div class="large-7 column"></div>
+                </div>
+                </section>
+            </div>
+            <div class="col-sm-6 get-in">
+                <h3 class="ms-3 me-3">Ten Brain Research Headband</h3>
+                <h5 class="ms-3 me-3"> 6 channel EEG headset for brain training and neurofeedback at home</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+  
+</div> -->
+<div class="container">
+    <div class="card">
+      <h1>Ten Brain Research Headband Product Information</h1>
+      <div class="row">
+        <div class="col-sm-6">
+          <section id="default" class="padding-top0">
+            <div class="row">
+              <!-- <div class="large-12 column"><h3>Product Zooming</h3></div> -->
+                <!-- <hr> -->
+              <div class="large-5 column">
+                <div class="xzoom-container">
+                  <img style="width: 500px !important" class="xzoom product-information-img" id="xzoom-default" src="{% static 'assets/eeg-images/headband/headband1.webp' %}" xoriginal="{% static 'assets/eeg-images/headband/headband1.webp' %}" />
+                  <div class="xzoom-thumbs">
+                    <a href="{% static 'assets/eeg-images/headband/headband1.webp' %}">
+                      <img class="xzoom-gallery" width="80" src="{% static 'assets/eeg-images/headband/headband1.webp' %}"  xpreview="{% static 'assets/eeg-images/headband/headband2.webp' %}" title="The description goes here">
+                    </a>
+                      
+                    <a href="{% static 'assets/eeg-images/headband/headband2.webp' %}">
+                      <img class="xzoom-gallery" width="80" src="{% static 'assets/eeg-images/headband/headband2.webp' %}" title="The description goes here">
+                    </a>
+                      
+                    <a href="{% static 'assets/eeg-images/headband/headband3.webp' %}">
+                      <img class="xzoom-gallery" width="80" src="{% static 'assets/eeg-images/headband/headband3.webp' %}" title="The description goes here">
+                    </a>
+                      
+                    
+                  </div>
+                </div>        
+              </div>
+              <div class="large-7 column"></div>
+            </div>
+            </section>
+            <!-- default end -->
+        </div>
+        <div class="col-sm-6">
+          <div class="Neurofeedback-device">
+          <h1>Ten Brain Research EEG Flex Cap: 8 Channel Dry EEG & Neurofeedback Device</h1>
+          <p>Unleash Your Brain’s Capabilities with Ten Brain Research Flex Cap</p>
+          </div>
+        </div>
+    </div>
+  </div>
+   <!-- Neuphony Headband Product Information and product description end-->
+
+
+<style>
+  .tabs{
+    list-style: none;
+  }
+  .pr-li{
+    padding: 20px 5px;
+  }
+  .active{
+    background-color: white !important;
+    border-left: 2px solid orange !important;
+    border-right: 2px solid orange !important;
+    border-top: 2px solid orange !important;
+    color: #000;
+
+  }
+</style>  
+   <div class="card p-4" >
+      <div class="product-description">
+          <h2>Product Description</h2>
+      </div>
+      <!-- table content  -->
+    <ul class="tabs">
+    <div class="row">
+      <div class="col-sm-6">
+        <li class="active border border pr-li" rel="tab1">Technical Specifications</li>
+      </div>
+      <div class="col-sm-6">
+        <li class="border border pr-li"  rel="tab2">Product Description</li>
+      </div>
+    </div>
+      </ul>
+      <div class="tab_container">
+        <div id="tab1" class="tab_content">
+            <table class="producttabledesc2 table-bordered" >
+              <thead>
+                <tr class="dark-grey">
+                  <th>Specification</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sensor Count</td>
+                  <td >6+2 References</td>
+                </tr>
+                <tr class="light-grey">
+                  <td>Resolution</td>
+                  <td >24 bits per channel</td>
+                </tr>
+                <tr>
+                  <td>Dynamic Range</td>
+                  <td >375 mV (pp)</td>
+                </tr>
+                <tr class="light-grey">
+                  <td>Motion Sensor</td>
+                  <td >3x accelerometer</td>
+                </tr>
+                <tr>
+                  <td>Battery Life</td>
+                  <td >Up to 8 hours</td>
+                </tr>
+                <tr class="light-grey">
+                  <td>Sample Rate</td>
+                  <td >250 SPS</td>
+                </tr>
+                <tr>
+                  <td>Sensor Locations</td>
+                  <td  >Fp1, Fp2, F3, F4, Fz, T3, T4, Pz</td>
+                </tr>
+                <tr class="light-grey">
+                  <td>LSB Resolution</td>
+                  <td >22.35 nVolts (24 bits mode)</td>
+                </tr>
+                <tr>
+                  <td>Sensor Technology</td>
+                  <td >Dry sensors: polycarbonate conductive passive electrodes with Ag/AgCl coating</td>
+                </tr>
+                <tr class="light-grey">
+                  <td>Sensor Technology</td>
+                  <td >CMS/DRL references at T3/T4</td>
+                </tr>
+                <tr>
+                  <td>Frequency Response</td>
+                  <td >1 – 45 Hz</td>
+                </tr>
+                <tr class="light-grey">
+                  <td>Connectivity</td>
+                  <td >Bluetooth® Low Energy 4.2, USB Type-C (with Extender)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- #tab1 -->
+        <div id="tab2" class="tab_content">
+        <div class="productdeschori-content">
+            <h5>Ten Brain Research Flex Cap captures data through 8 EEG channels from the brain. With the best signal quality easy to wear and flexible Ten Brain Research flex cap is one of the best caps for researchers. The device has 8 sensors distributed in the brain’s parietal, frontal &amp; temporal lobes with the flexibility to move the sensors based on the requirements of the research. These are dry sensors and do not require any gel or saline solution.</h5>
+           <h3>Ten Brain Research Desktop Application has the following premium features :</h3>
+        <ul>
+        <h5>Unique user ID creation along with customised experiments and records of each user</h5>
+        <h5>Real-time sensor connectivity and quality</h5>
+        <h5>Analysing Real-time EEG data through 8 channels</h5>
+        <h5>Frequency analysis and band powers</h5>
+        <h5>Real-time measurements of cognitive states including Stress, External Focus, Mood &amp; PDR</h5>
+        </ul>
+        <h3>*Desktop App to be renewed annually at an extra cost after 1-year subscription ends.</h3>
+      </div>
+        <!-- #tab2 -->
+      </div>
+      <!-- .tab_container -->
+      </div>
+      <!-- table content ends -->
+  </div>
+  
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- How to Use Ten Brain Research Flex Cap -->
+<div class="container mt-2 p-2">
+<div class="row">
+  <div class="col-sm-6 brain-research-Desktop-app" >
+    <h2>How to Use Ten Brain Research Flex Cap with Ten Brain Research Desktop Application</h2>
+    <p>To use the Ten Brain Research Flex Cap with the Ten Brain Research Desktop Application, you’ll need to follow a series of steps to ensure proper setup and real-time brain data monitoring. The Flex Cap, which is an EEG device, will collect brainwave data, and the Ten Brain Research Desktop Application will process, visualize, and analyze this data.</p>
+  </div>
+  <div class="col-sm-6 brain-research-Desktop-app" >
+    <h2>Wireless 8-Channel EEG Cap for Researchers, Students & Therapists</h2>
+    <p> A Wireless 8-Channel EEG Cap is a versatile tool for researchers, students, and therapists who are interested in studying brain activity, conducting neurofeedback, or using EEG in clinical settings. This type of EEG device typically offers a balance between performance, ease of use, and affordability, making it suitable for various applications such as brainwave analysis, cognitive training, and neurological therapy.</p>
+  </div>
+</div>
+</div>
+<!-- How to Use Ten Brain Research Flex end -->
+
+<!-- Features Of The Neuphony Application -->
+
+<div class="row mt-4 bg-light">
+  <h4><p style="text-align: center;"><b>Features Of The Ten Brain Research Application</b></p></h4>
+  <h3><p style="text-align: center;"><b>Unleash Your Brain's Capabilities with Ten Brain Research Flex Cap</b></p></h3>
+  <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+          <div class="wrapper">
+            <div class="my-slider">
+              <div class="card card-related-products" style="height: 100%; border-radius: 10%; color: #000; background-color: #fff;">
+                <img class="card-img-top" src="{% static 'assets/eeg-flexcap-images/Real-Time-EEG-Data.webp' %}" alt="Card image cap"  style="border-radius: 25px; margin-left: 10px; padding-right: 25px;">
+                <div class="card-body">
+                  <h4 class="card-title" style="text-align: center;">Real-time EEG Data</h4>
+                  <p class="card-text" style="text-align: center; background-color: #fff; color: #000;">With Ten Brain Research Headsets and desktop application you can get access to real-time EEG data without any latency.</p>
+                </div>
+              </div>
+              <div class="card card-related-products" style="height: 100%; border-radius: 10%; color: #000;background-color: #fff;;">
+                <img class="card-img-top" src="{% static 'assets/eeg-flexcap-images/BandPowerAnalysis.webp' %}" alt="Card image cap"  style="border-radius: 25px; margin-left: 10px; padding-right: 25px;">
+                <div class="card-body">
+                  <h4 class="card-title" style="text-align: center;">Band Power Analysis</h4>
+                  <p class="card-text" style="text-align: center; background-color: #fff; color: #000;">Ten Brain Research Desktop App helps you access real-time cognitive insights like focus, calm, mental fatigue, readiness, mood & PDR</p>
+                </div>
+              </div>
+              <div class="card card-related-products" style="height: 100%; border-radius: 10%; color: #000;background-color: #fff;;">
+                <img class="card-img-top" src="{% static 'assets/eeg-flexcap-images/CognitiveInsights.webp' %}" alt="Card image cap"  style="border-radius: 25px; margin-left: 10px; padding-right: 25px;">
+                <div class="card-body">                
+                  <h4 class="card-title" style="text-align: center;">Cognitive Insights</h4>
+                  <p class="card-text" style="text-align: center; background-color: #fff; color: #000;">Ten Brain Research Desktop App helps you access real-time cognitive insights like focus, calm, mental fatigue, readiness, mood & PDR</p>
+                </div>
+              </div>
+
+              <div class="card card-related-products" style="height: 100%; border-radius: 10%; color: #000;background-color: #fff;;">
+                <img class="card-img-top" src="{% static 'assets/eeg-flexcap-images/LabStreamingLayer.webp' %}" alt="Card image cap"  style="border-radius: 25px; margin-left: 10px; padding-right: 25px;">
+                <div class="card-body">
+                  <h4 class="card-title" style="text-align: center;">Lab Streaming Layer</h4>
+                  <p class="card-text" style="text-align: center; color: #000; background-color: #fff;">Ten Brain Research Desktop Application also allows to develop your own applications and softwares allowing access to real-time EEG data</p>
+                </div>
+              </div>
+              <div class="card card-related-products" style="height: 100%; border-radius: 10%; color: #000;background-color: #fff;;">
+                <img class="card-img-top" src="{% static 'assets/eeg-flexcap-images/CustomExperiments.webp' %}" alt="Card image cap"  style="border-radius: 25px; margin-left: 10px; padding-right: 25px;">
+                <div class="card-body">
+                  <h4 class="card-title" style="text-align: center;">Custom Experiments</h4>
+                  <p class="card-text" style="text-align: center; background-color: #fff; color: #000;">You can create your own experiments, like Audio P 300 and Visual P 300 or tailor your experiments by choosing specific images or videos.</p>
+                </div>
+              </div>
+              
+                                    
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+
+
+
+
+
+<!-- <div class="Features-Of-brain-Application">
+  <h2>Features Of The Ten Brain Research Application</h2>
+  <h3>Unleash Your Brain's Capabilities with Ten Brain Research Flex Cap</h3>
+  <div class="container">
+    <div class="row">
+      <div class="wrapper">
+        <div class="my-slider">
+            <div >
+              <div class="card">
+                <img src="./static/assets/eeg-flexcap-images/Real-Time-EEG-Data.webp" class="card-img-top" alt="...">
+                  <h4>Real-                     time EEG Data</h4>
+                  <p>With                         Ten Brain Research Headsets and desktop application you can get access to real-time EEG data without any latency.</p>
+              </div>
+            </div>
+            <div >
+              <div class="card">
+                <img src="./static/assets/eeg-flexcap-images/BandPowerAnalysis.webp" class="card-img-top" alt="...">
+                  <h4>Band Power Analysi                    s</h4>
+                  <p>Ten Brain Research Desktop Ap                   p helps you access real-time cognitive insights like focus, calm, mental fatigue, readiness, mood & PDR</p>
+                </div>
+            </div>
+            <div >
+              <div class="card">
+                <img src="./static/assets/eeg-flexcap-images/CognitiveInsights.webp" class="card-img-top" alt="...">
+                  <h4>Cognitive Insig        hts</h4>
+                  <p>Ten Brain Resear           ch Desktop App helps you access real-time cognitive insights like focus, calm, mental fatigue, readiness, mood & PDR</p>
+                </div>
+            </div>
+            <div >
+              <div class="card">
+                <img src="./static/assets/eeg-flexcap-images/LabStreamingLayer.webp" class="card-img-top" alt="...">
+                  <h4>Lab Streaming Layer</h4>
+                  <p>Ten Brain Research Desktop Application also allows to develop your own applications and softwares allowing access to real-time EEG data</p>
+                </div>
+              </div>
+            <div >
+              <div class="card">
+                <img src="./static/assets/eeg-flexcap-images/CustomExperiments.webp" class="card-img-top" alt="...">
+                  <h4>Custom Experiments</h4>
+                  <p>You can create your own experiments, like Audio P 300 and Visual P 300 or tailor your experiments by choosing specific images or videos.</p>
+                </div>
+              </div>
+
+              <div >
+                <div class="card">
+                  <img src="./static/assets/eeg-flexcap-images/Real-Time-EEG-Data.webp" class="card-img-top" alt="...">
+                    <h4>Real-time EEG Data</h4>
+                    <p>With Ten Brain Research Headsets and desktop application you can get access to real-time EEG data without any latency.</p>
+                </div>
+              </div>
+              <div >
+                <div class="card">
+                  <img src="./static/assets/eeg-flexcap-images/BandPowerAnalysis.webp" class="card-img-top" alt="...">
+                    <h4>Band Power Analysis</h4>
+                    <p>Ten Brain Research Desktop App helps you access real-time cognitive insights like focus, calm, mental fatigue, readiness, mood & PDR</p>
+                  </div>
+              </div>
+              <div >
+                <div class="card">
+                  <img src="./static/assets/eeg-flexcap-images/CognitiveInsights.webp" class="card-img-top" alt="...">
+                    <h4>Cognitive Insights</h4>
+                    <p>Ten Brain Research Desktop App helps you access real-time cognitive insights like focus, calm, mental fatigue, readiness, mood & PDR</p>
+                  </div>
+              </div>
+              <div >
+                <div class="card">
+                  <img src="./static/assets/eeg-flexcap-images/LabStreamingLayer.webp" class="card-img-top" alt="...">
+                    <h4>Lab Streaming Layer</h4>
+                    <p>Ten Brain Research Desktop Application also allows to develop your own applications and softwares allowing access to real-time EEG data</p>
+                  </div>
+                </div>
+              <div >
+                <div class="card">
+                  <img src="./static/assets/eeg-flexcap-images/CustomExperiments.webp" class="card-img-top" alt="...">
+                    <h4>Custom Experiments</h4>
+                    <p>You can create your own experiments, like Audio P 300 and Visual P 300 or tailor your experiments by choosing specific images or videos.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div> -->
+<!-- Features Of The Neuphony Application ends-->
+
+
+<!-- Build with Neuphony starts-->
+    <div class="Build-with-header">
+      <h2>Build with Ten Brain Research </h2>
+      <h4>Develop custom BCI (Brain Computer Interface) Applications using real time EEG data including Virtual Reality, BCI drones, Brain-controlled robots, Mood based automatic lighting, and more.</h4>
+    <div class="container">
+      <div class="row">
+      <div class="card" >
+      <img src="./static/assets/eeg-flexcap-images/Develop-your-own-applications.webp"  class="card-img-top" alt="...">
+      <h5 >Develop Your Own Applications </h5>
+      <p >Develop custom applications with real-time EEG data, leveraging Lab Streaming Layer for personalized solutions.</p>
+      </div>
+      <div class="card" >
+      <img src="./static/assets/eeg-flexcap-images/neuromarketing-neuphony.webp"  class="card-img-top" alt="...">
+      <h5>Neuromarketing Research & Advertising </h5>
+      <p  >Gain a deeper understanding of consumer behavior through brain waves Data & craft compelling advertising campaigns</p>
+      </div>
+      <div class="card" >
+      <img src="./static/assets/eeg-flexcap-images/VR-Gamesn.webp"  class="card-img-top" alt="...">
+      <h5>Brain-Controlled VRs & Gaming</h5>
+      <p >Players can use their thoughts to manipulate characters, objects, or actions within a game, enhancing the gaming experience.</p>
+      </div>
+        <div class="card" >
+         <img src="./static/assets/eeg-flexcap-images/Assistive-technology.webp"  class="card-img-top" alt="...">
+          <h5>Assistive Technology </h5>
+        <p >Enable individuals with motor impairments to control wheelchairs, communication devices, and robotic arms.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+<!-- Build with Neuphony ends-->
+
+<div class="row mt-4">
+  <h3><p style="text-align: center;"><b>Made in India, Loved by the World</b></p></h3>
+  <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <div class="row">
+          <div class="slideshow-container">
+
+            <div class="mySlides fade ms-3 me-3">
+              <p style="text-align: center;color: #000; background-color:#fff"  class="">
+                This is incredible! This is a whole next level! What a good meditations I have heard and experienced!! So far! This is what an EEG device deserves! This opens possibility to create a next level in measurement of the EEG Because I have seen some faults during the regular meditations.                          
+                  <br>
+                  <p  style="text-align: center;color: #000; background-color:#fff">Nick Van</p>
+                  <p  style="text-align: center;color: #000; background-color:#fff"><b>Founder, Meditator & Entrepreneur</b></p>
+              </p>
+              <!-- <div class="text">Caption Text</div> -->
+            </div>
+            
+            <div class="mySlides fade ms-3 me-3">
+              <p style="text-align: center;color: black; background-color:#fff"  class="">
+                To begin with, the Ten Brain Research device seems pretty cool to me. I still remember trying it on for the first time and having mutiple questions about how it’s going to feel like, kept on wondering how the device can measure my stress level, will I feel any sensations or discomfort and so on. But to my surprise it was pretty awesome. The device was not at all complicated. It felt like a head gear and was super easy to wear. The only disadvantage about the device is that after sometime it becomes too heavy on your head ad a bit pokey too.
+                  <br>
+                  <p  style="text-align: center;color: #000; background-color:#fff">Nikita Patel</p>
+                  <p  style="text-align: center;color: #000; background-color:#fff"><b>Fashion Influencer</b></p>
+              </p>
+              <!-- <div class="text">Caption Text</div> -->
+            </div><div class="mySlides fade ms-3 me-3">
+              <p style="text-align: center;color: #000; background-color:#fff"  class="">
+                Brain activity was monitored during one of my meditation sessions copy. A very good initiative by team Ten Brain Research. I have never had such an amazing experience where my brain activity was monitored during one of my meditation sessions. The device that the team is working on is a very novice idea that will help people monitor their brain waves at home with ease.
+                <br>
+                  <p  style="text-align: center;color: #000; background-color:#fff">Trisha Behl</p>
+                  <p  style="text-align: center;color: #000; background-color:#fff"><b>Communication Specialist</b></p>
+              </p>
+              <!-- <div class="text">Caption Text</div> -->
+            </div><div class="mySlides fade ms-3 me-3">
+              <p style="text-align: center;color: #000; background-color:#fff"  class="">
+                It was an amazing experience overall, using a headband does not affect your meditation experience it just helps your realize how you were truly involved in meditation, after a few minutes you forget about the headband it is that comfortable. Normal meditation and guided meditation with Ten Brain Research and Level are slightly different as they help you to focus and calm your mind easily.
+                <br>
+                  <p  style="text-align: center;color: #000; background-color:#fff">Kunal Rajaram</p>
+                  <p  style="text-align: center;color: #000; background-color:#fff"><b>Student & Meditator</b></p>
+              </p>
+              <!-- <div class="text">Caption Text</div> -->
+            </div>
+            <div class="mySlides fade ms-3 me-3">
+              <p style="text-align: center;color: #000; background-color:#fff"  class="">
+                  I’ve been into meditation for 15 years now and thought that I was doing a more or less good job of it. But I never really felt completely relaxed during my meditations and this got confirmed with Ten Brain Research that mindfulness meditation is definitely the meditation that’s more suited to my brain waves
+                  <br>
+                  <p  style="text-align: center;color: #000; background-color:#fff">Susan Lemke</p>
+                  <p  style="text-align: center;color: #000; background-color:#fff"><b>15+ years Experienced Meditator</b></p>
+              </p>
+            </div>
+            <div class="mySlides fade ms-3 me-3">
+              <p style="text-align: center;color: #000; background-color:#fff"  class="">
+                I attended Ten Brain Research's meditation bootcamp & used their product which is brain analysing device through EEG in upgraded level without wires which is great. In normal meditation we are not able to conclude that how much focused we are but with Ten Brain Research's headband and its app where it has a feature of music sound which increase when we are focused and decrease when we are not helps a lot and that's the best feature I can say
+                  <br>
+                  <p  style="text-align: center;color: #000; background-color:#fff">Chaitrali Shah</p>
+                  <p  style="text-align: center;color: #000; background-color:#fff"><b>Student & Meditator</b></p>
+              </p>
+            </div>
+            <div class="mySlides fade ms-3 me-3">
+              <p style="text-align: center;color: #000; background-color:#fff"  class="">
+                My experience with the device has been great. I love the concept of the device, didn't think it would be so efficient to actually measure your brain activity. The device is compact, easy and comfortable. It keeps us motivated to improve ourselves by adopting new habits. Its a very cool and exciting device. Thank you for the opportunity glad to have been a part of it
+                  <br>
+                  <p  style="text-align: center;color: #000; background-color:#fff">Pooja Chhedda</p>
+                  <p  style="text-align: center;color: #000; background-color:#fff"><b>Student & Meditator</b></p>
+              </p>
+            </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" style="border: 1px blue solid;"></span> 
+              <span class="dot" style="border: 1px blue solid;"></span> 
+              <span class="dot" style="border: 1px blue solid;"></span> 
+              <span class="dot" style="border: 1px blue solid;"></span> 
+              <span class="dot" style="border: 1px blue solid;"></span> 
+              <span class="dot" style="border: 1px blue solid;"></span> 
+              <span class="dot" style="border: 1px blue solid;"></span> 
+            </div>
+        </div>
+    </div>
+  <div class="col-sm-2"></div>
+</div>
+<!-- slider content ends-->
+
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script src="https://unpkg.com/xzoom/dist/xzoom.min.js"></script>
+<script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<script>
+(function ($) {
+  $(document).ready(function() {
+      $('.xzoom, .xzoom-gallery').xzoom({zoomWidth: 300,zoomHeight:300, title: true, tint: '#333', Xoffset: 15});
+      $('.xzoom2, .xzoom-gallery2').xzoom({position: '#xzoom2-id', tint: '#ffa200'});
+      $('.xzoom3, .xzoom-gallery3').xzoom({position: 'lens', lensShape: 'circle', sourceClass: 'xzoom-hidden'});
+      $('.xzoom4, .xzoom-gallery4').xzoom({tint: '#006699', Xoffset: 15});
+      $('.xzoom5, .xzoom-gallery5').xzoom({tint: '#006699', Xoffset: 15});
+
+      //Integration with hammer.js
+      var isTouchSupported = 'ontouchstart' in window;
+      if (isTouchSupported) {
+          //If touch device
+          $('.xzoom, .xzoom2, .xzoom3, .xzoom4, .xzoom5').each(function(){
+              var xzoom = $(this).data('xzoom');
+              xzoom.eventunbind();
+          });
+
+          $('.xzoom, .xzoom2, .xzoom3').each(function() {
+              var xzoom = $(this).data('xzoom');
+              $(this).hammer().on("tap", function(event) {
+                  event.pageX = event.gesture.center.pageX;
+                  event.pageY = event.gesture.center.pageY;
+                  var s = 1, ls;
+
+                  xzoom.eventmove = function(element) {
+                      element.hammer().on('drag', function(event) {
+                          event.pageX = event.gesture.center.pageX;
+                          event.pageY = event.gesture.center.pageY;
+                          xzoom.movezoom(event);
+                          event.gesture.preventDefault();
+                      });
+                  }
+
+                  xzoom.eventleave = function(element) {
+                      element.hammer().on('tap', function(event) {
+                          xzoom.closezoom();
+                      });
+                  }
+                  xzoom.openzoom(event);
+              });
+          });
+
+      $('.xzoom4').each(function() {
+          var xzoom = $(this).data('xzoom');
+          $(this).hammer().on("tap", function(event) {
+              event.pageX = event.gesture.center.pageX;
+              event.pageY = event.gesture.center.pageY;
+              var s = 1, ls;
+
+              xzoom.eventmove = function(element) {
+                  element.hammer().on('drag', function(event) {
+                      event.pageX = event.gesture.center.pageX;
+                      event.pageY = event.gesture.center.pageY;
+                      xzoom.movezoom(event);
+                      event.gesture.preventDefault();
+                  });
+              }
+
+              var counter = 0;
+              xzoom.eventclick = function(element) {
+                  element.hammer().on('tap', function() {
+                      counter++;
+                      if (counter == 1) setTimeout(openfancy,300);
+                      event.gesture.preventDefault();
+                  });
+              }
+
+              function openfancy() {
+                  if (counter == 2) {
+                      xzoom.closezoom();
+                      $.fancybox.open(xzoom.gallery().cgallery);
+                  } else {
+                      xzoom.closezoom();
+                  }
+                  counter = 0;
+              }
+          xzoom.openzoom(event);
+          });
+      });
+
+      $('.xzoom5').each(function() {
+          var xzoom = $(this).data('xzoom');
+          $(this).hammer().on("tap", function(event) {
+              event.pageX = event.gesture.center.pageX;
+              event.pageY = event.gesture.center.pageY;
+              var s = 1, ls;
+
+              xzoom.eventmove = function(element) {
+                  element.hammer().on('drag', function(event) {
+                      event.pageX = event.gesture.center.pageX;
+                      event.pageY = event.gesture.center.pageY;
+                      xzoom.movezoom(event);
+                      event.gesture.preventDefault();
+                  });
+              }
+
+              var counter = 0;
+              xzoom.eventclick = function(element) {
+                  element.hammer().on('tap', function() {
+                      counter++;
+                      if (counter == 1) setTimeout(openmagnific,300);
+                      event.gesture.preventDefault();
+                  });
+              }
+
+              function openmagnific() {
+                  if (counter == 2) {
+                      xzoom.closezoom();
+                      var gallery = xzoom.gallery().cgallery;
+                      var i, images = new Array();
+                      for (i in gallery) {
+                          images[i] = {src: gallery[i]};
+                      }
+                      $.magnificPopup.open({items: images, type:'image', gallery: {enabled: true}});
+                  } else {
+                      xzoom.closezoom();
+                  }
+                  counter = 0;
+              }
+              xzoom.openzoom(event);
+          });
+      });
+
+      } else {
+          //If not touch device
+
+          //Integration with fancybox plugin
+          $('#xzoom-fancy').bind('click', function(event) {
+              var xzoom = $(this).data('xzoom');
+              xzoom.closezoom();
+              $.fancybox.open(xzoom.gallery().cgallery, {padding: 0, helpers: {overlay: {locked: false}}});
+              event.preventDefault();
+          });
+
+          //Integration with magnific popup plugin
+          $('#xzoom-magnific').bind('click', function(event) {
+              var xzoom = $(this).data('xzoom');
+              xzoom.closezoom();
+              var gallery = xzoom.gallery().cgallery;
+              var i, images = new Array();
+              for (i in gallery) {
+                  images[i] = {src: gallery[i]};
+              }
+              $.magnificPopup.open({items: images, type:'image', gallery: {enabled: true}});
+              event.preventDefault();
+          });
+      }
+  });
+})(jQuery);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $('.my-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    speed: 1000,
+    infinite: true,
+    autoplaySpeed: 3000,
+    autoplay: true,
+    responsive: [
+  {
+    breakpoint: 991,
+    settings: {
+      slidesToShow: 3,
+    }
+  },
+  {
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 1,
+    }
+  }
+]
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $('.slider1').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    speed: 1000,
+    infinite: true,
+    autoplaySpeed: 3000,
+    autoplay: true,
+    responsive: [
+  {
+    breakpoint: 991,
+    settings: {
+      slidesToShow: 3,
+    }
+  },
+  {
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 1,
+    }
+  }
+]
+  });
+});
+</script>
+
+<script>
+ // tabbed content
+// http://www.entheosweb.com/tutorials/css/tabs.asp
+$(".tab_content").hide();
+$(".tab_content:first").show();
+
+/* if in tab mode */
+$("ul.tabs li").click(function() {
+
+  $(".tab_content").hide();
+  var activeTab = $(this).attr("rel");
+  $("#"+activeTab).fadeIn();
+
+  $("ul.tabs li").removeClass("active");
+  $(this).addClass("active");
+
+  $(".tab_drawer_heading").removeClass("d_active");
+  $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
+
+});
+/* if in drawer mode */
+$(".tab_drawer_heading").click(function() {
+
+  $(".tab_content").hide();
+  var d_activeTab = $(this).attr("rel");
+  $("#"+d_activeTab).fadeIn();
+
+  $(".tab_drawer_heading").removeClass("d_active");
+  $(this).addClass("d_active");
+
+  $("ul.tabs li").removeClass("active");
+  $("ul.tabs li[rel^='"+d_activeTab+"']").addClass("active");
+});
+/* Extra class "tab_last"
+   to add border to right side
+   of last tab */
+$('ul.tabs li').last().addClass("tab_last");
+</script>
+</body>
+</html> -->
+{% endblock 'main' %}

@@ -1,0 +1,213 @@
+
+
+
+header {
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color, #f8f9fa);
+    color: var(--text-color, #000);
+}
+
+.sidebar {
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Ensures items stack vertically */
+    justify-content: space-between; /* Pushes the "Powered by" section to the bottom */
+    overflow-y: auto; /* Enables scrolling if content overflows */
+    padding-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Ensures this section takes up available space */
+}
+
+.sidebar ul li {
+    padding: 8px 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #7c848e;
+    font-size: 14px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #0056b3;
+}
+
+.pow {
+    text-align: center; /* Centers the text */
+    padding: 10px;
+    background-color: #f8f9fa; /* Subtle background for distinction */
+    color: #333;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+
+.pow a {
+    color: #0056b3; /* Link color */
+    text-decoration: none;
+}
+
+.pow a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    padding: 20px;
+}
+
+.device-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.help-section {
+    position: absolute; /* Use absolute positioning */
+    top: 100px;          /* Position from the top */
+    right: 20px;        /* Position from the right */
+    z-index: 1000;      /* Ensure it appears above other elements */
+    text-align: right;  /* Align the content to the right */
+}
+
+.help-section button {
+    padding: 8px 12px;
+    background-color: #d8d8d8;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+.projects-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.projects-section a {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.projects-section a:hover {
+    background-color: #f8f9fa;
+}
+
+.last-updated {
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 20px;
+}
+
+.theme-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.theme-switcher button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header .search input {
+    border: 1px solid #ffffff;
+    background-color: #dfdfdf;
+    text-decoration-color: #ddd;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.header .search input:focus {
+    outline: none;
+    border-color: #232a2e0a;
+}
+main h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center;
+    border-top: 1px solid #ddd;
+    
+    bottom: 0;
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.footer-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+.footer-icons i {
+    font-size: 20px;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-icons i:hover {
+    background-color: #e9ecef;
+    color: #495057;
+}
+

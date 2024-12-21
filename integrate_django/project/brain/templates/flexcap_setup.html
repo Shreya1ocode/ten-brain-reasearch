@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Up</title>
+    <link rel="stylesheet" href="{% static 'assets/css/set_up.css' %}">
+</head>
+<body>
+    <!--Header Part Start-->
+    <header>
+        <div class="div1">
+            <div class="head1">
+                <a href="#" class="anlink">
+                    <div class="ten"><img src="{% static 'assets/flexcap-setup-images/logo.jpg' %}" alt="logo" class="logo"></div>
+                    <div class="head_nm">Brain Research Set Up</div>
+                </a>
+            </div>
+    
+            <div class="head2">
+                <div class="search">
+                    <div class="symbol">
+                        <img src="{% static 'assets/flexcap-setup-images/search.svg' %}" alt="search" class="se">
+                    </div>
+                    <div class="srch">
+                        <input type="text" placeholder="Ask or Search" class="src">
+                    </div>
+                </div>
+            </div>
+            <img src="{% static 'assets/flexcap-setup-images/menu.svg' %}" alt="menu" class="menu-icon" onclick="toggleMenu()">
+        </div>
+        
+    </header>
+    <!--Header Part End-->
+
+    <!--Body Part Start-->
+    <div class="div2">
+        <!--Control Panel Start-->
+        <div class="panel" id="menu-links">
+            <div class="list">
+                <a href="#" class="anlink"> Brain Research Set Up</a>
+            </div>
+            <div class="cont">CONNECTION</div>
+            <ul class="unorder">
+                <li>
+                    <div class="list">
+                        <a href="#" class="anlink">Device Connection</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="list">
+                        <a href="#" class="anlink">Setting up the device on the app</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="list">
+                        <a href="#" class="anlink">Types of Anomalies</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Control Panel End-->
+        <!--Main Part Start-->
+        <div class="main">
+            <div class="bold_nm">
+                <h1>Brain Research Set Up</h1>
+            </div>
+            <div class="brn">
+                <img src="{% static 'assets/flexcap-setup-images/brain.jpg' %}" alt="Brain" class="brain">
+            </div>
+            <div class="para">
+                <p >To securely connect the Ten Brain Research FlexCap device for brain research, ensure the device is intact, install the latest app, calibrate it, and properly place the electrodes. Monitor the signal for issues, reduce interference, and verify clean data after collection, reviewing for any anomalies.</p>
+            </div>
+            <div class="refer">
+                <p>Refer to the video below:</p>
+            </div>
+            <div class="vd">
+                <iframe src="https://www.youtube.com/embed/d2a6lekGkgQ?si=9UJHlgP90cGuDDsP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen  class="vid"></iframe>
+            </div>
+            <div class="conet">
+                <div class="connect">
+                    <a href="#" class="anli">
+                        <div class="lside">
+                            <div class="nxt">
+                                <span>Next</span>
+                            </div>
+                
+                            <div class="dc">
+                                <span>Device Connection</span>
+                            </div>
+                        </div>
+                        <div class="for">
+                            <img src="{% static 'assets/flexcap-setup-images/forward.svg' %}" alt="forward" class="frwd">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <!--Main Part End-->
+
+        <!--Right Panel Start-->
+        <div class="rp">
+            <div class="hed">Was this helpful?</div>
+            <div class="rate">
+                <div class="no"><button class="btn"><img src="{% static 'assets/flexcap-setup-images/no.svg' %}" alt="no"></button></div>
+                <div class="ok"><button class="btn"><img src="{% static 'assets/flexcap-setup-images/ok.svg' %}" alt="ok"></button></div>
+                <div class="yes"><button class="btn"><img src="{% static 'assets/flexcap-setup-images/yes.svg' %}" alt="yes"></button></div>
+            </div>
+        </div>
+        <!--Right Panel End-->
+    </div>
+    <!--Body Part End-->
+    <!--Footer Part Start-->
+    <footer>
+        <div class="div3">
+            <div class="mode">
+                <div class="light"><button class="btn"><img src="{% static 'assets/flexcap-setup-images/light.svg' %}" alt="light"></button></div>
+                <div class="desktop"><button class="btn"><img src="{% static 'assets/flexcap-setup-images/desktop.svg' %}" alt="desktop"></button></div>
+                <div class="dark"><button class="btn"><img src="{% static 'assets/flexcap-setup-images/dark.svg' %}" alt="dark"></button></div>
+            </div>
+        </div>
+    </footer>
+    <!--Footer Part End-->
+
+    <!--Script Part Start-->
+    <script>
+        let menuLinks = document.getElementById("menu-links");
+
+        function toggleMenu() {
+            
+            menuLinks.classList.toggle('show-menu');
+        }
+    </script>
+    <!--Script Part End-->
+</body>
+</html>

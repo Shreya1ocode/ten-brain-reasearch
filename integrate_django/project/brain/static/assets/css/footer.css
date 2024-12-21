@@ -1,0 +1,151 @@
+.footerimg1{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 53px;
+}
+.footercontent1{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 15px;
+}
+.large{
+    font-size: 22px;
+}
+.small {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Company{
+    text-align: left;
+    margin-left: 220px;
+}
+
+#policy{
+    text-decoration: none;
+    text-align: justify;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.policy1{
+    margin-left: 240px;
+    font-size: 110%;
+    line-height: 1;
+}
+.img{
+    
+    margin: 20px;
+}
+.row-footer1{
+    text-align: center;
+    margin-left: 180px;
+}
+
+.row-footer2{
+    text-align: left;
+    margin-left: 150px;
+}
+
+@media only screen and (max-width:320px){
+    .footerimg1{
+        display: inline-block;
+        vertical-align: top;
+        
+    }
+    .footercontent1{
+        display: inline-block;
+        vertical-align: top;
+        
+    }
+    .large{
+        font-size: 22px;
+    }
+    .small {
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .Company{
+        text-align: left;
+        margin-left: 220px;
+    }
+    
+    #policy{
+        text-decoration: none;
+        text-align: justify;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .policy1{
+        margin-left: 240px;
+        font-size: 110%;
+        line-height: 1;
+    }
+    .img{
+        
+        margin: 20px;
+    }
+    .row-footer1{
+        text-align: center;
+        margin-left: 180px;
+    }
+    
+    .row-footer2{
+        text-align: left;
+        margin-left: 150px;
+    }
+}
+
+
+@media only screen and (max-width:320px){
+    body{
+        padding: 2px;
+    }
+
+    .footerimg1{
+        display: inline-block;
+        vertical-align: top;
+        margin: 1px;
+        
+    }
+
+    .footercontent1{
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 3px;
+    }
+    .large{
+        font-size: 17px;
+    }
+    .small {
+        font-size: 2px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .Company{
+        text-align: left;
+        margin-left: 5rem;
+    }
+    
+    .policy1{
+        margin-left: 6rem;
+        font-size: 11px;
+        line-height: 1;
+    }
+
+    /* .img{
+        
+        margin: 20px;
+    } */
+    .row-footer1{
+
+        margin-left: 20px;
+    }
+    .row-footer2{
+        text-align: center;
+        margin-left: 1rem;
+    }
+    .Copyright{
+        font-size: 10px;
+    }
+
+}

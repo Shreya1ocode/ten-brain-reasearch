@@ -1,0 +1,263 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+
+<style>
+    .subscription-section {
+    text-align: center;
+    background-color: #f1f1f1 !important;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subscription-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  
+  .subscription-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666666;
+  }
+  
+  .subscription-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .subscription-form input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .subscription-form button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #4a69bd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscription-form button:hover {
+    background-color: #3b55a3;
+  }
+  
+  @media (max-width: 600px) {
+    .subscription-form {
+      flex-direction: column;
+    }
+  
+    .subscription-form input[type="email"] {
+      margin-bottom: 10px;
+    }
+  }
+
+  .learn-more-class{
+    text-decoration: none;
+    color: black;
+    background-color: #ff9800 !important;
+    padding: 10px 17px;
+    border-radius: 20px;
+  }
+
+</style>
+<div class="text-white"  style="background-color: #020825;">
+    <div class="row">
+        <div class="image-container">            
+                <img src="{% static 'assets/how-it-works-images/Wearables.webp ' %}" alt="Ten Brain Research Wearables" width="100%">
+        </div>
+    </div>
+
+    <div class="row" >
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="row mt-4 mb-4">
+                <h3 style="text-align: center;"><b>Harness the Power of Neuroplasticity</b></h3>
+                    <!-- Subtitle -->
+                <h3 style="text-align: center;"><b>The smartwatch for your brain</b></h3>
+                    <!-- Description Text -->
+                <p style="text-align: center;">
+                        Discover how  Ten Brain Research leverages neuroplasticity to enhance brain health and performance, unlocking your mind’s full potential.
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row p-3">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <iframe src="https://www.youtube.com/embed/cLJmT7J2Kv4?start=141" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen height="650px" width="100%" style="border-radius: 30px;">
+            </iframe>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+
+    <div class="row p-3"  >
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="row mt-5 mb-5">
+                <div class="col-sm-5">
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/oc6Y1sEJU_Q" title="7 minute Explainer - Brain Lobes, Brainwaves, Brain Networks and More" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 30px;"></iframe>
+            </iframe>
+                </div>
+                <div class="col-sm-7">
+                    <p>
+                        <h3>Monitor Brain Activity with EEG Precision </h3>
+                        <h4>Understanding Your Brain Better</h4>
+                        <p>Capture detailed brain wave data with our advanced EEG device, providing a comprehensive view of your cognitive function</p>
+                        <p class="w3-right w3-hide-small">
+                            <a href="/how_it_works" class="learn-more-class">Learn More</a>
+                        </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row p-3"  >
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="row mt-5 mb-5">
+                <div class="col-sm-7">
+                    <p>
+                        <h3>Transform Data into Actionable Insights with Neurofeedback </h3>
+                        <h4>Unlock Your Mind: Gamified Neurofeedback on the Go</h4>
+                        <p>Utilize the power of neurofeedback to turn brain wave data into practical insights for better mental performance and wellness.</p>
+                        <p class="w3-right w3-hide-small">
+                            <a href="/how_it_works" class="learn-more-class">Learn More</a>
+                        </p>
+                    </p>
+                </div>
+                <div class="col-sm-5">
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/VfkD15zpLHA" title="4 Minutes Explainer on #Neurofeedback Based Meditations for #BrainTraining | Ten Brain Research" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 30px;"></iframe>
+            </iframe>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row p-3"  >
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="row mt-5 mb-5">
+                <div class="col-sm-5">
+                    <iframe width="100%" height="235" src="https://www.youtube.com/embed/t3477Wn7vk0" title="Smart Cognitive Assessments with Ten Brain Research EEG Wearable" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 30px;"></iframe>
+            </iframe>
+                </div>
+                <div class="col-sm-7">
+                    <p>
+                        <h3>Comprehensive Cognitive Assessments with  Ten Brain Research </h3>
+                        <p>Gain in-depth understanding of your cognitive abilities through  Ten Brain Research’s EEG-based assessments, tailored to your unique needs</p>
+                        <p class="w3-right w3-hide-small">
+                            <a href="/how_it_works" class="learn-more-class" >Learn More</a>
+                        </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row p-3"  >
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="row mt-5 mb-5">
+                <div class="col-sm-6">
+                    <iframe width="100%" height="235" src="https://www.youtube.com/embed/JDshU1FzJPQ" title="Introducing Ten Brain Research App | How It Works? | Well-being &amp; Meditation App for Your Brain Health" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 30px;"></iframe>
+                    <p>
+                        <h4> Ten Brain Research Desktop Application</h4>
+                <p>With the  Ten Brain Research Desktop Application, you can also track real-time EEG data, Band Powers, and real-time cognitive insights such as Focus, Relaxation, Fatigue, Readiness, Mood & PDR.</p>
+                    </p>
+
+                </div>
+                <div class="col-sm-6">
+                    <iframe width="100%" height="235" src="https://www.youtube.com/embed/d5MHfEl6u3c" title="Neurofeedback - Video Game- like therapy to help with focus, stress, and anxiety | Ten Brain Research Software" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 30px;"></iframe>
+                    <p>
+                        <h4> Ten Brain Research Desktop Application</h4>
+                <p>With the  Ten Brain Research Desktop Application, you can also track real-time EEG data, Band Powers, and real-time cognitive insights such as Focus, Relaxation, Fatigue, Readiness, Mood & PDR.</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+
+    <div class="row p-3"  >
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="row mt-4 mb-4">
+                <h3 style="text-align: center;"><b>Achieve Peak Performance with Holistic Brain Training</b></h3>
+                    <!-- Subtitle -->
+                    <!-- Description Text -->
+                <p style="text-align: center;">
+                    Train your brain using a blend of holistic techniques and neurofeedback to reach optimal mental performance and well-being.
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row p-3"  >
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="row mb-5">
+                <div class="col-sm-6 mt-3 mb-4 " style="height: 75%;">
+                    <img src="{% static 'assets/how-it-works-images/Biohacking.webp ' %}" style="width: -webkit-fill-available;border-radius: 25px;">
+                    <p>
+                        <h4>A 7-Day Plan to Help You Unlock Secrets of Biohacking</h4>
+                <p>In the first week, explore the focus and calm modules in the  Ten Brain Research app to find the ones you enjoy the most. You can also add your own music to the app and use that to measure your focus and calm levels. Establish a routine for your sessions.</p>
+                    </p>
+
+                </div>
+                <div class="col-sm-6 mt-3 mb-4">
+                    <img src="{% static 'assets/how-it-works-images/Performance.webp ' %}" style="width: -webkit-fill-available;border-radius: 25px;"">
+                    <p>
+                        <h4>A Plan to Help You Achieve Resilience & Peak Performance</h4>
+                <p>Two individuals face the same challenging situation. One crumbles under the pressure, while the other tackles it head-on, seemingly unfazed. What’s the secret ingredient that sets them apart?</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+    
+
+</div><!--end text-white-->
+<div class="subscription-section">
+    <h2 class="mt-5">New from Ten Brain Research?</h2>
+    <p>Get the latest from Ten Brain Research by subscribing now.</p>
+    <form class="subscription-form mb-5" method="post" action="/submit_subscription">
+        {% csrf_token %}
+        {% if success_msg %}
+                      <div id="alerts" class="alert alert-success" role="alert">{{success_msg}}
+                      </div>
+                  {% endif %}
+        <input type="email" name="uemail" placeholder="Email" required  />
+        <input type="hidden" name="page_url" value="how_it_works">
+        <button type="submit">Subscribe</button>
+      </form>
+  </div>
+
+{% endblock 'main' %}

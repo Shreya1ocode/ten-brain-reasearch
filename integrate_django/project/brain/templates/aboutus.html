@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+
+<style>
+    .about-header {
+    text-align: center;
+    margin-top: 20px;
+}
+.about-section {
+    padding: 50px 0;
+}
+.about-image img {
+    border-radius: 15px;
+    max-width: 100%;
+}
+.about-video {
+    margin-top: 20px;
+}
+
+p {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+  .card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    background-color: azure;
+}
+</style>
+      <!-- About Us Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="about-header">About Us</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6 about-text">
+                        <p>
+                            At <strong>TEN Brain Research</strong>, we are dedicated to advancing the understanding 
+                            of the human brain and fostering innovation in neuroscience. Inspired by the principles of 
+                            <strong>The Entrepreneurship Network</strong>, we aim to create a comprehensive Virtual Incubator Program 
+                            tailored specifically for brain-related research and development.
+                        </p>
+                    </div>
+                    <div class="col-md-6 about-image">
+                        <img src="{% static 'assets/aboutus-images/brain research.jpg' %}" alt="About Us">
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+         <!-- Mission Section -->
+    <section id="mission" class="about-section bg-light">
+        <div class="container">
+            <h3 class="text-center">Our Mission</h3>
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <p>
+                        Our mission is to empower aspiring neuroscientists, researchers, and innovators by 
+                        providing accessible, quality-driven resources and mentorship. We strive to bridge 
+                        the gap between research and innovation, enabling breakthroughs in brain-related 
+                        studies to improve lives worldwide.
+                        Mission is rooted in the belief that accessibility and quality are the cornerstones of progress. We are dedicated to equipping individuals with the tools, knowledge, and guidance they need to make meaningful contributions to neuroscience. Through our programs, we aim to empower the next generation of thinkers and pioneers to push the boundaries of brain research, unlocking new possibilities for understanding the human mind and improving lives worldwide.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Video Section -->
+        <section id="video" class="about-section bg-light">
+            <div class="container text-center">
+                <h3>Explore Brain Journey</h3>
+                <div class="about-video">
+                    <video controls width="80%">
+                        <source src="{% static 'assets/aboutus-images/REWIRE YOUR BRAIN - Neuroscientist Explains How To Control Your Mind in MINUTES!.mp4' %}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main heading to cards -->
+        <div class="container py-5">
+            <div class="text-center mb-4">
+                <h3>Our Team</h3>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+              <!-- Card 1 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="{% static 'assets/aboutus-images/1st image.jpg' %}" class="card-img-top" alt="Image 1">
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>Shrikrupa HD</strong></h5>
+                    <p class="card-text">Project Manager & Data Scientist</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="{% static 'assets/aboutus-images/2nd image.jpg' %}" class="card-img-top" alt="Image 2">
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>Bhagyashree Patil</strong></h5>
+                    <p class="card-text">Project Manager</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="{% static 'assets/aboutus-images/3rd image.jpg' %}" class="card-img-top" alt="Image 3">
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>Priyanshi Sharma</strong></h5>
+                    <p class="card-text">Sr. HR Manager</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 4 -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="{% static 'assets/aboutus-images/4th image.jpg' %}" class="card-img-top" alt="Image 4">
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>Samsul Alam</strong></h5>
+                    <p class="card-text">Web Developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          {% endblock 'main' %}

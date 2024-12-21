@@ -1,0 +1,590 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+{% load static %}
+
+<style>
+    body,html{
+    background: linear-gradient(to right, #2b4f40, #000000);
+    color: #fff !important;
+    /* font-family: Verdana, sans-serif; */
+    /* font-size: 15px; */
+    /* line-height: 1.5; */
+    
+}
+/* Ten Brain Research EXG Synapse starts */
+#Synapse-heading-1{
+    border:1px solid white;
+    background:transparent;
+    border-radius:15px; 
+    padding: 4px;
+}
+.Synapse-heading-2{
+    margin-top: 10%;
+}
+/* Ten Brain Research EXG Synapse ends */
+/* list content starts */
+.w3-content{
+    list-style: none;
+    margin-top: 5px;
+    display: inline-flex;
+    text-align: center;
+    line-height: 2.2;
+}
+/* list content ends */
+/* Discover Neuroscience with EXG Synapse starts */
+.Discover-Neuroscience{
+    text-align: center;
+    
+}
+#w3-card{
+    background-color:greenyellow;
+    border-radius:25px;
+    width: 100%;
+}
+/* Discover Neuroscience with EXG Synapse ends */
+/* Your Complete Neuroscience Toolkit starts */
+.Neuroscience-Toolkit{
+    text-align: center;    
+}
+#w4-card1{
+    background-color: #e91e63 !important;
+    text-align: center;
+    border-radius: 25px;
+    
+}
+#w4-card2{
+    background: transparent;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    
+}
+#w4-card3{
+    background-color: #3f51b5 !important;
+    text-align: center;
+    border-radius: 25px;
+      
+}
+/* Your Complete Neuroscience Toolkit ends */
+/* Synapse DIY Neuroscience Kits starts */
+.Synapse-DIY-Neuroscience-Kits{
+    text-align: center;
+    margin: 15px;
+}
+.w3-video{
+    border-radius:25px;
+    width:100%;
+    height:auto;
+    aspect-ratio: 16 / 9;   
+}
+/* Synapse DIY Neuroscience Kits end */
+/* Technical Specifications of Ten Brain Research Headband​ starts */
+.Technical-Specifications{
+    text-align: center;
+}
+.Technical-Specifications-table table{
+    border: 1px solid white;
+    width: 100%;
+}
+
+.Technical-Specifications-table table tbody tr td{
+    border: 1px solid white;
+    font-size: 21px;
+    padding: 5px;
+}
+/* Technical Specifications of Ten Brain Research Headband​ ends */
+
+/* Packages and Bundles starts */
+.Packages-and-Bundles{
+    text-align: center;
+}
+.Packages-and-Bundles .w5-content{
+    display: inline-flex;
+}
+.Packages-and-Bundles .w5-content .card{
+    background-color: #0e322d;;
+    border-radius: 25px;
+    padding: 1px;
+    margin: 2%;
+    
+}
+/* Packages and Bundles ends */
+/* Ready to Use starts */
+.w6-comtent{
+    text-align: center;
+}
+/* Ready to Use ends */
+/* Guide to Setup and Use EXG Synapse Kit starts */
+.EXG-Synapse-Kit{text-align: center;}
+
+/* Guide to Setup and Use EXG Synapse Kit ends */
+
+@media (max-width:576px){
+ body,html{
+    font-size: 12px;
+    text-align: center;
+ }
+ #Synapse-heading-1{
+    border:1px solid black;
+}
+.w3-content{
+    display: grid;
+    justify-content: center;
+}
+/* Technical Specifications of Ten Brain Research Headband​ starts */
+.Technical-Specifications-table table tbody tr td{
+    font-size: 18px;
+    text-align: left;
+    padding: 5px;
+}
+/* Technical Specifications of Ten Brain Research Headband​ ends */
+/* Packages and Bundles starts */
+.Packages-and-Bundles .w5-content{
+    display: grid;
+}
+/* Packages and Bundles ends */
+}
+.subscription-section {
+  text-align: center;
+  background-color: #f1f1f1 !important;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.subscription-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666666;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.subscription-form input[type="email"] {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.subscription-form button {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #4a69bd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscription-form button:hover {
+  background-color: #3b55a3;
+}
+
+@media (max-width: 600px) {
+  .subscription-form {
+    flex-direction: column;
+  }
+  .subscription-form input[type="email"] {
+    margin-bottom: 10px;
+  }
+}
+</style>
+<div class="container">
+    <!-- Ten Brain Research EXG Synapse starts-->
+        <div class="row mt-5">
+            <div class="col-sm-6">
+               <div class="card" id="Synapse-heading-1">
+                    <img src="{% static 'assets/science-kits-images/EXGSynapse.webp' %}" alt="...">
+                </div> 
+            </div>
+            <div class="col-sm-6">
+                <div class="Synapse-heading-2">
+                    <h1 >Ten Brain Research EXG Synapse</h1>
+                    <h2>Most Affordable & Open Source EXG Kit</h2>
+                </div>    
+            </div>                    
+        </div>
+    <!-- Ten Brain Research EXG Synapse end-->
+    <!-- list content starts -->
+    <div class="row mt-5">
+        <ul class="w3-content">
+            <li class="col-sm-3">
+                <img src="{% static 'assets/science-kits-images/EEG.webp' %}" alt="">
+                <p>EEG</p>
+            </li>
+            <li class="col-sm-3">
+                <img src="{% static 'assets/science-kits-images/EMG.webp' %}" alt="">
+                <p>EMG</p>
+            </li>
+            <li class="col-sm-3">
+                <img src="{% static 'assets/science-kits-images/EOG.webp' %}" alt="">
+                <p>EOG</p>
+            </li>
+            <li class="col-sm-3">
+                <img src="{% static 'assets/science-kits-images/ECG.webp' %}" alt="">
+                <p>ECG</p>
+            </li>
+        </ul>
+    </div>
+    <!-- list content ends -->
+    <!-- Discover Neuroscience with EXG Synapse starts-->
+     <div class="row mt-5">
+        <div class="Discover-Neuroscience">
+            <h1>Discover Neuroscience with EXG Synapse</h1>
+            <h4>Dive into the world of brain-computer interfacing with our DIY kit.</h4>
+        </div>
+    
+
+    <div class="row mt-5">
+    <div class="col-sm-6">
+        <!-- row1 -->
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="{% static 'assets/science-kits-images/Explorers.webp' %}" alt="">        
+            </div>
+            <div class="col-sm-8 m-4">
+                <h2>For All Explorers</h2>
+                <h5>Simple and Comprehensive: Whether you're studying, researching, or just passionate about neuroscience, Synapse is your perfect companion.</h5>
+            </div>
+        </div>
+        <!-- row1 -->
+         <!-- row1 -->
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="{% static 'assets/science-kits-images/Discover.webp' %}" alt="">        
+            </div>
+            <div class="col-sm-8 m-4">
+                <h2>Build and Discover</h2>
+                <h5>Affordable and Complete: Get hands-on with brain-computer interface technology at an incredible value—only INR 1,200 for the full kit.</h5>
+            </div>
+        </div>
+        <!-- row1 -->
+         <!-- row1 -->
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="{% static 'assets/science-kits-images/Community.webp' %}" alt="">        
+            </div>
+            <div class="col-sm-8 m-4">
+                <h2>Community Driven</h2>
+                <h5>Collaborate and Innovate: With open-source accessibility, join a community dedicated to pushing the boundaries of neuroscience.</h5>
+            </div>
+        </div>
+        <!-- row1 -->
+        
+        <a href="https://github.com/Ten Brain Research/EXG-Synapse/tree/main" target="_blank"> <button class="btn btn-light p-3" > Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+          </svg>
+        </button></a>
+    </div>
+    <div class="col-sm-6">
+        <div class="card m-1" id="w3-card">
+            <img src="{% static 'assets/science-kits-images/accessibility_img.webp' %}" alt="">
+          </div>
+    </div>
+    </div>
+    </div>
+     <!-- Discover Neuroscience with EXG Synapse ends-->
+     <!-- Your Complete Neuroscience Toolkit starts -->
+      <div class="row mt-5">
+        <div class="Neuroscience-Toolkit">
+            <h1>Synapse: Your Complete Neuroscience Toolkit</h1>
+            <h5>The Ten Brain Research Synapse, priced at just INR 1,500/- is the ideal toolkit for anyone passionate about brain science—from students to professionals.</h5>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card p-3" id="w4-card1">
+                <h3>Kit Contents</h3>
+                <img src="{% static 'assets/science-kits-images/Contents.webp' %}" class="card-img-top" alt="...">
+                  <h5 class="card-text">The Kit comes with everything you need to get started, including sensors and accessories for seamless biosignal acquisition.</h5>
+                  <a href="https://drive.google.com/file/d/1Ejv062bge6TqrzGIkVR-Zhv1jxKAxwVe/view" target="_blank"> <button class="btn btn-light p-2" > Schematic <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg>
+                </button></a>
+              </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card p-3" id="w4-card2">
+                <h3 style="color: #fff;">Visualization and Streaming</h3>
+                <img src="{% static 'assets/science-kits-images/Visualization.webp' %}" class="card-img-top" alt="...">
+                
+                  <h5 style="color: #fff;">Easily visualize your data with our visualizer or integrate it into larger projects with Lab Streaming Layer support.</h5>
+                  <a href="https://Ten Brain Research.gitbook.io/synapse/get-started/exg-circuits" target="_blank"> <button class="btn btn-light p-2" > Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg>
+                </button></a>
+              </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card p-3" id="w4-card3">
+                <h3>Open Source Projects</h3>
+                <img src="{% static 'assets/science-kits-images/repository.webp' %}" class="card-img-top" alt="...">
+            
+                  <h5>Access our Github repository for various biosignal acquisition examples and start creating your own projects.</h5>
+                  <a href="https://github.com/Ten Brain Research/EXG-Synapse" target="_blank"> <button class="btn btn-light p-2" > Access Github Repository <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg>
+                </button></a>
+              </div>
+        </div>
+      </div>
+    <!-- Your Complete Neuroscience Toolkit ends -->
+    <!-- Synapse DIY Neuroscience Kits starts-->
+       <div class="row mt-5" style="background-color:#000 !important;">
+        <div class="Synapse-DIY-Neuroscience-Kits">
+            <h1> Unlock the Future of HCI & BCI Projects | Introducing Ten Brain Research EXG Synapse DIY Neuroscience Kits</h1>
+        </div>            
+        <iframe class="w3-video p-3" src="https://www.youtube.com/embed/jTDCuVDt-ms?autoplay=0&amp;rel=0&amp;modestbranding=1&amp;showinfo=0&amp;controls=1" loading="lazy" allowfullscreen="">
+        </iframe>
+       </div>
+    <!-- Synapse DIY Neuroscience Kits ends-->
+    <!-- Technical Specifications of Ten Brain Research Headband​ starts-->
+       
+    <div class="row mt-5">
+        <div class="Technical-Specifications">
+            <h1>Technical Specifications of Ten Brain Research Headband​</h1>
+        </div>
+        <div class="Technical-Specifications-table">
+            <table >
+                <tbody>
+                    <tr>
+                        <td>Input Voltage</td>
+                        <td>3.3V</td>
+                    </tr>
+                    <tr>
+                        <td>Input Impedance</td>
+                        <td>2009 Ω</td>
+                    </tr>
+                    <tr>
+                        <td>Compatible Hardware</td>
+                        <td>Any ADC input</td>
+                    </tr>
+                    <tr>
+                        <td>Biopotentials</td>
+                        <td>ECG EMG, EOG, or EEG (configurable bandpass) | By default configured for a bandwidth of 1.6Hz to 47Hz and Gain 50</td>
+                    </tr>
+                    <tr>
+                        <td> No. of channels</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td> Electrodes</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td> Dimensions</td>
+                        <td>30.0 x 33.0 mm</td>
+                    </tr>
+                    <tr>
+                        <td>Open Source </td>
+                        <td>Hardware </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+     <!-- Technical Specifications of Ten Brain Research Headband​ end-->
+     <!-- Innovate Human-Computer Interface Solutions starts-->
+      <div class="row mt-5">
+        <div class="col-sm-6">
+            <h4>Innovate Human-Computer Interface Solutions using a Single Product</h4>
+            <div class="w5-card5 mt-4 ">
+                <div class="card shadow-lg p-3 bg-transparent" style="color: #fff;">
+                    <p>Signal Compatibility</p>
+                    <p>Biopotential Range: Explain that Synapse works with ECG, EEG, EOG, and EMG signals.</p>
+                    <p>Device Integration</p>
+                    <p>Wide Compatibility: Detail how it connects with various microcontrollers like Arduino and ESP32.</p>
+                    <p>Custom Analysis</p>
+                    <p>Flexible Analysis Options: Mention the ability to customize signal output for varied research needs.</p>
+
+                  </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="w5-card5">
+                <div class="card shadow-lg p-3 bg-transparent" >
+                    <iframe class="w3-round" width="100%" height="350px" src="https://www.youtube.com/embed/1r4feY1ZErw" frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+            </div>
+        </div>
+      </div>
+      <!-- Innovate Human-Computer Interface Solutions ends-->
+      <!-- Packages and Bundles starts-->
+       <div class="row mt-5">
+        <div class="Packages-and-Bundles">
+            <h1>Packages and Bundles</h1>
+        
+        <div class="row mt-3">
+            <div class="w5-content">
+                <div class="col-sm-4">
+                    <div class="card shadow-lg" >
+                        <div class="card-body">
+                          <img src="{% static 'assets/science-kits-images/Explorer.webp' %}" alt="Explorer">
+                          <h5 class="mt-3" style="color: #fff;">Unleash your curiosity with the EXG Synapse Explorer Edition</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card shadow-lg" >
+                        <div class="card-body">
+                          <img src="{% static 'assets/science-kits-images/powerful.webp' %}" alt="powerful" >
+                          <h5 class="mt-3" style="color: #fff;">Ignite innovation with the powerful EXG Synpase Innovator Bundle</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card shadow-lg" >
+                        <div class="card-body">
+                          <img src="{% static 'assets/science-kits-images/pioneers.webp' %}" alt="pioneers">
+                          <h5 class="mt-3" style="color: #fff;">For the dedicated pioneers pushing the boundaries of neuroscience</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+       </div>
+       <!-- Packages and Bundles ends-->
+       <!-- Ready to Use starts-->
+        <div class="row mt-5">
+            <div class="w6-comtent">
+            <h2>Ready to Use</h2>
+            </div>
+            <div class="col-sm-6">
+                <div class="w6-card1 mt-3 ">
+                    <div class="card shadow-lg p-5 bg-transparent" >
+                        <h1 style="color: #fff;">Do it Yourself with
+                            Ready to Use
+                            Ten Brain Research EXG Synapse
+                            Kits</h1>
+                            <h4 style="color: #fff;">Dive into DIY neuroscience with EXG Synapse Kits! Perfect for students
+                                and innovators, effortlessly capture EMG, ECG, EEG, and EOG signals.
+                                Explore the brain and muscles—it’s hands-on and exciting</h4>
+                      </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card shadow-lg p-5 bg-transparent">
+                    <img src="{% static 'assets/science-kits-images/neuroscience.webp' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Ready to Use ends-->
+        <!-- Guide to Setup and Use EXG Synapse Kit starts-->
+        <div class="row mt-5" style="background-color:#000 !important;">
+            <div class="EXG-Synapse-Kit">
+                <h1> Step by Step Guide to Setup and Use EXG Synapse Kit </h1>
+                <h4>Ten Brain Research Synapse is an easy to setup device which can be used to access ECG, EMG, EOG & EEG data. The following video shows how you can setup, program and test the results in real-time.</h4>
+            </div>            
+            <iframe class="w3-video p-3" src="https://www.youtube.com/embed/1r4feY1ZErw?autoplay=0&rel=0&modestbranding=1&showinfo=0&controls=1" loading="lazy" allowfullscreen="">
+            </iframe>
+           </div>
+         <!-- Guide to Setup and Use EXG Synapse Kit ends-->
+
+         <!-- Fuel for Innovation in Education starts-->
+                  
+     <div class="row mt-5">
+        <div class="Discover-Neuroscience">
+            <h1>EXG Synapse: Fuel for Innovation in Education</h1>
+        </div>
+    
+    <div class="row mt-5 ">
+    <div class="col-sm-6 shadow-lg p-5">
+        <!-- row1 -->
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="{% static 'assets/science-kits-images/Explorers.webp' %}" alt="">        
+            </div>
+            <div class="col-sm-8 m-4">
+                <h2>Explore Biopotential Data</h2>
+                <h5>Capture and analyze diverse body signals for health and tech applications with Synapse. Perfect for student projects in ECG, EMG, EOG, and EEG.</h5>
+            </div>
+        </div>
+        <!-- row1 -->
+         <!-- row1 -->
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="{% static 'assets/science-kits-images/Discover.webp' %}" alt="">        
+            </div>
+            <div class="col-sm-8 m-4">
+                <h2>Project Pathways</h2>
+                <h5>From health monitors to interactive tech, Synapse provides the data for various creative and practical student projects.</h5>
+            </div>
+        </div>
+        <!-- row1 -->
+         <!-- row1 -->
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="{% static 'assets/science-kits-images/Community.webp' %}" alt="">        
+            </div>
+            <div class="col-sm-8 m-4">
+                <h2>Accessible Technology</h2>
+                <h5>Get started on your neuroscience journey with Synapse, priced for accessibility and designed for versatility.</h5>
+            </div>
+        </div>
+        <!-- row1 -->
+    </div>
+    <div class="col-sm-6 ">
+        <div class="card m-1 shadow-lg p-5 bg-transparent">
+            <img src="{% static 'assets/science-kits-images/Technology.webp' %}" alt="">
+          </div>
+    </div>
+    </div>
+    </div>
+          <!-- Fuel for Innovation in Education ends-->
+            <!-- Ready to Use starts-->
+        <div class="row mt-5">
+            <div class="w6-comtent">
+            <h2>Ready to Use</h2>
+            </div>
+            <div class="col-sm-6">
+                <div class="w6-card1 mt-3 ">
+                    <div class="card shadow-lg p-5 bg-transparent" >
+                        <h1 style="color: #fff;">Explore and Learn with "HCI & Biofeedback Kit" Ready in a Box</h1>
+                            <h4 style="color: #fff;">Discover the fusion of technology and wellness with our “HCI” Ready Kit in a Box, featuring a biofeedback kit designed to deepen your understanding and engagement with human-computer interaction.</h4>
+                      </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card shadow-lg p-5 bg-transparent">
+                    <img src="{% static 'assets/science-kits-images/Biofeedback.webp' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Ready to Use ends-->
+          
+</div>
+
+<div class="subscription-section">
+    <h2>New from Ten Brain Research?</h2>
+    <p>Get the latest from Ten Brain Research by subscribing now.</p>
+    <form class="subscription-form" method="post" action="/submit_subscription">
+        {% csrf_token %}
+        {% if success_msg %}
+                      <div id="alerts" class="alert alert-success" role="alert">{{success_msg}}
+                      </div>
+                  {% endif %}
+        <input type="email" name="uemail" placeholder="Email" required  />
+        <input type="hidden" name="page_url" value="neuroscience_kits">
+        <button type="submit">Subscribe</button>
+      </form>
+  </div>
+{% endblock 'main' %}

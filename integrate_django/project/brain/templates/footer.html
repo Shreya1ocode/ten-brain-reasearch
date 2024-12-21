@@ -1,0 +1,884 @@
+{% load static %}
+<style>
+  /* body , html {
+    font-style: italic;
+    font-size: 17px;
+} */
+
+.shipping svg{
+    width: 12%;
+}
+.w3-black{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.w3-black a{
+    text-decoration: none;
+    color: white;
+    line-height: 1.0;
+}
+
+.row-footer1 img{
+    width: 35%;
+}
+.row-footer2 img{
+    width: 12%;
+}
+.row-footer3{
+    text-align: center;
+}
+
+
+
+@media  (max-width : 320px){
+    body, html{
+        text-align: center;
+    }
+    .w3-black .shipping h4{
+        font-size: 22px;
+    }
+    .w3-black .shipping p{
+        font-size: 14px;
+    }
+    .w3-black h4{
+        font-size: 20px ;
+    }
+    .w3-black p{
+        font-size: 15px ;
+    }
+    .row-footer1 h3{
+        font-size: 22px;
+    } 
+    .row-footer1 img{
+        width: 48%;
+    }
+    .row-footer2 h3{
+        font-size: 22px;
+    }
+    .row-footer2 img{
+        width: 14%;
+    }
+    .row-footer3{
+        font-size: small;
+    }
+    
+    }
+    
+    /* whatsapp logo */
+   .whatsapp-logo{
+    position: fixed;
+    bottom:20px;
+    left:30px;
+   
+  }
+  
+  .whatsapp-container {
+    position: fixed;
+    bottom: 5rem;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    
+  }
+
+ 
+  .close-button {
+    background-color:black;
+    border: none;
+    cursor: pointer;
+    /* margin-bottom: 10px; */
+    color:#ffffff;
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .close-button i {
+    font-size: 1.5rem;
+  }
+  
+  .query-label {
+    background-color: #ffffff;
+    color: #000;
+    padding: 10px 12px;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    white-space: nowrap;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:1px transparent rgb(123, 121, 121);
+  }
+
+.toggle-checkbox {
+    display: none;
+  }
+  .toggle-checkbox:checked ~ .query-label {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .toggle-checkbox:checked + .close-button {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .whatsapp-button img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(100%);
+  }
+  
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  }
+
+
+  /* Whatsapp logo end */
+
+</style>
+
+<!-- <div class="container-fliud text-bg-dark">
+  <div class="row">   
+      <div class="col-sm-4 w3-black">
+          <div class="shipping">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+              <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+              </svg>
+          <h4>Free Shipping</h4>
+          <p>Shipping Globally</p>  
+          </div>
+          <div>
+          <h4>Company</h4>
+           <a href="" ><p>Disclaimer </p></a>
+           <a href="" ><p >About Us </p></a>
+           <a href=""><p >Privacy Policy </p></a>       
+           <a href=""><p >Return Policy</p></a>
+           <a href=""><p >Term and Conditions</p></a>
+          </div>
+      </div>
+
+      <div class="col-sm-4 w3-black">
+          <div class="shipping">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                  <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
+                  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                </svg>
+          <h4>7-Day Return Policy</h4>
+          <p>No questions asked</p>  
+          </div>
+          <div>
+          <h4>Useful Links</h4>
+           <a href="" > <p>News, Media & PR </p></a>
+           <a href="" ><p >Certifications </p></a>
+           <a href=""><p >Sitelinks </p></a>
+          </div>
+      </div>
+      <div class="col-sm-4 w3-black">
+          <div class="shipping">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                  <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+                </svg>
+          <h4>Dedicated Support</h4>
+          <p>Gets back Within 24 hrs</p>  
+          </div>
+          <div>
+          <h4>Service</h4>
+           <a href="" ><p>Frequently Asked Questions </p></a>
+           <a href="" ><p>Set up Guide For Ten Brain research Flexcap </p></a>
+           <a href=""><p >Desktop App User Manual </p></a>       
+           <a href=""><p >How to Setup EXG Synapse</p></a>
+           <a href=""><p >Blog</p></a>
+           <a href=""><p >Contact Us</p></a>
+          </div>
+      </div> 
+  </div>
+  <div class="row footer2 p-4">
+      <div class="col-sm-4" ></div>
+      <div class="col-sm-4" >
+          <h3>Join the #Brainiacs Community</h3>
+      <img src="{% static 'assets/footer-images/linkdin.webp' %}" alt="" >
+
+          
+      </div>
+      <div class="col-sm-4" ></div>    
+  </div>
+  <div class="row-footer3 mt-2" >
+          <p>Copyright 2024 &copy; Ten Tech Enterpreneurship Network Private Limited. All Rights Reserved</p>
+  </div>
+</div> -->
+
+
+<div class="text-center text-bg-dark p-1">
+  <div class="row mt-3">   
+    <div class="col-sm-4 w3-black">
+        <div class="shipping">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+            </svg>
+        <h4>Free Shipping</h4>
+        <p>Shipping Globally</p>  
+        </div>
+        <div>
+        <h4>Company</h4>
+         <a href="/disclaimer" ><p>Disclaimer </p></a>
+         <a href="/aboutus" ><p >About Us </p></a>
+         <a href="/privacy_policy"><p >Privacy Policy </p></a>       
+         <a href="/return_policy"><p >Return Policy</p></a>
+         <a href="/terms_condition"><p >Term and Conditions</p></a>
+        </div>
+    </div>
+
+    <div class="col-sm-4 w3-black">
+        <div class="shipping">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+              </svg>
+        <h4>7-Day Return Policy</h4>
+        <p>No questions asked</p>  
+        </div>
+        <div>
+        <h4>Useful Links</h4>
+         <a href="/site_links"><p >Sitelinks </p></a>
+        </div>
+    </div>
+
+
+    <div class="col-sm-4 w3-black">
+        <div class="shipping">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+              </svg>
+        <h4>Dedicated Support</h4>
+        <p>Gets back Within 24 hrs</p>  
+        </div>
+        <div>
+        <h4>Service</h4>
+         <a href="/faq" ><p>Frequently Asked Questions </p></a>
+         <a href="/flexcap-setup" ><p>Set up Guide For Ten Brain research Flexcap </p></a>
+         <a href="/synapse"><p >How to Setup EXG Synapse</p></a>
+         <a href="/blogs"><p >Blog</p></a>
+         <a href="/contactus"><p >Contact Us</p></a>
+        </div>
+    </div>
+</div>
+    
+<div class="row footer2 p-4">
+  <div class="col-sm-4" ></div>
+  <div class="col-sm-4" >
+      <h3>Join the #Brainiacs Community</h3>
+      <img src="{% static 'assets/footer-images/linkdin.webp' %}" alt="" >
+  </div>
+  <div class="col-sm-4" ></div>    
+</div>
+    
+    
+    <div class="row-footer3 mt-2" >
+        <p>Copyright 2024 &copy; Ten Tech Entrepreneurship Network. All Rights Reserved</p>
+    </div>
+
+  
+</div>
+
+
+
+
+</div><!--container end-->
+
+<div class="whatsapp-container1">
+  <div class="whatsapp-container">
+      <input type="checkbox" id="toggle-query" class="toggle-checkbox" />
+<label for="toggle-query" class="close-button" aria-label="Close">
+<i class="fa-solid fa-xmark"></i>
+</label>
+     
+      <div class="query-label">Have a query?</div>
+     
+    </div>
+    <div class="whatsapp-logo">
+      <a
+        href="https://wa.me/your-number"
+        target="_blank"
+        class="whatsapp-button"
+        aria-label="Contact us on WhatsApp"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+        />
+      </a>
+      
+    </div>
+</div>
+
+
+<!-- Bootstrap Bundle JS -->
+     <!-- <script src="js/main.js"></script> -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
+     <script src="https://unpkg.com/xzoom/dist/xzoom.min.js"></script>
+     <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+     
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
+     
+ 
+ 
+     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- <script src="https://code.jquery.com/jquery-2.1.1.js"></script> -->
+     
+     <script>
+      // tabbed content
+     // http://www.entheosweb.com/tutorials/css/tabs.asp
+     $(".tab_content").hide();
+     $(".tab_content:first").show();
+ 
+   /* if in tab mode */
+     $("ul.tabs li").click(function() {
+ 
+       $(".tab_content").hide();
+       var activeTab = $(this).attr("rel");
+       $("#"+activeTab).fadeIn();
+ 
+       $("ul.tabs li").removeClass("active");
+       $(this).addClass("active");
+ 
+     $(".tab_drawer_heading").removeClass("d_active");
+     $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
+ 
+     });
+   /* if in drawer mode */
+   $(".tab_drawer_heading").click(function() {
+ 
+       $(".tab_content").hide();
+       var d_activeTab = $(this).attr("rel");
+       $("#"+d_activeTab).fadeIn();
+ 
+     $(".tab_drawer_heading").removeClass("d_active");
+       $(this).addClass("d_active");
+ 
+     $("ul.tabs li").removeClass("active");
+     $("ul.tabs li[rel^='"+d_activeTab+"']").addClass("active");
+     });
+   /* Extra class "tab_last"
+      to add border to right side
+      of last tab */
+   $('ul.tabs li').last().addClass("tab_last");
+   </script>
+     <script>
+      
+ 
+ (function ($) {
+     $(document).ready(function() {
+         $('.xzoom, .xzoom-gallery').xzoom({zoomWidth: 200, title: true, tint: '#333', Xoffset: 15});
+         $('.xzoom2, .xzoom-gallery2').xzoom({position: '#xzoom2-id', tint: '#ffa200'});
+         $('.xzoom3, .xzoom-gallery3').xzoom({position: 'lens', lensShape: 'circle', sourceClass: 'xzoom-hidden'});
+         $('.xzoom4, .xzoom-gallery4').xzoom({tint: '#006699', Xoffset: 15});
+         $('.xzoom5, .xzoom-gallery5').xzoom({tint: '#006699', Xoffset: 15});
+ 
+         //Integration with hammer.js
+         var isTouchSupported = 'ontouchstart' in window;
+ 
+         if (isTouchSupported) {
+             //If touch device
+             $('.xzoom, .xzoom2, .xzoom3, .xzoom4, .xzoom5').each(function(){
+                 var xzoom = $(this).data('xzoom');
+                 xzoom.eventunbind();
+             });
+             
+             $('.xzoom, .xzoom2, .xzoom3').each(function() {
+                 var xzoom = $(this).data('xzoom');
+                 $(this).hammer().on("tap", function(event) {
+                     event.pageX = event.gesture.center.pageX;
+                     event.pageY = event.gesture.center.pageY;
+                     var s = 1, ls;
+     
+                     xzoom.eventmove = function(element) {
+                         element.hammer().on('drag', function(event) {
+                             event.pageX = event.gesture.center.pageX;
+                             event.pageY = event.gesture.center.pageY;
+                             xzoom.movezoom(event);
+                             event.gesture.preventDefault();
+                         });
+                     }
+     
+                     xzoom.eventleave = function(element) {
+                         element.hammer().on('tap', function(event) {
+                             xzoom.closezoom();
+                         });
+                     }
+                     xzoom.openzoom(event);
+                 });
+             });
+ 
+         $('.xzoom4').each(function() {
+             var xzoom = $(this).data('xzoom');
+             $(this).hammer().on("tap", function(event) {
+                 event.pageX = event.gesture.center.pageX;
+                 event.pageY = event.gesture.center.pageY;
+                 var s = 1, ls;
+ 
+                 xzoom.eventmove = function(element) {
+                     element.hammer().on('drag', function(event) {
+                         event.pageX = event.gesture.center.pageX;
+                         event.pageY = event.gesture.center.pageY;
+                         xzoom.movezoom(event);
+                         event.gesture.preventDefault();
+                     });
+                 }
+ 
+                 var counter = 0;
+                 xzoom.eventclick = function(element) {
+                     element.hammer().on('tap', function() {
+                         counter++;
+                         if (counter == 1) setTimeout(openfancy,300);
+                         event.gesture.preventDefault();
+                     });
+                 }
+ 
+                 function openfancy() {
+                     if (counter == 2) {
+                         xzoom.closezoom();
+                         $.fancybox.open(xzoom.gallery().cgallery);
+                     } else {
+                         xzoom.closezoom();
+                     }
+                     counter = 0;
+                 }
+             xzoom.openzoom(event);
+             });
+         });
+         
+         $('.xzoom5').each(function() {
+             var xzoom = $(this).data('xzoom');
+             $(this).hammer().on("tap", function(event) {
+                 event.pageX = event.gesture.center.pageX;
+                 event.pageY = event.gesture.center.pageY;
+                 var s = 1, ls;
+ 
+                 xzoom.eventmove = function(element) {
+                     element.hammer().on('drag', function(event) {
+                         event.pageX = event.gesture.center.pageX;
+                         event.pageY = event.gesture.center.pageY;
+                         xzoom.movezoom(event);
+                         event.gesture.preventDefault();
+                     });
+                 }
+ 
+                 var counter = 0;
+                 xzoom.eventclick = function(element) {
+                     element.hammer().on('tap', function() {
+                         counter++;
+                         if (counter == 1) setTimeout(openmagnific,300);
+                         event.gesture.preventDefault();
+                     });
+                 }
+ 
+                 function openmagnific() {
+                     if (counter == 2) {
+                         xzoom.closezoom();
+                         var gallery = xzoom.gallery().cgallery;
+                         var i, images = new Array();
+                         for (i in gallery) {
+                             images[i] = {src: gallery[i]};
+                         }
+                         $.magnificPopup.open({items: images, type:'image', gallery: {enabled: true}});
+                     } else {
+                         xzoom.closezoom();
+                     }
+                     counter = 0;
+                 }
+                 xzoom.openzoom(event);
+             });
+         });
+ 
+         } else {
+             //If not touch device
+ 
+             //Integration with fancybox plugin
+             $('#xzoom-fancy').bind('click', function(event) {
+                 var xzoom = $(this).data('xzoom');
+                 xzoom.closezoom();
+                 $.fancybox.open(xzoom.gallery().cgallery, {padding: 0, helpers: {overlay: {locked: false}}});
+                 event.preventDefault();
+             });
+            
+             //Integration with magnific popup plugin
+             $('#xzoom-magnific').bind('click', function(event) {
+                 var xzoom = $(this).data('xzoom');
+                 xzoom.closezoom();
+                 var gallery = xzoom.gallery().cgallery;
+                 var i, images = new Array();
+                 for (i in gallery) {
+                     images[i] = {src: gallery[i]};
+                 }
+                 $.magnificPopup.open({items: images, type:'image', gallery: {enabled: true}});
+                 event.preventDefault();
+             });
+         }
+     });
+ })(jQuery);
+ 
+ 
+     $(document).ready(function(){
+       $('.my-slider').slick({
+         slidesToShow: 3,
+         slidesToScroll: 1,
+         arrows: true,
+         dots: true,
+         speed: 300,
+         infinite: true,
+         autoplaySpeed: 5000,
+         autoplay: true,
+         responsive: [
+       {
+         breakpoint: 991,
+         settings: {
+           slidesToShow: 3,
+         }
+       },
+       {
+         breakpoint: 767,
+         settings: {
+           slidesToShow: 1,
+         }
+       }
+     ]
+       });
+     });
+ 
+ 
+ 
+ 
+ let slideIndex = 0;
+ showSlides();
+ 
+ function showSlides() {
+   let i;
+   let slides = document.getElementsByClassName("mySlides");
+   let dots = document.getElementsByClassName("dot");
+   for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+   }
+   slideIndex++;
+   if (slideIndex > slides.length) {slideIndex = 1}    
+   for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" active", "");
+   }
+   slides[slideIndex-1].style.display = "block";  
+   // slides[slideIndex-1].style.color = "white";  
+   dots[slideIndex-1].className += " active";
+   setTimeout(showSlides, 2000); // Change image every 2 seconds
+ }
+ 
+ 
+         (function () {
+     "use strict";
+   
+     const keyboardSupport = function (container, hasTabs) {
+       const tablist = container.querySelectorAll('[role="tablist"]')[0];
+       let tabs;
+       let panels;
+   
+       const generateArrays = function () {
+         panels = container.querySelectorAll('[role="tabpanel"]');
+         tabs = container.querySelectorAll('[role="tab"]');
+       };
+   
+       generateArrays();
+   
+       // For easy reference
+       const keys = {
+         end: 35,
+         home: 36,
+         left: 37,
+         up: 38,
+         right: 39,
+         down: 40,
+         delete: 46,
+         enter: 13,
+         space: 32
+       };
+   
+       // Add or subtract depending on key pressed
+       const direction = {
+         37: -1,
+         38: -1,
+         39: 1,
+         40: 1
+       };
+   
+       // Deactivate all tabs and tab panels
+       const deactivateTabs = function () {
+         for (let t = 0; t < tabs.length; t++) {
+           tabs[t].setAttribute("tabindex", "-1");
+           tabs[t].setAttribute("aria-selected", "false");
+         }
+       };
+   
+       // Activates any given tab panel
+       const activateTab = function (tab, setFocus) {
+         setFocus = setFocus || true;
+         // Deactivate all other tabs
+         deactivateTabs();
+   
+         // Remove tabindex attribute
+         tab.removeAttribute("tabindex");
+   
+         // Set the tab as selected
+         tab.setAttribute("aria-selected", "true");
+   
+         // Set focus when required
+         if (setFocus) {
+           tab.focus();
+         }
+       };
+   
+       const triggerTabClick = function (e) {
+         const clickedId = e.target.getAttribute("id");
+         if (clickedId) {
+           const clickedTab = container.querySelector(
+             '[aria-controls="' + clickedId + '"]'
+           );
+           clickedTab.click();
+           document.getElementById(clickedId).scrollIntoView({
+             behavior: "smooth"
+           });
+         }
+       };
+   
+       const accordionClickEventListener = function (event) {
+         triggerTabClick(event);
+       };
+   
+       // When a tab is clicked, activateTab is fired to activate it
+       const clickEventListener = function (event) {
+         const tab = event.target;
+         activateTab(tab, false);
+       };
+   
+       // Make a guess
+       const focusFirstTab = function () {
+         const target = hasTabs ? tabs : panels;
+         target[0].focus();
+       };
+   
+       // Make a guess
+       const focusLastTab = function () {
+         const target = hasTabs ? tabs : panels;
+         target[target.length - 1].focus();
+       };
+   
+       // Either focus the next, previous, first, or last tab
+       // depending on key pressed
+       const switchTabOnArrowPress = function (event) {
+         const pressed = event.keyCode;
+   
+         if (direction[pressed]) {
+           const target = event.target;
+           const targetElems = hasTabs ? tabs : panels;
+           if (target.index !== undefined) {
+             if (targetElems[target.index + direction[pressed]]) {
+               targetElems[target.index + direction[pressed]].focus();
+             } else if (pressed === keys.left || pressed === keys.up) {
+               focusLastTab();
+             } else if (pressed === keys.right || pressed == keys.down) {
+               focusFirstTab();
+             }
+           }
+         }
+       };
+   
+       // When a tablist's aria-orientation is set to vertical,
+       // only up and down arrow should function.
+       // In all other cases only left and right arrow function.
+       const determineOrientation = function (event) {
+         const key = event.keyCode;
+         const vertical = tablist
+           ? tablist.getAttribute("aria-orientation") === "vertical"
+           : null;
+         let proceed = false;
+   
+         if (vertical || !hasTabs) {
+           if (key === keys.up || key === keys.down) {
+             event.preventDefault();
+             proceed = true;
+           }
+         } else {
+           if (key === keys.left || key === keys.right) {
+             proceed = true;
+           }
+         }
+   
+         if (proceed) {
+           switchTabOnArrowPress(event);
+         }
+       };
+   
+       // Handle keydown on tabs
+       const keydownEventListener = function (event) {
+         const key = event.keyCode;
+         switch (key) {
+           case keys.end:
+             event.preventDefault();
+             // Activate last tab
+             focusLastTab();
+             break;
+           case keys.home:
+             event.preventDefault();
+             // Activate first tab
+             focusFirstTab();
+             break;
+   
+           // Up and down are in keydown
+           // because we need to prevent page scroll >:)
+           case keys.up:
+           case keys.down:
+             determineOrientation(event);
+             break;
+         }
+       };
+   
+       // Handle keyup on tabs
+       const keyupEventListener = function (event) {
+         const key = event.keyCode;
+         switch (key) {
+           case keys.left:
+           case keys.right:
+             determineOrientation(event);
+             break;
+           case keys.enter:
+           case keys.space:
+             if (hasTabs) {
+               activateTab(event.target);
+             } else {
+               triggerTabClick(event);
+             }
+             break;
+         }
+       };
+   
+       const addListeners = function (index) {
+         const target = hasTabs ? tabs[index] : panels[index];
+         tabs[index].addEventListener("click", clickEventListener);
+         if (target) {
+           if (!hasTabs) {
+             target.addEventListener("click", accordionClickEventListener);
+           }
+           target.addEventListener("keydown", keydownEventListener);
+           target.addEventListener("keyup", keyupEventListener);
+           // Build an array with all tabs (<button>s) in it
+           target.index = index;
+         }
+       };
+   
+       // Bind listeners
+       for (let i = 0; i < tabs.length; ++i) {
+         addListeners(i);
+       }
+   
+       // Accordion mode
+       if (!hasTabs) {
+         for (const panel of panels) {
+           panel.onclick = function (e) {
+             triggerTabClick(e);
+           };
+         }
+       }
+     };
+   
+     const toggleClass = function (otherElems, thisELem, className = "is-active") {
+       for (const otherElem of otherElems) {
+         otherElem.classList.remove(className);
+       }
+       thisELem.classList.add(className);
+     };
+   
+     const toggleVerticalTabs = function (tabContainer, tabs, items, item) {
+       item.onclick = function (e) {
+         const currId = item.getAttribute("id");
+         const tab = tabContainer.querySelector(
+           '.ootb-tabcordion--tabs [aria-controls="' + currId + '"]'
+         );
+         toggleClass(tabs, tab);
+         toggleClass(items, item);
+       };
+     };
+   
+     const toggleTabs = function (tabContainer) {
+       const tabs = tabContainer.querySelectorAll(".ootb-tabcordion--tabs .tab");
+       const items = tabContainer.querySelectorAll(".ootb-tabcordion--entry");
+       for (const tab of tabs) {
+         tab.onclick = function () {
+           const target = tab.getAttribute("aria-controls");
+           const content = document.getElementById(target);
+           toggleClass(tabs, tab);
+           toggleClass(items, content);
+         };
+       }
+       for (const item of items) {
+         toggleVerticalTabs(tabContainer, tabs, items, item);
+       }
+     };
+   
+     const hasTabs = function (container) {
+       return container.classList.contains("has-tabs");
+     };
+   
+     const modeSwitcher = function (tabContainer, containerWidth) {
+       const tabs = tabContainer.querySelectorAll(".tab");
+       const container = tabs[0].closest(".ootb-tabcordion");
+       let totalW = 0;
+       for (const tab of tabs) {
+         totalW += tab.offsetWidth;
+       }
+       if (totalW >= containerWidth) {
+         container.classList.remove("has-tabs");
+       } else {
+         container.classList.add("has-tabs");
+       }
+       keyboardSupport(tabContainer, hasTabs(container));
+     };
+   
+     const resizeObserver = new ResizeObserver((entries) => {
+       for (let entry of entries) {
+         modeSwitcher(entry.target, entry.contentRect.width);
+       }
+     });
+   
+     const tabContainers = document.querySelectorAll(".ootb-tabcordion");
+     for (const tabContainer of tabContainers) {
+       const tabList = tabContainer.querySelector(".ootb-tabcordion--tabs");
+       resizeObserver.observe(tabList);
+       toggleTabs(tabContainer);
+       keyboardSupport(tabContainer, hasTabs(tabContainer));
+     }
+   })();
+   
+     </script>
+ </body>
+ </html>
